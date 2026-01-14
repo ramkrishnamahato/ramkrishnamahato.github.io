@@ -857,3 +857,78 @@
 	  
   </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nepal Hydropower Project Boundaries</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <style>
+        body { margin: 0; font-family: sans-serif; }
+        #map { height: 100vh; width: 100%; }
+        .info-panel {
+            position: absolute; top: 10px; right: 10px; z-index: 1000;
+            background: white; padding: 15px; border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2); max-width: 300px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="info-panel">
+        <h3>Project Explorer</h3>
+        <p>This map shows the license boundaries of hydropower projects based on DOED coordinates.</p>
+        <div id="project-list"></div>
+    </div>
+
+    <div id="map"></div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <script>
+        // Initialize Map centered on Nepal
+        const map = L.map('map').setView([28.3949, 84.1240], 7);
+
+        // Add OpenStreetMap Tiles
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        // Sample Data: Converted from DOED DMS to Decimal Degrees
+        const projects = [
+            {
+                name: "Sunkoshi Marin Cascade",
+                capacity: "24.8 MW",
+                latRange: [28.2438, 28.2705], // [minLat, maxLat]
+                lngRange: [84.8208, 84.8791]  // [minLng, maxLng]
+            },
+            {
+                name: "Ghunsa Khola HEP",
+                capacity: "155.82 MW",
+                latRange: [27.5666, 27.6666],
+                lngRange: [87.8522, 87.9522]
+            }
+        ];
+
+        // Function to draw boundaries
+        projects.forEach(project => {
+            // Define the bounding box (Rectangle)
+            const bounds = [
+                [project.latRange[0], project.lngRange[0]], // South-West
+                [project.latRange[1], project.lngRange[1]]  // North-East
+            ];
+
+            // Add Rectangle to Map
+            const rect = L.rectangle(bounds, {
+                color: "#ff7800", 
+                weight: 2, 
+                fillOpacity: 0.3 
+            }).addTo(map);
+
+            // Add Popup
+            rect.bindPopup(`<b>${project.name}</b><br>Capacity: ${project.capacity}`);
+        });
+    </script>
+</body>
+</html>
