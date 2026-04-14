@@ -1,1569 +1,891 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#0e1117">
-<title>Nepal Hydropower Hub | Civilopedia</title>
-<style>html,body{background:#0e1117!important;color:#e8e6e1}</style>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <head>
+    <title>Ramkrishna Mahato Portfolio</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+
 <style>
-*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-:root {
-  --bg: #0e1117; --surface: #151b26; --surface2: #1c2436;
-  --border: rgba(255,255,255,0.07); --gold: #c8a96e;
-  --gold-dim: rgba(200,169,110,0.18); --gold-glow: rgba(200,169,110,0.08);
-  --teal: #38b2ac; --red: #e05252; --text: #e8e6e1;
-  --muted: #8a8f9e; --light: #c4c8d4; --sidebar-w: 248px;
-  --green-bright: #4ade80;
+
+/*======================================
+//--//-->   ABOUT
+======================================*/
+
+.about-mf .box-shadow-full {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 
-/* ══ NEA ANNUAL REPORT PANEL CSS ══ */
-/* Auto-update notification bar */
-.report-update-bar {
-  display: flex; align-items: center; gap: 0.75rem;
-  padding: 0.6rem 1.4rem;
-  background: rgba(56,178,172,0.07);
-  border-bottom: 1px solid rgba(56,178,172,0.18);
-  font-family: 'DM Mono', monospace; font-size: 0.6rem;
-  letter-spacing: 0.14em; text-transform: uppercase;
-  color: var(--teal); flex-shrink: 0;
-}
-.rub-dot {
-  width: 6px; height: 6px; border-radius: 50%;
-  background: var(--teal); animation: rubpulse 1.8s infinite;
-}
-@keyframes rubpulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.2;transform:scale(0.6)} }
-.rub-fetch-btn {
-  margin-left: auto; background: none; border: 1px solid rgba(56,178,172,0.3);
-  color: var(--teal); padding: 0.18rem 0.55rem;
-  font-size: 0.56rem; font-family: 'DM Mono', monospace;
-  cursor: pointer; transition: all 0.2s; text-transform: uppercase; letter-spacing: 0.1em;
-}
-.rub-fetch-btn:hover { background: rgba(56,178,172,0.1); }
-
-/* Report top stats strip */
-.report-kpi-strip {
-  display: flex; flex-wrap: wrap; gap: 1px;
-  background: var(--border); border-bottom: 1px solid var(--border);
-  flex-shrink: 0;
-}
-.rkpi {
-  background: var(--surface); padding: 1rem 1.35rem;
-  flex: 1; min-width: 130px; position: relative;
-}
-.rkpi::after {
-  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
-}
-.rkpi.gold::after { background: var(--gold); }
-.rkpi.teal::after { background: var(--teal); }
-.rkpi.green::after { background: var(--green-bright); }
-.rkpi.red::after   { background: var(--red); }
-.rkpi-lbl { font-family: 'DM Mono', monospace; font-size: 0.58rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.3rem; }
-.rkpi-val { font-family: 'Playfair Display', serif; font-size: 1.55rem; font-weight: 700; color: var(--text); line-height: 1; }
-.rkpi-val.gold  { color: var(--gold); }
-.rkpi-val.teal  { color: var(--teal); }
-.rkpi-val.green { color: var(--green-bright); }
-.rkpi-val.red   { color: var(--red); }
-.rkpi-sub { font-size: 0.62rem; color: var(--muted); margin-top: 0.25rem; }
-.rkpi-change { font-family: 'DM Mono', monospace; font-size: 0.6rem; }
-.rc-up   { color: var(--green-bright); }
-.rc-down { color: var(--red); }
-
-/* Section headers inside report */
-.r-section { margin-bottom: 2.5rem; }
-.r-sec-tag {
-  font-family: 'DM Mono', monospace; font-size: 0.62rem;
-  letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold);
-  display: flex; align-items: center; gap: 0.65rem;
-  margin-bottom: 0.55rem;
-}
-.r-sec-tag::before { content: ''; width: 1.2rem; height: 1px; background: var(--gold); }
-.r-sec-title {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(1.1rem, 2vw, 1.6rem); font-weight: 700;
-  color: var(--text); margin-bottom: 1.35rem; line-height: 1.2;
-}
-.r-intro {
-  font-size: 0.84rem; color: var(--muted); line-height: 1.9;
-  max-width: 900px; margin-bottom: 1.75rem;
+.about-mf .about-img {
+  margin-bottom: 2rem;
 }
 
-/* Data grid — 2×2, 3×2 etc. */
-.r-data-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
-.r-data-grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.15rem; }
-.r-data-grid-4 { display: grid; grid-template-columns: repeat(4,1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); }
+.about-mf .about-img img {
+  margin-left: 10px;
+}
 
-/* Stat card */
-.r-stat-card {
-  background: var(--bg); border: 1px solid var(--border); padding: 1.35rem;
-}
-.r-stat-card-title {
-  font-size: 0.65rem; letter-spacing: 0.14em; text-transform: uppercase;
-  color: var(--muted); font-family: 'DM Mono', monospace;
-  margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;
-}
-.r-stat-card-title::after { content: ''; flex: 1; height: 1px; background: var(--border); }
-.r-row {
-  display: flex; justify-content: space-between; align-items: center;
-  padding: 0.55rem 0; border-bottom: 1px solid var(--border);
-  font-size: 0.81rem;
-}
-.r-row:last-child { border-bottom: none; }
-.r-row .k { color: var(--muted); flex: 1; padding-right: 0.75rem; line-height: 1.4; }
-.r-row .v { color: var(--text); font-weight: 500; text-align: right; }
-.r-row .v.accent { color: var(--gold); }
-.r-row .v.teal   { color: var(--teal); }
-.r-row .v.green  { color: var(--green-bright); }
-.r-row .v.red    { color: var(--red); }
 
-/* Highlight box — important findings */
-.r-highlight {
-  background: linear-gradient(135deg, rgba(200,169,110,0.06), rgba(56,178,172,0.04));
-  border: 1px solid rgba(200,169,110,0.22);
-  padding: 1.25rem 1.5rem; margin-bottom: 2rem;
-  display: flex; align-items: flex-start; gap: 0.9rem;
+.skill-mf .progress {
+  /* background-color: #cde1f8; */
+  margin: .5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: .7rem;
 }
-.r-highlight .rh-icon { font-size: 1.4rem; flex-shrink: 0; margin-top: 2px; }
-.r-highlight .rh-text { font-size: 0.83rem; line-height: 1.75; color: var(--light); }
-.r-highlight strong { color: var(--gold); }
 
-/* Achievement cards */
-.r-achieve-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.1rem; margin-bottom: 2rem; }
-.r-achieve-card {
-  background: var(--surface); border: 1px solid var(--border);
-  padding: 1.2rem; position: relative; overflow: hidden;
+.skill-mf .progress .progress-bar {
+  height: .7rem;
+  background-color: #ffbd39;
 }
-.r-achieve-card::before {
-  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
-  background: var(--gold);
-}
-.r-ach-icon { font-size: 1.6rem; margin-bottom: 0.55rem; }
-.r-ach-label { font-family: 'DM Mono', monospace; font-size: 0.58rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.4rem; }
-.r-ach-val { font-family: 'Playfair Display', serif; font-size: 1.35rem; font-weight: 700; color: var(--gold); line-height: 1; margin-bottom: 0.35rem; }
-.r-ach-body { font-size: 0.75rem; color: var(--muted); line-height: 1.6; }
 
-/* Monthly generation table */
-.r-monthly-table { width: 100%; border-collapse: collapse; font-size: 0.79rem; min-width: 600px; margin-bottom: 1.75rem; }
-.r-monthly-table th { background: var(--surface2); padding: 0.6rem 0.85rem; text-align: left; font-weight: 600; color: var(--muted); font-size: 0.65rem; letter-spacing: 0.08em; text-transform: uppercase; border-bottom: 1px solid var(--border); }
-.r-monthly-table td { padding: 0.55rem 0.85rem; border-bottom: 1px solid var(--border); color: var(--light); vertical-align: middle; }
-.r-monthly-table tr:hover td { background: rgba(200,169,110,0.04); }
-.r-monthly-table td.num { font-family: 'DM Mono', monospace; color: var(--text); font-weight: 500; }
-.r-monthly-table td.gold-num { font-family: 'DM Mono', monospace; color: var(--gold); font-weight: 600; }
-.r-monthly-table td.teal-num { font-family: 'DM Mono', monospace; color: var(--teal); font-weight: 600; }
-.r-monthly-table td.red-num  { font-family: 'DM Mono', monospace; color: var(--red); font-weight: 500; }
-.r-monthly-table td.green-num{ font-family: 'DM Mono', monospace; color: var(--green-bright); font-weight: 500; }
-.r-bar-cell { display: flex; align-items: center; gap: 0.5rem; }
-.r-bar { height: 5px; background: var(--gold); border-radius: 2px; min-width: 4px; }
-.r-bar.teal { background: var(--teal); }
-.r-bar.green { background: var(--green-bright); }
-.r-bar.red { background: var(--red); }
 
-/* Progress bar for generation mix */
-.r-mix-bar { display: flex; height: 18px; border-radius: 2px; overflow: hidden; margin-bottom: 0.5rem; gap: 1px; }
-.r-mix-seg { height: 100%; }
+/* Animation styles */
+#typing-animation {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end) infinite;
+}
 
-/* Timeline for milestones */
-.r-timeline { display: flex; flex-direction: column; gap: 0; }
-.r-tl-item {
-  display: flex; gap: 1.1rem; padding: 1.1rem 0;
-  border-bottom: 1px solid var(--border);
+#typing-animation:before {
+  content: "";
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ccc;
+  animation: typing-cursor 0.5s ease-in-out infinite;
 }
-.r-tl-item:last-child { border-bottom: none; }
-.r-tl-left { flex-shrink: 0; display: flex; flex-direction: column; align-items: center; gap: 0.4rem; }
-.r-tl-dot {
-  width: 10px; height: 10px; border-radius: 50%;
-  border: 2px solid var(--gold); background: var(--bg); flex-shrink: 0;
-}
-.r-tl-dot.filled { background: var(--gold); }
-.r-tl-line { width: 1px; flex: 1; background: var(--border); }
-.r-tl-month { font-family: 'DM Mono', monospace; font-size: 0.6rem; color: var(--gold); letter-spacing: 0.08em; text-transform: uppercase; }
-.r-tl-body { flex: 1; }
-.r-tl-title { font-weight: 600; font-size: 0.84rem; color: var(--text); margin-bottom: 0.3rem; line-height: 1.3; }
-.r-tl-desc { font-size: 0.76rem; color: var(--muted); line-height: 1.65; }
 
-/* Auto-update live section */
-.r-live-section {
-  background: rgba(56,178,172,0.04);
-  border: 1px solid rgba(56,178,172,0.18);
-  padding: 1.5rem; margin-bottom: 2rem;
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
-.r-live-header {
-  display: flex; align-items: center; gap: 0.75rem;
-  margin-bottom: 1.25rem; padding-bottom: 0.85rem;
-  border-bottom: 1px solid rgba(56,178,172,0.15);
-}
-.r-live-dot {
-  width: 7px; height: 7px; border-radius: 50%;
-  background: var(--teal); animation: rubpulse 1.8s infinite;
-}
-.r-live-title { font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--teal); flex: 1; }
-.r-live-ts { font-family: 'DM Mono', monospace; font-size: 0.58rem; color: var(--muted); }
-.r-live-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
-.r-live-cell { text-align: center; }
-.r-live-cell-lbl { font-family: 'DM Mono', monospace; font-size: 0.56rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.3rem; }
-.r-live-cell-val { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 700; line-height: 1; transition: color 0.3s; }
-.r-live-cell-val.gold  { color: var(--gold); }
-.r-live-cell-val.teal  { color: var(--teal); }
-.r-live-cell-val.green { color: var(--green-bright); }
-.r-live-cell-val.red   { color: var(--red); }
-.r-live-cell-unit { font-family: 'DM Mono', monospace; font-size: 0.56rem; color: var(--muted); margin-top: 0.2rem; }
-.r-live-note { font-size: 0.72rem; color: var(--muted); margin-top: 1rem; padding-top: 0.85rem; border-top: 1px solid rgba(56,178,172,0.1); line-height: 1.6; }
-.r-live-note a { color: var(--teal); text-decoration: none; }
-.r-live-note a:hover { text-decoration: underline; }
 
-/* Source pill */
-.r-source {
-  display: inline-flex; align-items: center; gap: 0.4rem;
-  padding: 0.18rem 0.65rem; border-radius: 2px;
-  font-size: 0.6rem; font-family: 'DM Mono', monospace;
-  letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500;
-  vertical-align: middle; margin-left: 0.5rem;
+@keyframes typing-cursor {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 0;
+  }
 }
-.rs-nea  { background: rgba(56,178,172,0.12); color: var(--teal); border: 1px solid rgba(56,178,172,0.3); }
-.rs-fy   { background: rgba(200,169,110,0.12); color: var(--gold); border: 1px solid rgba(200,169,110,0.3); }
-.rs-live { background: rgba(74,222,128,0.1); color: var(--green-bright); border: 1px solid rgba(74,222,128,0.25); }
-.rs-2081 { background: rgba(224,82,82,0.1); color: var(--red); border: 1px solid rgba(224,82,82,0.3); }
 
-/* Loading state */
-.r-loading {
-  display: flex; align-items: center; gap: 0.6rem;
-  padding: 1.5rem; color: var(--muted); font-size: 0.8rem;
-}
-.r-spinner {
-  width: 16px; height: 16px; border-radius: 50%;
-  border: 2px solid var(--border); border-top-color: var(--teal);
-  animation: spin 0.8s linear infinite; flex-shrink: 0;
-}
-@keyframes spin { to { transform: rotate(360deg); } }
 
-/* Updated content badge */
-.r-updated-badge {
-  display: inline-flex; align-items: center; gap: 0.35rem;
-  padding: 0.18rem 0.6rem; border-radius: 2px;
-  background: rgba(74,222,128,0.09); border: 1px solid rgba(74,222,128,0.25);
-  font-family: 'DM Mono', monospace; font-size: 0.58rem;
-  color: var(--green-bright); letter-spacing: 0.08em; text-transform: uppercase;
-  margin-left: 0.75rem; vertical-align: middle;
-}
-.r-updated-badge::before { content: '●'; animation: blink 1.5s infinite; }
-@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.2} }
+/* project image zoom effect */
 
-/* Responsive */
-@media (max-width: 1100px) {
-  .r-data-grid-3 { grid-template-columns: 1fr 1fr; }
-  .r-achieve-grid { grid-template-columns: 1fr 1fr; }
-  .r-live-grid { grid-template-columns: 1fr 1fr; }
-  .r-data-grid-4 { grid-template-columns: 1fr 1fr; }
+.zoom-effect {
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
 }
-@media (max-width: 820px) {
-  .r-data-grid-2, .r-data-grid-3, .r-achieve-grid { grid-template-columns: 1fr; }
-  .r-live-grid { grid-template-columns: 1fr 1fr; }
-  .report-kpi-strip { flex-wrap: wrap; }
-  .rkpi { min-width: calc(50% - 1px); }
-}
-@media (max-width: 480px) {
-  .r-live-grid { grid-template-columns: 1fr; }
-  .rkpi { min-width: 100%; }
-}
-html { scroll-behavior: smooth; font-size: 15px; background: #0e1117; }
-body { font-family: 'DM Sans', sans-serif; background: #0e1117; background: var(--bg); color: #e8e6e1; color: var(--text); overflow: hidden; height: 100dvh; display: flex; }
-#sidebar { width: var(--sidebar-w); flex-shrink: 0; background: var(--surface); border-right: 1px solid var(--border); display: flex; flex-direction: column; height: 100dvh; position: fixed; left: 0; top: 0; bottom: 0; z-index: 300; transition: transform 0.3s cubic-bezier(0.4,0,0.2,1); overflow: hidden; }
-.sb-brand { padding: 1.4rem 1.4rem 1.1rem; border-bottom: 1px solid var(--border); flex-shrink: 0; }
-.sb-brand a { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--gold); text-decoration: none; font-weight: 700; display: block; line-height: 1.2; }
-.sb-brand small { display: block; font-size: 0.6rem; color: var(--muted); letter-spacing: 0.15em; text-transform: uppercase; margin-top: 0.3rem; font-family: 'DM Mono', monospace; }
-.sb-nav { flex: 1; overflow-y: auto; padding: 0.6rem 0; scrollbar-width: thin; scrollbar-color: var(--border) transparent; }
-.sb-group-label { font-family: 'DM Mono', monospace; font-size: 0.56rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--muted); padding: 0.85rem 1.4rem 0.3rem; opacity: 0.55; }
-.sb-item { display: flex; align-items: center; gap: 0.7rem; padding: 0.65rem 1.4rem; font-size: 0.82rem; font-weight: 500; color: var(--muted); cursor: pointer; border: none; background: none; width: 100%; text-align: left; border-left: 2.5px solid transparent; transition: all 0.16s; user-select: none; text-decoration: none; }
-.sb-item .si-icon { font-size: 0.95rem; width: 1.1rem; text-align: center; flex-shrink: 0; }
-.sb-item .si-label { flex: 1; line-height: 1.2; }
-.sb-item .si-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--gold); opacity: 0; flex-shrink: 0; transition: opacity 0.16s; }
-.sb-item:hover { color: var(--light); background: var(--gold-glow); }
-.sb-item.active { color: var(--gold); border-left-color: var(--gold); background: var(--gold-glow); }
-.sb-item.active .si-dot { opacity: 1; }
-.sb-footer { padding: 1rem 1.4rem; border-top: 1px solid var(--border); display: flex; flex-direction: column; gap: 0.5rem; }
-.sb-footer a { font-size: 0.68rem; color: var(--muted); text-decoration: none; display: flex; align-items: center; gap: 0.4rem; transition: color 0.15s; }
-.sb-footer a:hover { color: var(--gold); }
-#main { margin-left: var(--sidebar-w); flex: 1; display: flex; flex-direction: column; height: 100dvh; overflow: hidden; min-width: 0; }
-#topbar { display: none; align-items: center; gap: 0.75rem; padding: 0.8rem 1rem; background: rgba(21,27,38,0.98); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); flex-shrink: 0; z-index: 200; }
-#topbar-brand { font-family: 'Playfair Display', serif; font-size: 0.98rem; color: var(--gold); font-weight: 700; flex: 1; }
-#topbar-crumb { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
-#menu-btn { background: none; border: 1px solid var(--border); padding: 0.4rem 0.55rem; cursor: pointer; border-radius: 2px; display: flex; flex-direction: column; gap: 4px; }
-#menu-btn span { display: block; width: 16px; height: 1.5px; background: var(--muted); border-radius: 2px; transition: all 0.25s; }
-#menu-btn.open span:nth-child(1) { transform: rotate(45deg) translate(3px, 3.5px); }
-#menu-btn.open span:nth-child(2) { opacity: 0; }
-#menu-btn.open span:nth-child(3) { transform: rotate(-45deg) translate(3px, -3.5px); }
-#sb-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.6); backdrop-filter: blur(2px); z-index: 299; }
-#sb-overlay.on { display: block; }
-#panel-wrap { flex: 1; overflow: hidden; position: relative; }
-.panel { position: absolute; inset: 0; display: flex; flex-direction: column; opacity: 0; pointer-events: none; transform: translateY(6px); transition: opacity 0.22s ease, transform 0.22s ease; overflow: hidden; }
-.panel.active { opacity: 1; pointer-events: auto; transform: translateY(0); }
-.ph { background: var(--surface); border-bottom: 1px solid var(--border); padding: 1.5rem 2.5rem 1.25rem; flex-shrink: 0; }
-.ph-tag { font-family: 'DM Mono', monospace; font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.4rem; }
-.ph-tag::before { content: ''; width: 1rem; height: 1px; background: var(--gold); }
-.ph h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.4rem, 2.5vw, 2.1rem); font-weight: 700; color: var(--text); line-height: 1.1; }
-.ph p { font-size: 0.84rem; color: var(--muted); margin-top: 0.4rem; line-height: 1.6; max-width: 600px; }
-.pb { flex: 1; overflow-y: auto; overflow-x: hidden; padding: 2rem 2.5rem 3rem; scrollbar-width: thin; scrollbar-color: rgba(200,169,110,0.2) transparent; }
-#panel-home .pb { padding: 0; }
-.hero-wrap { background: linear-gradient(135deg, #0e1117 0%, #131b2e 50%, #0e1117 100%); padding: 3.5rem 2.5rem 3rem; text-align: center; position: relative; overflow: hidden; }
-.hero-wrap::before { content: ''; position: absolute; inset: 0; background-image: radial-gradient(ellipse 60% 40% at 50% 0%, rgba(200,169,110,0.1) 0%, transparent 70%); }
-.hero-eyebrow { font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.9rem; position: relative; }
-.hero-wrap h1 { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 4vw, 3.5rem); font-weight: 900; line-height: 1.1; background: linear-gradient(135deg, #f5f0e8, var(--gold)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 0.75rem; position: relative; }
-.hero-sub { font-size: 0.92rem; color: var(--muted); max-width: 540px; margin: 0 auto 2.5rem; position: relative; }
-.stats-bar { display: flex; flex-wrap: wrap; justify-content: center; gap: 1px; background: var(--border); border: 1px solid var(--border); max-width: 820px; margin: 0 auto; position: relative; }
-.stat-box { background: var(--surface); padding: 1.1rem 1.25rem; flex: 1; min-width: 120px; text-align: center; }
-.stat-box .val { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 700; color: var(--gold); display: block; line-height: 1; }
-.stat-box .lbl { font-size: 0.58rem; color: var(--muted); letter-spacing: 0.08em; text-transform: uppercase; margin-top: 0.3rem; display: block; }
-.home-nav-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-.hn-card { background: var(--surface); padding: 1.5rem; cursor: pointer; border: none; text-align: left; transition: background 0.18s; width: 100%; display: flex; flex-direction: column; gap: 0.4rem; }
-.hn-card:hover { background: var(--surface2); }
-.hn-card .hn-icon { font-size: 1.3rem; }
-.hn-card .hn-title { font-size: 0.85rem; font-weight: 600; color: var(--text); line-height: 1.2; }
-.hn-card .hn-sub { font-size: 0.72rem; color: var(--muted); line-height: 1.4; }
-.hn-card .hn-arrow { font-size: 0.7rem; color: var(--gold); margin-top: auto; padding-top: 0.5rem; }
-.live-banner { background: var(--surface); border-bottom: 1px solid var(--border); }
-.live-banner-inner { display: flex; align-items: stretch; }
-.live-label { display: flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.1rem; background: rgba(56,178,172,0.09); border-right: 1px solid var(--border); flex-shrink: 0; font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--teal); white-space: nowrap; }
-.live-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--teal); animation: livepulse 1.6s ease-in-out infinite; }
-@keyframes livepulse { 0%,100% { opacity:1; transform:scale(1); } 50% { opacity:0.3; transform:scale(0.7); } }
-.live-cells { display: flex; flex: 1; flex-wrap: wrap; }
-.live-cell { display: flex; flex-direction: column; justify-content: center; padding: 0.65rem 1rem; border-right: 1px solid var(--border); flex: 1; min-width: 110px; }
-.live-cell:last-child { border-right: none; }
-.live-cell-label { font-family: 'DM Mono', monospace; font-size: 0.56rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.15rem; }
-.live-cell-value { font-family: 'Playfair Display', serif; font-size: 1.15rem; font-weight: 700; line-height: 1; color: var(--text); transition: color 0.3s; }
-.live-cell-value.loading { color: var(--muted); font-size: 0.82rem; font-family: 'DM Sans', sans-serif; }
-.live-cell-value.green { color: #5bc85b; } .live-cell-value.teal { color: var(--teal); } .live-cell-value.red { color: var(--red); } .live-cell-value.gold { color: var(--gold); }
-.live-cell-unit { font-size: 0.58rem; color: var(--muted); font-family: 'DM Mono', monospace; margin-top: 0.1rem; }
-.live-meta { display: flex; align-items: center; gap: 0.5rem; padding: 0.65rem 1rem; font-size: 0.58rem; color: var(--muted); font-family: 'DM Mono', monospace; flex-shrink: 0; flex-direction: column; justify-content: center; text-align: right; border-left: 1px solid var(--border); }
-.live-refresh-btn { background: none; border: 1px solid var(--border); color: var(--muted); padding: 0.2rem 0.5rem; font-size: 0.56rem; font-family: 'DM Mono', monospace; cursor: pointer; transition: all 0.2s; text-transform: uppercase; margin-top: 0.25rem; }
-.live-refresh-btn:hover { border-color: var(--teal); color: var(--teal); }
-.spin { animation: spin 1s linear infinite; display: inline-block; }
-@keyframes spin { to { transform: rotate(360deg); } }
-.sec-tag { font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); display: flex; align-items: center; gap: 0.7rem; margin-bottom: 0.6rem; }
-.sec-tag::before { content: ''; width: 1.2rem; height: 1px; background: var(--gold); }
-h2.sec-title { font-family: 'Playfair Display', serif; font-size: clamp(1.4rem, 2.5vw, 2rem); font-weight: 700; color: var(--text); margin-bottom: 2rem; }
-.source-badge { display: inline-flex; align-items: center; gap: 0.35rem; padding: 0.15rem 0.6rem; border-radius: 2px; font-size: 0.6rem; font-family: 'DM Mono', monospace; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; vertical-align: middle; }
-.badge-nea { background: rgba(56,178,172,0.12); color: var(--teal); border: 1px solid rgba(56,178,172,0.3); }
-.badge-doed { background: rgba(200,169,110,0.12); color: var(--gold); border: 1px solid rgba(200,169,110,0.3); }
-.badge-mofe { background: rgba(96,180,96,0.12); color: #5bc85b; border: 1px solid rgba(96,180,96,0.3); }
-.badge-erc { background: rgba(224,82,82,0.12); color: var(--red); border: 1px solid rgba(224,82,82,0.3); }
-.lifecycle-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); }
-.lc-step { background: var(--surface); padding: 1.25rem; position: relative; transition: background 0.2s; }
-.lc-step:hover { background: var(--surface2); }
-.lc-num { font-family: 'DM Mono', monospace; font-size: 0.6rem; color: var(--gold); letter-spacing: 0.1em; margin-bottom: 0.5rem; }
-.lc-title { font-weight: 600; font-size: 0.84rem; color: var(--text); margin-bottom: 0.4rem; line-height: 1.3; }
-.lc-body { font-size: 0.75rem; color: var(--muted); line-height: 1.6; }
-.lc-dot { position: absolute; top: 0.9rem; right: 0.9rem; width: 7px; height: 7px; border-radius: 50%; background: var(--gold); opacity: 0.45; }
-.nea-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 2rem; }
-.info-card { background: var(--bg); border: 1px solid var(--border); padding: 1.5rem; }
-.info-card-title { font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); font-family: 'DM Mono', monospace; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem; }
-.info-card-title::after { content: ''; flex: 1; height: 1px; background: var(--border); }
-.nea-stat-row { display: flex; justify-content: space-between; align-items: center; padding: 0.6rem 0; border-bottom: 1px solid var(--border); font-size: 0.82rem; }
-.nea-stat-row:last-child { border-bottom: none; }
-.nea-stat-row .k { color: var(--muted); }
-.nea-stat-row .v { color: var(--text); font-weight: 500; text-align: right; max-width: 55%; }
-.nea-stat-row .v.accent { color: var(--gold); } .nea-stat-row .v.teal { color: var(--teal); }
-.ppa-new-banner { background: linear-gradient(135deg, rgba(224,82,82,0.07), rgba(200,169,110,0.05)); border: 1px solid rgba(224,82,82,0.22); padding: 1.1rem 1.5rem; margin-bottom: 2rem; display: flex; align-items: flex-start; gap: 0.9rem; }
-.ppa-new-banner .icon { font-size: 1.3rem; flex-shrink: 0; margin-top: 2px; }
-.ppa-new-banner .text { font-size: 0.82rem; line-height: 1.6; color: var(--light); }
-.ppa-new-banner strong { color: var(--gold); }
-.tscroll { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin-bottom: 1.75rem; }
-table { width: 100%; border-collapse: collapse; font-size: 0.8rem; min-width: 400px; }
-th { background: var(--surface2); padding: 0.65rem 0.9rem; text-align: left; font-weight: 600; color: var(--muted); font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; border-bottom: 1px solid var(--border); }
-td { padding: 0.6rem 0.9rem; border-bottom: 1px solid var(--border); color: var(--light); vertical-align: top; line-height: 1.5; }
-tr:hover td { background: rgba(200,169,110,0.04); }
-td strong { color: var(--text); }
-td.rate { color: var(--gold); font-weight: 600; font-family: 'DM Mono', monospace; }
-td.rate-hi { color: #7fcfcb; font-weight: 600; font-family: 'DM Mono', monospace; }
-.table-note { font-size: 0.75rem; color: var(--muted); padding: 0.65rem 0.9rem; background: var(--surface); border: 1px solid var(--border); line-height: 1.65; margin-top: -1.75rem; margin-bottom: 1.75rem; }
-.license-flow { display: grid; grid-template-columns: repeat(6, 1fr); gap: 0; margin-bottom: 2.5rem; border: 1px solid var(--border); }
-.lf-step { padding: 1.25rem 1rem; background: var(--bg); border-right: 1px solid var(--border); position: relative; text-align: center; }
-.lf-step:last-child { border-right: none; }
-.lf-step::after { content: '›'; position: absolute; top: 50%; right: -9px; transform: translateY(-50%); font-size: 1.1rem; color: var(--gold); z-index: 2; }
-.lf-step:last-child::after { display: none; }
-.lf-num { width: 26px; height: 26px; border-radius: 50%; border: 1.5px solid var(--gold); display: flex; align-items: center; justify-content: center; font-family: 'DM Mono', monospace; font-size: 0.65rem; color: var(--gold); margin: 0 auto 0.65rem; }
-.lf-label { font-size: 0.75rem; font-weight: 600; color: var(--text); line-height: 1.3; }
-.lf-sub { font-size: 0.65rem; color: var(--muted); margin-top: 0.35rem; line-height: 1.4; }
-.doed-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.25rem; margin-bottom: 2rem; }
-.doed-card { background: var(--bg); border: 1px solid var(--border); padding: 1.25rem; }
-.doed-card-title { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.9rem; }
-.doed-list { list-style: none; }
-.doed-list li { font-size: 0.78rem; color: var(--muted); padding: 0.4rem 0; border-bottom: 1px solid var(--border); display: flex; align-items: flex-start; gap: 0.55rem; line-height: 1.5; }
-.doed-list li:last-child { border-bottom: none; }
-.doed-list li::before { content: '—'; color: var(--gold); flex-shrink: 0; }
-.royalty-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
-.royalty-card { background: var(--bg); border: 1px solid var(--border); padding: 1.5rem; }
-.royalty-card h4 { font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--teal); margin-bottom: 1rem; font-family: 'DM Mono', monospace; }
-.eia-threshold { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.5px; background: var(--border); border: 1px solid var(--border); margin-bottom: 2rem; }
-.eia-box { background: var(--surface); padding: 1.75rem; text-align: center; }
-.eia-box .cap { font-family: 'Playfair Display', serif; font-size: 1.7rem; font-weight: 700; margin-bottom: 0.35rem; }
-.eia-box .type { font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.5rem; font-family: 'DM Mono', monospace; }
-.eia-box .auth { font-size: 0.75rem; color: var(--muted); line-height: 1.5; }
-.eia-box.micro .cap, .eia-box.micro .type { color: #5bc85b; }
-.eia-box.iee .cap, .eia-box.iee .type { color: var(--teal); }
-.eia-box.eia .cap, .eia-box.eia .type { color: var(--red); }
-.eia-process { display: grid; grid-template-columns: repeat(7, 1fr); gap: 0; background: var(--border); border: 1px solid var(--border); margin-bottom: 2rem; }
-.ep-step { background: var(--surface); padding: 1.1rem 0.9rem; text-align: center; border-right: 1px solid var(--border); }
-.ep-step:last-child { border-right: none; }
-.ep-icon { font-size: 1.3rem; margin-bottom: 0.4rem; }
-.ep-label { font-size: 0.68rem; font-weight: 600; color: var(--light); line-height: 1.3; }
-.ep-dur { font-size: 0.6rem; color: var(--muted); margin-top: 0.25rem; font-family: 'DM Mono', monospace; }
-.env-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
-.env-card { background: var(--surface); border: 1px solid var(--border); padding: 1.5rem; }
-.env-card h4 { font-size: 0.78rem; font-weight: 700; color: var(--text); margin-bottom: 0.85rem; display: flex; align-items: center; gap: 0.5rem; }
-.env-card ul { list-style: none; }
-.env-card ul li { font-size: 0.78rem; color: var(--muted); padding: 0.38rem 0; border-bottom: 1px solid var(--border); display: flex; gap: 0.55rem; line-height: 1.5; }
-.env-card ul li:last-child { border-bottom: none; }
-.env-card ul li::before { content: '▸'; color: #5bc85b; flex-shrink: 0; font-size: 0.6rem; margin-top: 3px; }
-.compliance-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.75rem; margin-bottom: 2rem; }
-.manuals-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.1rem; }
-.manual-card { background: var(--surface); border: 1px solid var(--border); padding: 1.25rem; transition: all 0.22s; cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; }
-.manual-card:hover { border-color: var(--gold); background: rgba(200,169,110,0.07); }
-.manual-card-arrow { position: absolute; top: 0.9rem; right: 0.9rem; font-size: 0.7rem; color: var(--gold); opacity: 0; transition: opacity 0.18s; }
-.manual-card:hover .manual-card-arrow { opacity: 1; }
-.manual-icon { font-size: 1.35rem; margin-bottom: 0.6rem; }
-.manual-cat { font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); font-family: 'DM Mono', monospace; margin-bottom: 0.4rem; }
-.manual-title { font-size: 0.84rem; font-weight: 600; color: var(--text); line-height: 1.3; }
-.update-pill { display: inline-flex; align-items: center; gap: 0.45rem; background: rgba(224,82,82,0.09); border: 1px solid rgba(224,82,82,0.22); padding: 0.3rem 0.75rem; border-radius: 2px; font-size: 0.64rem; color: var(--red); letter-spacing: 0.08em; text-transform: uppercase; font-family: 'DM Mono', monospace; margin-bottom: 1rem; }
-.update-pill::before { content: '●'; animation: blink 1.5s infinite; }
-@keyframes blink { 0%,100% { opacity:1; } 50% { opacity:0.2; } }
-.panel-footer { padding: 1.25rem 2.5rem; border-top: 1px solid var(--border); font-size: 0.7rem; color: var(--muted); flex-shrink: 0; background: var(--surface); display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
-.panel-footer a { color: var(--gold); text-decoration: none; }
 
-/* Admin sync notification */
-#admin-sync-bar {
-  display: none; align-items: center; gap: 0.75rem;
-  padding: 0.5rem 1.4rem; background: rgba(200,169,110,0.08);
-  border-bottom: 1px solid rgba(200,169,110,0.2);
-  font-family: 'DM Mono', monospace; font-size: 0.6rem;
-  color: var(--gold); letter-spacing: 0.1em; text-transform: uppercase;
-  flex-shrink: 0;
+.zoom-effect:hover {
+  transform: scale(1.1);
 }
-#admin-sync-bar.show { display: flex; }
-#admin-sync-bar::before { content: '●'; animation: blink 1.5s infinite; }
 
-@media (max-width: 1100px) { .lifecycle-grid { grid-template-columns: repeat(2, 1fr); } .license-flow { grid-template-columns: repeat(3, 1fr); } .eia-process { grid-template-columns: repeat(4, 1fr); } .doed-grid { grid-template-columns: 1fr 1fr; } .nea-grid { grid-template-columns: 1fr 1fr; } .home-nav-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 820px) {
-  body { overflow: hidden; }
-  #sidebar { transform: translateX(calc(-1 * var(--sidebar-w) - 2px)); }
-  #sidebar.open { transform: translateX(0); }
-  #main { margin-left: 0; }
-  #topbar { display: flex; }
-  .pb { padding: 1.25rem 1.1rem 3rem; } .ph { padding: 1.1rem 1.1rem 0.9rem; } .panel-footer { padding: 1rem 1.1rem; font-size: 0.64rem; }
-  .lifecycle-grid { grid-template-columns: 1fr; } .nea-grid { grid-template-columns: 1fr; } .license-flow { grid-template-columns: 1fr 1fr; } .lf-step::after { display: none; } .doed-grid { grid-template-columns: 1fr; } .royalty-grid { grid-template-columns: 1fr; } .eia-threshold { grid-template-columns: 1fr; } .eia-process { grid-template-columns: repeat(2, 1fr); } .env-cards { grid-template-columns: 1fr; } .compliance-grid { grid-template-columns: 1fr; } .manuals-grid { grid-template-columns: 1fr 1fr; } .home-nav-grid { grid-template-columns: 1fr 1fr; }
-  .live-banner-inner { flex-direction: column; } .live-label { border-right: none; border-bottom: 1px solid var(--border); } .live-cells { flex-wrap: wrap; } .live-cell { min-width: 50%; border-bottom: 1px solid var(--border); } .live-cell:nth-child(odd) { border-right: 1px solid var(--border); } .live-cell:nth-child(even) { border-right: none; } .live-meta { border-left: none; border-top: 1px solid var(--border); flex-direction: row; justify-content: space-between; }
-  .hero-wrap { padding: 2.5rem 1.25rem 2rem; } .stats-bar { flex-direction: row; flex-wrap: wrap; } .stat-box { min-width: calc(50% - 1px); } .stat-box .val { font-size: 1.25rem; }
-  th, td { padding: 0.5rem 0.65rem; font-size: 0.73rem; }
-}
-@media (max-width: 480px) { html { font-size: 13px; } .manuals-grid { grid-template-columns: 1fr; } .license-flow { grid-template-columns: 1fr; } .eia-process { grid-template-columns: 1fr; } .stat-box { min-width: 100%; } .live-cell { min-width: 100%; border-right: none; } .home-nav-grid { grid-template-columns: 1fr; } }
+
 </style>
-</head>
-<body>
 
-<!-- ══ ADMIN SYNC BAR — shown when admin edits are active ══ -->
-<div id="admin-sync-bar"></div>
-
-<aside id="sidebar">
-  <div class="sb-brand">
-    <a href="https://www.ramkrishnamahato.com.np/">Civilopedia</a>
-    <small>Nepal Hydropower Hub</small>
-  </div>
-  <nav class="sb-nav">
-    <div class="sb-group-label">Overview</div>
-    <button class="sb-item active" data-panel="home"><span class="si-icon">🏠</span><span class="si-label">Home &amp; Live Data</span><span class="si-dot"></span></button>
-    <div class="sb-group-label">Development</div>
-    <button class="sb-item" data-panel="roadmap"><span class="si-icon">🗺️</span><span class="si-label">Development Cycle</span><span class="si-dot"></span></button>
-    <div class="sb-group-label">Regulatory &amp; Financial</div>
-    <button class="sb-item" data-panel="nea"><span class="si-icon">⚡</span><span class="si-label">NEA Statistics</span><span class="si-dot"></span></button>
-    <button class="sb-item" data-panel="ppa"><span class="si-icon">📑</span><span class="si-label">PPA Rates</span><span class="si-dot"></span></button>
-    <button class="sb-item" data-panel="doed"><span class="si-icon">🏛️</span><span class="si-label">DoED Licensing</span><span class="si-dot"></span></button>
-    <div class="sb-group-label">Environment &amp; Legal</div>
-    <button class="sb-item" data-panel="mofe"><span class="si-icon">🌿</span><span class="si-label">MoFE / EIA</span><span class="si-dot"></span></button>
-    <button class="sb-item" data-panel="compliance"><span class="si-icon">⚖️</span><span class="si-label">Legal Framework</span><span class="si-dot"></span></button>
-    <div class="sb-group-label">Resources</div>
-    <button class="sb-item" data-panel="manuals"><span class="si-icon">📚</span><span class="si-label">Technical Manuals</span><span class="si-dot"></span></button>
-    <div class="sb-group-label">Reports</div>
-    <button class="sb-item" data-panel="nea-report">
-      <span class="si-icon">📋</span>
-      <span class="si-label">NEA Annual Report</span>
-      <span class="si-dot"></span>
-    </button>
-  </nav>
-  <div class="sb-footer">
-    <a href="https://doed.gov.np" target="_blank">🔗 DoED</a>
-    <a href="https://nea.org.np" target="_blank">🔗 NEA</a>
-    <a href="https://mofe.gov.np" target="_blank">🔗 MoFE</a>
-    <a href="https://www.ramkrishnamahato.com.np/" target="_blank">← Portfolio</a>
-  </div>
-</aside>
-
-<div id="sb-overlay"></div>
-
-<div id="main">
-  <div id="topbar">
-    <button id="menu-btn" aria-label="Open menu"><span></span><span></span><span></span></button>
-    <div id="topbar-brand">Civilopedia</div>
-    <div id="topbar-crumb">Home</div>
-  </div>
-
-  <div id="panel-wrap">
-
-    <!-- HOME PANEL -->
-    <div class="panel active" id="panel-home">
-      <div class="hero-wrap">
-        <div class="hero-eyebrow" id="cv-eyebrow">Nepal Hydropower Hub · Civilopedia</div>
-        <h1 id="cv-headline">Comprehensive Hydropower<br>Development Reference</h1>
-        <p class="hero-sub" id="cv-sub">Authoritative insights sourced from NEA, DoED, and MoFE — from survey license to asset handover.</p>
-        <div class="stats-bar" id="cv-stats-bar">
-          <div class="stat-box"><span class="val" id="sv1">3,617<span style="font-size:0.9rem"> MW</span></span><span class="lbl" id="sl1">Installed Capacity</span></div>
-          <div class="stat-box"><span class="val" id="sv2">14.80<span style="font-size:0.9rem"> NPR</span></span><span class="lbl" id="sl2">Max Winter Tariff</span></div>
-          <div class="stat-box"><span class="val" id="sv3">83,000<span style="font-size:0.9rem"> MW</span></span><span class="lbl" id="sl3">Theoretical Potential</span></div>
-          <div class="stat-box"><span class="val" id="sv4">30–35<span style="font-size:0.9rem"> Yrs</span></span><span class="lbl" id="sl4">License Term</span></div>
-          <div class="stat-box"><span class="val" id="sv5">10,300+<span style="font-size:0.9rem"> MW</span></span><span class="lbl" id="sl5">PPAs Signed</span></div>
-        </div>
-      </div>
-
-      <div class="live-banner">
-        <div class="live-banner-inner">
-          <div class="live-label"><div class="live-dot"></div>NEA Live</div>
-          <div class="live-cells">
-            <div class="live-cell"><div class="live-cell-label">Current Demand</div><div class="live-cell-value loading" id="lv-demand">—</div><div class="live-cell-unit" id="lv-demand-u">fetching…</div></div>
-            <div class="live-cell"><div class="live-cell-label">Total Generation</div><div class="live-cell-value loading" id="lv-gen">—</div><div class="live-cell-unit" id="lv-gen-u">fetching…</div></div>
-            <div class="live-cell"><div class="live-cell-label">Import</div><div class="live-cell-value loading" id="lv-import">—</div><div class="live-cell-unit" id="lv-import-u">fetching…</div></div>
-            <div class="live-cell"><div class="live-cell-label">Export</div><div class="live-cell-value loading" id="lv-export">—</div><div class="live-cell-unit" id="lv-export-u">fetching…</div></div>
-            <div class="live-cell"><div class="live-cell-label">Consumption</div><div class="live-cell-value loading" id="lv-domestic">—</div><div class="live-cell-unit" id="lv-domestic-u">fetching…</div></div>
-            <div class="live-cell"><div class="live-cell-label">Installed Capacity</div><div class="live-cell-value loading" id="lv-capacity">—</div><div class="live-cell-unit" id="lv-capacity-u">fetching…</div></div>
-          </div>
-          <div class="live-meta"><span id="live-updated">Loading…</span><button class="live-refresh-btn" onclick="fetchNEALive()" id="refresh-btn">↻ Refresh</button></div>
-        </div>
-      </div>
-
-      <div class="home-nav-grid">
-        <button class="hn-card" data-panel="roadmap"><div class="hn-icon">🗺️</div><div class="hn-title">Development Cycle</div><div class="hn-sub">10-step lifecycle from registration to asset handover</div><div class="hn-arrow">Explore →</div></button>
-        <button class="hn-card" data-panel="nea"><div class="hn-icon">⚡</div><div class="hn-title">NEA Statistics</div><div class="hn-sub">Capacity 3,617 MW · Customers 6.11M · Q2 FY 2082/83 data (Dec 2025)</div><div class="hn-arrow">Explore →</div></button>
-        <button class="hn-card" data-panel="ppa"><div class="hn-icon">📑</div><div class="hn-title">PPA Rates</div><div class="hn-sub">ROR, PROR, Storage &amp; Solar tariff tables with ERC 2026 update</div><div class="hn-arrow">Explore →</div></button>
-        <button class="hn-card" data-panel="doed"><div class="hn-icon">🏛️</div><div class="hn-title">DoED Licensing</div><div class="hn-sub">License flow, requirements, royalty structure &amp; incentives</div><div class="hn-arrow">Explore →</div></button>
-        <button class="hn-card" data-panel="mofe"><div class="hn-icon">🌿</div><div class="hn-title">MoFE / EIA</div><div class="hn-sub">Environmental clearance thresholds, process &amp; forest rules</div><div class="hn-arrow">Explore →</div></button>
-        <button class="hn-card" data-panel="compliance"><div class="hn-icon">⚖️</div><div class="hn-title">Legal Framework</div><div class="hn-sub">Acts, regulations &amp; classification tables</div><div class="hn-arrow">Explore →</div></button>
-      </div>
-      <div class="panel-footer"><span>© 2026 Civilopedia · Data: NEA, DoED, MoFE, ERC</span><span>For reference only — verify with official sources</span></div>
-    </div>
-
-    <!-- ROADMAP PANEL -->
-    <div class="panel" id="panel-roadmap">
-      <div class="ph"><div class="ph-tag">Project Development</div><h2>Development Lifecycle <span class="source-badge badge-doed">DoED</span><span class="source-badge badge-mofe" style="margin-left:0.4rem;">MoFE</span></h2><p>10-step process from company registration through survey license, environmental approval, PPA, construction, and final asset handover to GoN.</p></div>
-      <div class="pb">
-        <div class="sec-tag">Project Development</div>
-        <h2 class="sec-title">Project Development Lifecycle <span class="source-badge badge-doed" style="margin-left:0.75rem;font-size:0.62rem;">DoED</span><span class="source-badge badge-mofe" style="margin-left:0.4rem;font-size:0.62rem;">MoFE</span></h2>
-        <div class="lifecycle-grid" id="cv-lifecycle">
-          <div class="lc-step"><div class="lc-dot"></div><div class="lc-num">01 — REGISTRATION</div><div class="lc-title">Company Registration</div><div class="lc-body">Register at CRO, DOI, and Tax Office. FDI approval needed if foreign investment involved. Prepare MOA/AOA and director citizenship certificates.</div></div>
-          <div class="lc-step"><div class="lc-dot"></div><div class="lc-num">02 — SURVEY LICENSE</div><div class="lc-title">Survey License (DoED)</div><div class="lc-body">Apply to DoED with project details, maps, and water resource data. DoED field visit conducted. Valid up to 5 years; typically issued within 30 days if application is complete.</div></div>
-          <div class="lc-step"><div class="lc-dot"></div><div class="lc-num">03 — ENVIRONMENTAL</div><div class="lc-title">Feasibility &amp; Environmental Study</div><div class="lc-body">IEE for projects ≤50 MW; full EIA for projects &gt;50 MW. EIA approved by MoFE. Process takes 6–12 months. Public hearing mandatory for projects &gt;5 MW.</div></div>
-          <div class="lc-step"><div class="lc-dot"></div><div class="lc-num">04 — PPA</div><div class="lc-title">PPA Execution (NEA)</div><div class="lc-body">Agreement with NEA based on approved rates. Requires technical feasibility, approved IEE/EIA, and bank LOI. NEA is sole buyer of electricity in practice.</div></div>
-          <div class="lc-step"><div class="lc-dot"></div><div class="lc-num">05 — APPROVALS</div><div class="lc-title">Additional Clearances</div><div class="lc-body">Forestry clearance (MoFE/DFO), National Parks clearance (DNPWC), Road Dept access, local government recommendations.</div></div>
-          <div class="lc-step"><div class="lc-dot"></div><div class="lc-num">06 — FINANCING</div><div class="lc-title">Financial Closure</div><div class="lc-body">Typical debt-equity ratio: 70:30. Demonstrate minimum 30% equity at application stage. Bank commitment letters, cost estimates, and implementation schedule required.</div></div>
-          <div class="lc-step"><div class="lc-dot"></div><div class="lc-num">07 — GENERATION LICENSE</div><div class="lc-title">Generation License (DoED)</div><div class="lc-body">Issued for 30–35 years (max 50). Issued within 120 days of complete application. Separate licenses required for generation, transmission, and distribution.</div></div>
-          <div class="lc-step"><div class="lc-dot"></div><div class="lc-num">08 — CONSTRUCTION</div><div class="lc-title">Construction Phase</div><div class="lc-body">Physical work must begin within 3 months of license issue. Follow DoED standards and EIA mitigation commitments. DoED monitors construction compliance.</div></div>
-          <div class="lc-step"><div class="lc-dot"></div><div class="lc-num">09 — OPERATION</div><div class="lc-title">Power Generation &amp; Royalty</div><div class="lc-body">Generate and sell power under PPA. Pay capacity royalty and energy royalty to DoED. Royalty distributed: 50% local unit, 25% area-based, 25% population-based.</div></div>
-          <div class="lc-step"><div class="lc-dot"></div><div class="lc-num">10 — HANDOVER</div><div class="lc-title">Asset Handover to GoN</div><div class="lc-body">After license expiry, all assets revert to Government of Nepal for free (Right of Reversion). Foreign-owned (&gt;50%) projects: mandatory free handover.</div></div>
-        </div>
-      </div>
-      <div class="panel-footer"><span>Source: DoED Electricity Act 2049 &amp; Licensing Guidelines</span><a href="https://doed.gov.np" target="_blank">doed.gov.np ↗</a></div>
-    </div>
-
-    <!-- NEA PANEL -->
-    <div class="panel" id="panel-nea">
-      <div class="ph"><div class="ph-tag">Nepal Electricity Authority</div><h2>NEA — Key Statistics <span class="source-badge badge-nea">Q2 FY 2082/83 · Dec 2025</span></h2><p>Updated from NEA's FY 2082/83 Q2 Self-Publication (Kartik–Poush 2082 / Oct–Dec 2025). Capacity as of Poush 2082; financials for Q2 period.</p></div>
-      <div class="pb">
-        <div class="sec-tag">Nepal Electricity Authority</div>
-        <h2 class="sec-title">NEA — Key Statistics &amp; Overview <span class="source-badge badge-nea" style="margin-left:0.75rem;font-size:0.62rem;">Updated Q2 FY 2082/83 (Dec 2025)</span></h2>
-        <div class="nea-grid">
-          <div class="info-card"><div class="info-card-title">Generation &amp; Capacity</div>
-            <div class="nea-stat-row"><span class="k">Installed Capacity (FY 2082/83 Q2, Dec 2025)</span><span class="v accent" id="nea-cap">3,617.54 MW</span></div>
-            <div class="nea-stat-row"><span class="k">New capacity added (Q1 FY 2082/83)</span><span class="v" id="nea-add">~105.95 MW (6 IPPs)</span></div>
-            <div class="nea-stat-row"><span class="k">— NEA Subsidiaries contribution</span><span class="v">153.5 MW</span></div>
-            <div class="nea-stat-row"><span class="k">— Private sector (IPP) contribution</span><span class="v">280.5 MW</span></div>
-            <div class="nea-stat-row"><span class="k">Hydropower share of total capacity</span><span class="v accent">~95%</span></div>
-            <div class="nea-stat-row"><span class="k">NEA solar installed</span><span class="v" id="nea-sol">25 MW (NEA) + 116.94 MW (private)</span></div>
-            <div class="nea-stat-row"><span class="k">NEA own generation capacity (Dec 2025)</span><span class="v" id="nea-prod">661.57 MW</span></div>
-            <div class="nea-stat-row"><span class="k">Private sector capacity (hydro + solar)</span><span class="v teal" id="nea-cons">2,303.57 MW (2,186.63 hydro + 116.94 solar)</span></div>
-            <div class="nea-stat-row"><span class="k">Subsidiary companies capacity</span><span class="v" id="nea-yoy">646.4 MW</span></div>
-          </div>
-          <div class="info-card"><div class="info-card-title">Financial Performance (FY 2024/25)</div>
-            <div class="nea-stat-row"><span class="k">Electricity sales billed (Kartik–Poush 2082)</span><span class="v accent" id="nea-rev">NPR 58.58B</span></div>
-            <div class="nea-stat-row"><span class="k">— Of which from exports</span><span class="v" id="nea-exp">NPR 17.47B</span></div>
-            <div class="nea-stat-row"><span class="k">Total income (Kartik–Poush 2082)</span><span class="v" id="nea-inc">NPR 85.31B</span></div>
-            <div class="nea-stat-row"><span class="k">Pre-tax profit estimate (Kartik–Poush 2082)</span><span class="v" id="nea-pbt">NPR 8.06B</span></div>
-            <div class="nea-stat-row"><span class="k">Cash collected (Kartik–Poush 2082)</span><span class="v" style="color:var(--teal);" id="nea-pyoy">NPR 55.90B</span></div>
-            <div class="nea-stat-row"><span class="k">Operating expenses (Kartik–Poush 2082)</span><span class="v" id="nea-ass">NPR 77.24B</span></div>
-            <div class="nea-stat-row"><span class="k">Electricity purchase costs (Kartik–Poush 2082)</span><span class="v teal" id="nea-ryoy">NPR 45.24B</span></div>
-            <div class="nea-stat-row"><span class="k">Total customers (Poush 2082 / Dec 2025)</span><span class="v">6.11 million (61,13,198)</span></div>
-          </div>
-          <div class="info-card"><div class="info-card-title">Transmission Infrastructure</div>
-            <div class="nea-stat-row"><span class="k">Total transmission line length</span><span class="v accent">6,760 CKm</span></div>
-            <div class="nea-stat-row"><span class="k">— 132 kV lines</span><span class="v">4,136 km</span></div>
-            <div class="nea-stat-row"><span class="k">— 220 kV lines</span><span class="v">1,213 km</span></div>
-            <div class="nea-stat-row"><span class="k">— 400 kV lines</span><span class="v">644 km</span></div>
-            <div class="nea-stat-row"><span class="k">Transmission lines under construction</span><span class="v">2,034 CKm</span></div>
-            <div class="nea-stat-row"><span class="k">Total substation capacity</span><span class="v">14,123 MVA</span></div>
-          </div>
-          <div class="info-card"><div class="info-card-title">Power Trade &amp; Future Targets</div>
-            <div class="nea-stat-row"><span class="k">PPAs signed total</span><span class="v accent">&gt;10,300 MW</span></div>
-            <div class="nea-stat-row"><span class="k">Daily electricity export (avg)</span><span class="v teal">~500 MW</span></div>
-            <div class="nea-stat-row"><span class="k">Daily electricity import (dry season)</span><span class="v">500–700 MW</span></div>
-            <div class="nea-stat-row"><span class="k">Target installed capacity by 2028/29</span><span class="v accent">~10,000 MW</span></div>
-            <div class="nea-stat-row"><span class="k">Target export by 2035</span><span class="v">15,000 MW</span></div>
-            <div class="nea-stat-row"><span class="k">Import cost (Kartik–Poush 2082)</span><span class="v" id="nea-solppa">NPR 97.53 crore (12.80 crore units)</span></div>
-          </div>
-        </div>
-      </div>
-      <div class="panel-footer"><span>Source: NEA Self-Publication FY 2082/83 Q2 (Kartik–Poush 2082) · Annual Report FY 2081/82</span><a href="https://nea.org.np/monthlyUpdates" target="_blank">nea.org.np/monthlyUpdates ↗</a></div>
-    </div>
-
-    <!-- PPA PANEL -->
-    <div class="panel" id="panel-ppa">
-      <div class="ph"><div class="ph-tag">NEA Power Purchase Agreement</div><h2>PPA Rates <span class="source-badge badge-nea">NEA</span><span class="source-badge badge-erc" style="margin-left:0.4rem;">ERC 2026</span></h2><p>ROR, PROR, Storage and Solar power purchase rates. Includes new ERC February 2026 directive for reservoir-based projects.</p></div>
-      <div class="pb">
-        <div class="sec-tag">NEA Power Purchase Agreement</div>
-        <h2 class="sec-title">Power Purchase Rates <span class="source-badge badge-nea" style="margin-left:0.75rem;font-size:0.62rem;">NEA</span><span class="source-badge badge-erc" style="margin-left:0.4rem;font-size:0.62rem;">ERC 2026 Update</span></h2>
-        <div class="update-pill">New ERC Directive — February 2026</div>
-        <div class="ppa-new-banner" id="cv-erc-banner">
-          <div class="icon">🔔</div>
-          <div class="text" id="cv-erc-text"><strong>ERC Directive on Reservoir-Based Projects (2026):</strong> The Electricity Regulatory Commission (ERC) has issued new differentiated PPA rates for reservoir-based hydropower projects. For projects <strong>up to 100 MW</strong>, the cap is now <strong>NPR 14.80/unit (winter)</strong> and <strong>NPR 8.45/unit (monsoon)</strong>. For projects <strong>above 100 MW</strong>, rates are determined based on actual project costs. This replaces the previous uniform rate of NPR 12.40/NPR 7.10.</div>
-        </div>
-        <h3 style="font-size:0.85rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:1rem;font-family:'DM Mono',monospace;">ROR Rates — Up to 100 MW <small style="font-size:0.75em;text-transform:none;letter-spacing:0;font-family:'DM Sans',sans-serif;">(Effective 2074/01/14 · 3% annual escalation for 8 years)</small></h3>
-        <div class="tscroll"><table>
-          <tr><th>Option</th><th>Season</th><th>Period</th><th>Rate (Rs./kWh)</th><th>Min. Dry Energy</th></tr>
-          <tr><td rowspan="2"><strong>Option 1</strong><br><span style="color:var(--muted);font-size:0.78rem;">6 months each</span></td><td>Wet</td><td>Jestha 16 – Mangsir 15</td><td class="rate" id="ppa-ror-wet">4.80</td><td rowspan="2">30%</td></tr>
-          <tr><td>Dry</td><td>Mangsir 16 – Jestha 15</td><td class="rate" id="ppa-ror-dry">8.40</td></tr>
-          <tr><td rowspan="2"><strong>Option 2</strong></td><td>Wet</td><td>Baisakh – Mangsir</td><td class="rate">4.80</td><td rowspan="2">15%</td></tr>
-          <tr><td>Dry</td><td>Poush – Chaitra</td><td class="rate">8.40</td></tr>
-        </table></div>
-        <h3 style="font-size:0.85rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:1rem;font-family:'DM Mono',monospace;">Reservoir / Storage Project Rates</h3>
-        <div class="tscroll"><table>
-          <tr><th>Season</th><th>Period</th><th>Old Rate (Rs./kWh)</th><th>New Rate ≤100 MW (Rs./kWh)</th><th>Min. Dry Energy</th></tr>
-          <tr><td>Dry</td><td>Mangsir 16 – Jestha 15</td><td class="rate" id="ppa-stor-dry-old">12.40</td><td class="rate-hi" id="ppa-stor-dry-new">14.80 <span style="font-size:0.7rem;color:var(--muted);">(ERC 2026)</span></td><td>35%</td></tr>
-          <tr><td>Wet</td><td>Jestha 16 – Mangsir 15</td><td class="rate" id="ppa-stor-wet-old">7.10</td><td class="rate-hi" id="ppa-stor-wet-new">8.45 <span style="font-size:0.7rem;color:var(--muted);">(ERC 2026)</span></td><td>—</td></tr>
-        </table></div>
-        <div class="table-note"><strong>Storage Notes:</strong> If wet season energy &gt;50%, rate decreases by the excess %. If dry energy &lt;35%, treated as PROR. Active storage volume ≥ 15 days design discharge. For projects &gt;100 MW, ERC determines PPA rate based on actual project costs.</div>
-        <h3 style="font-size:0.85rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:1rem;font-family:'DM Mono',monospace;">Solar PPA (Competitive Bidding, 2024)</h3>
-        <div class="tscroll"><table>
-          <tr><th>Parameter</th><th>Detail</th></tr>
-          <tr><td>Maximum base tariff ceiling</td><td class="rate" id="ppa-sol-max">NPR 5.94 / unit</td></tr>
-          <tr><td>PPA duration</td><td id="ppa-sol-dur">25 years (fixed rate)</td></tr>
-          <tr><td>Construction period (&lt;10 MW)</td><td id="ppa-sol-sm">18 months from PPA date</td></tr>
-          <tr><td>Construction period (&gt;10 MW)</td><td>24 months from PPA date</td></tr>
-        </table></div>
-      </div>
-      <div class="panel-footer"><span>Source: NEA PPA Rate Board Decision 2074 + ERC Directive 2026</span><a href="https://nea.org.np" target="_blank">nea.org.np ↗</a></div>
-    </div>
-
-    <!-- DOED PANEL -->
-    <div class="panel" id="panel-doed">
-      <div class="ph"><div class="ph-tag">Department of Electricity Development</div><h2>DoED — Licensing Framework <span class="source-badge badge-doed">DoED</span></h2><p>Survey license and generation license process, document requirements, royalty structure, and fiscal incentives for hydropower projects.</p></div>
-      <div class="pb">
-        <div class="sec-tag">Department of Electricity Development</div>
-        <h2 class="sec-title">DoED — Licensing Framework <span class="source-badge badge-doed" style="margin-left:0.75rem;font-size:0.62rem;">DoED</span></h2>
-        <div style="margin-bottom:2.5rem;"><p style="font-size:0.85rem;color:var(--muted);line-height:1.8;max-width:860px;">The Department of Electricity Development (DoED) was established on 16 July 1993 under the Ministry of Water Resources. It is the primary authority for issuing survey licenses, generation licenses, transmission licenses, and distribution licenses.</p></div>
-        <h3 style="font-size:0.82rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:1.25rem;font-family:'DM Mono',monospace;">Licensing Process Flow</h3>
-        <div class="license-flow">
-          <div class="lf-step"><div class="lf-num">1</div><div class="lf-label">Pre-Application Consultation</div><div class="lf-sub">Engage DoED for guidance. Prepare project concept, maps, water resource data.</div></div>
-          <div class="lf-step"><div class="lf-num">2</div><div class="lf-label">Survey License Application</div><div class="lf-sub">Submit to DoED with company docs, MOA/AOA, financial capacity, technical proposal.</div></div>
-          <div class="lf-step"><div class="lf-num">3</div><div class="lf-label">DoED Review &amp; Field Visit</div><div class="lf-sub">DoED conducts site visit, stakeholder consultation, issues public notice (35-day objection window).</div></div>
-          <div class="lf-step"><div class="lf-num">4</div><div class="lf-label">Survey License Issued</div><div class="lf-sub">Typically within 30 days. Valid 2–5 years. Allows feasibility &amp; IEE/EIA studies.</div></div>
-          <div class="lf-step"><div class="lf-num">5</div><div class="lf-label">Generation License Application</div><div class="lf-sub">Submit DPR, approved IEE/EIA, financial closure evidence, PPA, community consent.</div></div>
-          <div class="lf-step"><div class="lf-num">6</div><div class="lf-label">Generation License Issued</div><div class="lf-sub">Within 120 days of complete application. Valid 35 years (extendable to 50).</div></div>
-        </div>
-        <div class="doed-grid">
-          <div class="doed-card"><div class="doed-card-title">Survey License Requirements</div><ul class="doed-list"><li>Certificate of Incorporation (OCR)</li><li>MOA / AOA of the applicant company</li><li>Citizenship certificates of all directors</li><li>Board resolution for application submission</li><li>Financial capability statement / bank guarantees</li><li>Technical proposal with river system, location, capacity</li><li>Topographic maps of project site</li><li>Application fee (15% of prescribed license fee)</li></ul></div>
-          <div class="doed-card"><div class="doed-card-title">Generation License Requirements</div><ul class="doed-list"><li>Valid Survey License certificate (certified copy)</li><li>Detailed Project Report (DPR) per DoED guidelines</li><li>Approved IEE or EIA report</li><li>Signed Power Purchase Agreement (PPA) with NEA</li><li>Financial closure evidence (30% equity minimum)</li><li>Land ownership/lease certificates (survey numbers)</li><li>Affected community consent letters</li><li>Application fee (33.33% of prescribed license fee)</li></ul></div>
-          <div class="doed-card"><div class="doed-card-title">License Timelines &amp; Validity</div><ul class="doed-list"><li>Survey License: issued within 30 days</li><li>Survey License validity: 2 years (extendable up to 5 years)</li><li>Generation License: issued within 120 days</li><li>Generation License term: 35 years (max 50)</li><li>Physical construction: must begin within 3 months</li><li>100% foreign investment permitted</li></ul></div>
-        </div>
-        <h3 style="font-size:0.82rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin:2.5rem 0 1.25rem;font-family:'DM Mono',monospace;">Royalty Structure</h3>
-        <div class="royalty-grid">
-          <div class="royalty-card"><h4>Capacity Royalty</h4><div class="tscroll"><table><tr><th>Period</th><th>Rate per kW/year</th></tr><tr><td>First 15 years</td><td class="rate">NPR 100 / kW</td></tr><tr><td>After 15 years</td><td class="rate">NPR 1,000 / kW</td></tr></table></div></div>
-          <div class="royalty-card"><h4>Energy Royalty</h4><div class="tscroll"><table><tr><th>Period</th><th>% of Average Tariff</th></tr><tr><td>First 15 years</td><td class="rate">2% of average tariff</td></tr><tr><td>After 15 years</td><td class="rate">10% of average tariff</td></tr></table></div></div>
-        </div>
-      </div>
-      <div class="panel-footer"><span>Source: Electricity Act 2049, Electricity Rules 2050, DoED Guidelines</span><a href="https://doed.gov.np" target="_blank">doed.gov.np ↗</a></div>
-    </div>
-
-    <!-- MOFE PANEL -->
-    <div class="panel" id="panel-mofe">
-      <div class="ph"><div class="ph-tag">Ministry of Forests and Environment</div><h2>MoFE — Environmental Clearance <span class="source-badge badge-mofe">MoFE / DoE</span></h2><p>EIA/IEE thresholds, MoFE approval process, forest and protected area clearances, and key environmental legislation.</p></div>
-      <div class="pb">
-        <div class="sec-tag">Ministry of Forests and Environment</div>
-        <h2 class="sec-title">MoFE — Environmental Clearance Framework <span class="source-badge badge-mofe" style="margin-left:0.75rem;font-size:0.62rem;">MoFE / DoE</span></h2>
-        <h3 style="font-size:0.82rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:1.25rem;font-family:'DM Mono',monospace;">EIA / IEE Thresholds for Hydropower</h3>
-        <div class="eia-threshold"><div class="eia-box micro"><div class="cap">&lt;1 MW</div><div class="type">Micro Hydro</div><div class="auth">No IEE/EIA required. Local government / Ward Office oversight. DoED permission still required.</div></div><div class="eia-box iee"><div class="cap">1 – 50 MW</div><div class="type">IEE Required</div><div class="auth">Initial Environmental Examination. Approved by concerned ministry (MoEWRI). Public consultation mandatory for projects &gt;5 MW.</div></div><div class="eia-box eia"><div class="cap">&gt;50 MW</div><div class="type">Full EIA Required</div><div class="auth">Environmental Impact Assessment. Must be approved by MoFE. Process: 6–12 months. In Protected Areas: EIA required above 10 MW.</div></div></div>
-        <h3 style="font-size:0.82rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin:2.5rem 0 1.25rem;font-family:'DM Mono',monospace;">EIA Approval Process (MoFE — for projects &gt;50 MW)</h3>
-        <div class="eia-process"><div class="ep-step"><div class="ep-icon">🔍</div><div class="ep-label">Screening &amp; Scoping</div><div class="ep-dur">~2–4 weeks</div></div><div class="ep-step"><div class="ep-icon">📋</div><div class="ep-label">Terms of Reference (TOR) Approval</div><div class="ep-dur">MoFE review</div></div><div class="ep-step"><div class="ep-icon">🏕️</div><div class="ep-label">Field Study &amp; Baseline Data</div><div class="ep-dur">~3–6 months</div></div><div class="ep-step"><div class="ep-icon">📢</div><div class="ep-label">15-Day Public Notice</div><div class="ep-dur">National newspaper</div></div><div class="ep-step"><div class="ep-icon">🤝</div><div class="ep-label">Public Hearing</div><div class="ep-dur">Project-affected VDC</div></div><div class="ep-step"><div class="ep-icon">📨</div><div class="ep-label">EIA Report Submission</div><div class="ep-dur">30-day MoFE review</div></div><div class="ep-step"><div class="ep-icon">✅</div><div class="ep-label">Final Approval</div><div class="ep-dur">MoFE decision</div></div></div>
-        <div class="env-cards"><div class="env-card"><h4>🌲 Forest &amp; Protected Area Clearances</h4><ul><li>Forest clearance required if project land falls under forest area</li><li>National Parks / Wildlife Reserves require clearance from DNPWC</li><li>In protected areas: EIA required for projects above 10 MW</li><li>Tree planting ratio: 1:10 (compensatory afforestation)</li></ul></div><div class="env-card"><h4>🌊 Environmental Management Plan (EMP)</h4><ul><li>EMP implementation monitored by Ministry of Energy (MoEWRI)</li><li>Developer must implement project as per approved EIA/IEE report</li><li>Minimum environmental flow (e-flow) must be maintained downstream</li><li>Annual environmental monitoring report required</li></ul></div><div class="env-card"><h4>📄 Key Environmental Laws</h4><ul><li>Environment Protection Act 2076 (2019)</li><li>Environment Protection Rules 2077 (2020)</li><li>Water Resources Act 2049 (1992)</li><li>Forest Act 2019</li><li>National Parks and Wildlife Protection Act 1973</li></ul></div><div class="env-card"><h4>⏱️ Typical Timeline</h4><ul><li>IEE (≤50 MW): typically 3–6 months from submission</li><li>EIA (&gt;50 MW): typically 6–12 months</li><li>Forest clearance: additional 2–4 months</li><li>Protected area clearance: additional 3–6 months</li></ul></div></div>
-      </div>
-      <div class="panel-footer"><span>Source: Environment Protection Act 2076, Environment Protection Rules 2077</span><a href="https://mofe.gov.np" target="_blank">mofe.gov.np ↗</a></div>
-    </div>
-
-    <!-- COMPLIANCE PANEL -->
-    <div class="panel" id="panel-compliance">
-      <div class="ph"><div class="ph-tag">Legal &amp; Regulatory</div><h2>Legal Framework &amp; Classifications <span class="source-badge badge-doed">DoED</span><span class="source-badge badge-erc" style="margin-left:0.4rem;">ERC</span></h2><p>Hydropower classification tables, core Acts and Regulations, and regulatory body responsibilities.</p></div>
-      <div class="pb">
-        <div class="sec-tag">Legal &amp; Regulatory</div>
-        <h2 class="sec-title">Legal Framework &amp; Classifications <span class="source-badge badge-doed" style="margin-left:0.75rem;font-size:0.62rem;">DoED</span></h2>
-        <div class="compliance-grid">
-          <div><h3 style="font-size:0.82rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:1rem;font-family:'DM Mono',monospace;">Administrative Classification</h3><div class="tscroll"><table><tr><th>Category</th><th>Capacity</th><th>Regulatory Body</th></tr><tr><td>Micro Hydro</td><td>&lt;1 MW</td><td>Local Government / Ward Office</td></tr><tr><td>Small Hydro</td><td>1–10 MW</td><td>DoED (simplified process)</td></tr><tr><td>Medium Hydro</td><td>10–25 MW</td><td>DoED (standard process)</td></tr><tr><td>Large Hydro</td><td>25–500 MW</td><td>DoED / Cabinet approval</td></tr><tr><td>Mega Projects</td><td>&gt;500 MW</td><td>Investment Board of Nepal (IBN)</td></tr></table></div></div>
-          <div><h3 style="font-size:0.82rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:1rem;font-family:'DM Mono',monospace;">Classification by Head</h3><div class="tscroll"><table><tr><th>Type</th><th>Head Range</th></tr><tr><td>Very Low Head</td><td>Up to 15 m</td></tr><tr><td>Low Head</td><td>Below 60 m</td></tr><tr><td>Medium Head</td><td>60–150 m</td></tr><tr><td>High Head</td><td>150–350 m</td></tr><tr><td>Very High Head</td><td>&gt;350 m</td></tr></table></div></div>
-        </div>
-        <div style="margin-top:2.5rem;"><h3 style="font-size:0.82rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:1rem;font-family:'DM Mono',monospace;">Core Legal Framework</h3><div class="tscroll"><table><tr><th>Act / Regulation</th><th>Year</th><th>Key Provisions</th></tr><tr><td><strong>Electricity Act (2049)</strong></td><td>1992</td><td>Primary legislation — licensing, GoN nationalization rights, license transfer</td></tr><tr><td><strong>Electricity Rules (2050)</strong></td><td>1993</td><td>Detailed procedures for survey/generation licenses, royalty schedule</td></tr><tr><td><strong>Water Resources Act (2049)</strong></td><td>1992</td><td>Regulates use of water resources for hydropower generation</td></tr><tr><td><strong>Environment Protection Act (2076)</strong></td><td>2019</td><td>Mandates EIA/IEE for development projects</td></tr><tr><td><strong>Hydropower Development Policy</strong></td><td>2001</td><td>Royalty structure, foreign investment rules, right of reversion</td></tr><tr><td><strong>ERC Directive on Reservoir PPA</strong></td><td>2026</td><td>New differentiated PPA rates; ERC authorised to set rates</td></tr></table></div></div>
-      </div>
-      <div class="panel-footer"><span>Source: Electricity Act 2049, Water Resources Act 2049, EPA 2076</span></div>
-    </div>
-
-    <!-- MANUALS PANEL -->
-    <div class="panel" id="panel-manuals">
-      <div class="ph"><div class="ph-tag">Reference Resources</div><h2>Technical Manuals &amp; Guidelines</h2><p>Official PDFs from DoED, NEA, and MoFE — click any card to open the document.</p></div>
-      <div class="pb">
-        <div class="sec-tag">Reference Resources</div>
-        <h2 class="sec-title">Technical Manuals &amp; Guidelines</h2>
-        <div class="manuals-grid" id="cv-manuals-grid">
-          <a class="manual-card" href="https://www.nea.org.np/admin/assets/uploads/supportive_docs/77790169.pdf" target="_blank" rel="noopener"><span class="manual-card-arrow">↗</span><div class="manual-icon">💣</div><div class="manual-cat">Construction &amp; Site</div><div class="manual-title">Explosive Quantity for Tunneling (2025)</div></a>
-          <a class="manual-card" href="https://doed.gov.np/downloadfile/Powerhouse_Design_Guidelines_1536050621.pdf" target="_blank" rel="noopener"><span class="manual-card-arrow">↗</span><div class="manual-icon">🏭</div><div class="manual-cat">Construction &amp; Site</div><div class="manual-title">Powerhouse Design Guidelines (DoED, 2018)</div></a>
-          <a class="manual-card" href="https://www.nea.org.np/admin/assets/uploads/supportive_docs/Grid_Code_2019.pdf" target="_blank" rel="noopener"><span class="manual-card-arrow">↗</span><div class="manual-icon">⚡</div><div class="manual-cat">Transmission</div><div class="manual-title">Grid Code for Transmission (NEA, 2019)</div></a>
-          <a class="manual-card" href="https://doed.gov.np/downloadfile/Guidelines_for_Study_of_Hydropower_Projects_1539940559.pdf" target="_blank" rel="noopener"><span class="manual-card-arrow">↗</span><div class="manual-icon">📐</div><div class="manual-cat">Feasibility &amp; Study</div><div class="manual-title">Guidelines for Study of Hydropower Projects (DoED, 2018)</div></a>
-          <a class="manual-card" href="https://mofe.gov.np/downloadfile/EIA_Manual_Hydropower_1537170822.pdf" target="_blank" rel="noopener"><span class="manual-card-arrow">↗</span><div class="manual-icon">🌿</div><div class="manual-cat">Environmental</div><div class="manual-title">Hydropower EIA Manual (MoFE, 2018)</div></a>
-          <a class="manual-card" href="https://doed.gov.np/downloadfile/Standard_Progress_Update_Format.pdf" target="_blank" rel="noopener"><span class="manual-card-arrow">↗</span><div class="manual-icon">📊</div><div class="manual-cat">Feasibility &amp; Study</div><div class="manual-title">Standard Progress Update Formats (DoED)</div></a>
-          <a class="manual-card" href="https://www.nea.org.np/admin/assets/uploads/supportive_docs/electricity_act_2049.pdf" target="_blank" rel="noopener"><span class="manual-card-arrow">↗</span><div class="manual-icon">⚖️</div><div class="manual-cat">Financial &amp; Legal</div><div class="manual-title">Electricity Act 2049 (1992) — Full Text</div></a>
-          <a class="manual-card" href="https://www.nerc.gov.np/downloadfile/right_share_directive_2077.pdf" target="_blank" rel="noopener"><span class="manual-card-arrow">↗</span><div class="manual-icon">📜</div><div class="manual-cat">Financial &amp; Legal</div><div class="manual-title">ERC Directives on Right Share Issues</div></a>
-          <a class="manual-card" href="https://www.nea.org.np/admin/assets/uploads/PPA_Rates.pdf" target="_blank" rel="noopener"><span class="manual-card-arrow">↗</span><div class="manual-icon">💱</div><div class="manual-cat">Financial &amp; Legal</div><div class="manual-title">NEA PPA Rates — Board Decision (Official PDF)</div></a>
-          <a class="manual-card" href="https://mofe.gov.np/downloadfile/Public_Hearing_Manual.pdf" target="_blank" rel="noopener"><span class="manual-card-arrow">↗</span><div class="manual-icon">👥</div><div class="manual-cat">Environmental</div><div class="manual-title">Manual for Conducting Public Hearings in EIA (MoFE)</div></a>
-          <a class="manual-card" href="https://mofe.gov.np/downloadfile/Gender_EIA_Manual.pdf" target="_blank" rel="noopener"><span class="manual-card-arrow">↗</span><div class="manual-icon">♀️</div><div class="manual-cat">Environmental</div><div class="manual-title">Manual for Addressing Gender Issues in EIA/IEE (MoFE)</div></a>
-          <a class="manual-card" href="https://doed.gov.np/downloadfile/Foreign_Exchange_Directive_2074.pdf" target="_blank" rel="noopener"><span class="manual-card-arrow">↗</span><div class="manual-icon">🏦</div><div class="manual-cat">Financial &amp; Legal</div><div class="manual-title">DoED Foreign Exchange Recommendation Directive (2074)</div></a>
-        </div>
-        <div style="margin-top:3rem;display:flex;flex-wrap:wrap;gap:1rem;">
-          <a href="https://doed.gov.np" target="_blank" style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.7rem 1.25rem;border:1px solid var(--border);color:var(--muted);text-decoration:none;font-size:0.78rem;transition:all 0.2s;" onmouseover="this.style.borderColor='#c8a96e';this.style.color='#c8a96e'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">🔗 DoED Official Website</a>
-          <a href="https://nea.org.np" target="_blank" style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.7rem 1.25rem;border:1px solid var(--border);color:var(--muted);text-decoration:none;font-size:0.78rem;transition:all 0.2s;" onmouseover="this.style.borderColor='#38b2ac';this.style.color='#38b2ac'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">🔗 NEA Official Website</a>
-          <a href="https://mofe.gov.np" target="_blank" style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.7rem 1.25rem;border:1px solid var(--border);color:var(--muted);text-decoration:none;font-size:0.78rem;transition:all 0.2s;" onmouseover="this.style.borderColor='#5bc85b';this.style.color='#5bc85b'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">🔗 MoFE Official Website</a>
-        </div>
-      </div>
-      <div class="panel-footer"><span>Source: DoED, NEA, MoFE official publications</span></div>
-    </div>
-
-
-    <!-- ══════════════════════════════════════════════════════════════
-     NEA ANNUAL REPORT PANEL  (FY 2081/82 · 2024/25)
-     Source: NEA Annual Report 40th Anniversary + Monthly Updates
-     Auto-updates from nea.org.np/monthlyUpdates via Claude API
-══════════════════════════════════════════════════════════════════ -->
-<div class="panel" id="panel-nea-report" style="position:relative;display:flex;flex-direction:column;height:100%;overflow:hidden;">
-
-  <!-- Panel header -->
-  <div class="ph">
-    <div class="ph-tag">Nepal Electricity Authority</div>
-    <h2>NEA Report — FY 2081/82 &amp; Q2 FY 2082/83
-      <span class="r-source rs-nea">NEA</span>
-      <span class="r-source rs-fy">Updated Dec 2025</span>
-      <span class="r-updated-badge" id="report-badge" style="display:none;">Auto-Updated</span>
-    </h2>
-    <p>NEA Annual Report FY 2081/82 + latest Q2 FY 2082/83 Self-Publication (Kartik–Poush 2082 / Oct–Dec 2025). Installed capacity updated to <strong style="color:var(--gold);">3,617.54 MW</strong>. Customers updated to <strong style="color:var(--gold);">6.11 million</strong>. Auto-fetches from <a href="https://www.nea.org.np/monthlyUpdates" target="_blank" style="color:var(--gold);text-decoration:none;">nea.org.np/monthlyUpdates</a>.</p>
-  </div>
-
-  <!-- Auto-update bar -->
-  <div class="report-update-bar">
-    <div class="rub-dot"></div>
-    <span id="report-update-label">Auto-updating from nea.org.np/monthlyUpdates · Last fetch: <span id="report-last-fetch">Loading…</span></span>
-    <button class="rub-fetch-btn" onclick="fetchNEAReport()">⟳ Refresh Now</button>
-  </div>
-
-  <!-- KPI Strip -->
-  <div class="report-kpi-strip" id="report-kpi-strip">
-    <div class="rkpi gold"><div class="rkpi-lbl">Installed Capacity (Dec 2025)</div><div class="rkpi-val gold" id="r-kpi-cap">3,617.54 MW</div><div class="rkpi-sub"><span class="rkpi-change rc-up">↑ ~105.95 MW added Q1 FY 2082/83</span></div></div>
-    <div class="rkpi teal"><div class="rkpi-lbl">Total Energy Available</div><div class="rkpi-val teal" id="r-kpi-avail">15,641 GWh</div><div class="rkpi-sub">NEA 34% · IPP 55% · Import 11%</div></div>
-    <div class="rkpi green"><div class="rkpi-lbl">Domestic Consumption</div><div class="rkpi-val green" id="r-kpi-cons">NPR 55.90B</div><div class="rkpi-sub">Cash collected Kartik–Poush 2082</div></div>
-    <div class="rkpi gold"><div class="rkpi-lbl">Net Export (FY 2024/25)</div><div class="rkpi-val gold" id="r-kpi-export">668 GWh</div><div class="rkpi-sub">Export 2,380 GWh · Import 1,712 GWh</div></div>
-    <div class="rkpi teal"><div class="rkpi-lbl">Peak Demand</div><div class="rkpi-val teal" id="r-kpi-peak">2,901 MW</div><div class="rkpi-sub">Recorded Ashad 18, 2082 (July 2025)</div></div>
-    <div class="rkpi green"><div class="rkpi-lbl">Total Customers</div><div class="rkpi-val green" id="r-kpi-cust">6.11 M</div><div class="rkpi-sub">61,13,198 · as of Poush 2082</div></div>
-  </div>
-
-  <!-- Scrollable body -->
-  <div class="pb" style="padding:2rem 2.5rem 3rem;">
-
-    <!-- LIVE MONTHLY DATA ─────────────────────────────────────── -->
-    <div class="r-section">
-      <div class="r-live-section">
-        <div class="r-live-header">
-          <div class="r-live-dot"></div>
-          <div class="r-live-title">Live System Data — Auto-fetched from NEA Monthly Updates</div>
-          <div class="r-live-ts" id="r-live-ts">Fetching…</div>
-        </div>
-        <div class="r-live-grid" id="r-live-grid">
-          <div class="r-live-cell">
-            <div class="r-live-cell-lbl">Current Demand</div>
-            <div class="r-live-cell-val gold" id="rl-demand">—</div>
-            <div class="r-live-cell-unit" id="rl-demand-u">fetching…</div>
-          </div>
-          <div class="r-live-cell">
-            <div class="r-live-cell-lbl">Total Generation</div>
-            <div class="r-live-cell-val teal" id="rl-gen">—</div>
-            <div class="r-live-cell-unit" id="rl-gen-u">fetching…</div>
-          </div>
-          <div class="r-live-cell">
-            <div class="r-live-cell-lbl">Export to India</div>
-            <div class="r-live-cell-val green" id="rl-export">—</div>
-            <div class="r-live-cell-unit" id="rl-export-u">fetching…</div>
-          </div>
-          <div class="r-live-cell">
-            <div class="r-live-cell-lbl">Import from India</div>
-            <div class="r-live-cell-val red" id="rl-import">—</div>
-            <div class="r-live-cell-unit" id="rl-import-u">fetching…</div>
-          </div>
-        </div>
-        <div class="r-live-note" id="r-live-note">
-          Data automatically fetched via Claude API from <a href="https://www.nea.org.np/monthlyUpdates" target="_blank">nea.org.np/monthlyUpdates</a>. 
-          Refreshes every 24 hours. Falls back to last-known NEA figures if fetch fails.
-          Latest monthly publication: <strong id="r-pub-name" style="color:var(--gold);">NEA Annual Report FY 2081/82</strong>
-        </div>
-      </div>
-    </div>
-
-    <!-- SECTION 1 — GENERATION ─────────────────────────────────── -->
-    <div class="r-section">
-      <div class="r-sec-tag">Generation Directorate</div>
-      <div class="r-sec-title">Power Generation — FY 2081/82 <span class="r-source rs-nea">NEA</span></div>
-
-      <div class="r-highlight">
-        <div class="rh-icon">⚡</div>
-        <div class="rh-text">
-          As of Poush 2082 (December 2025), Nepal's total installed capacity reached <strong>3,617.54 MW</strong> — NEA own: 661.57 MW, Subsidiaries: 646.4 MW, Private hydro: 2,186.63 MW, Private solar: 116.94 MW, Biogas: 6 MW. FY 2081/82 data: national system accessed <strong>15,641 GWh</strong>; NEA 34%, IPPs 55%, India imports 11%. Domestic consumption grew <strong>10.7%</strong> to 11,319 GWh. Peak demand <strong>2,901 MW</strong> on Ashad 18, 2082.
-        </div>
-      </div>
-
-      <div class="r-data-grid-2">
-        <div class="r-stat-card">
-          <div class="r-stat-card-title">Installed Capacity Breakdown (Poush 2082 / Dec 2025)</div>
-          <div class="r-row"><span class="k">Total Installed Capacity (Updated)</span><span class="v accent">3,617.54 MW</span></div>
-          <div class="r-row"><span class="k">NEA own hydro (grid-connected + isolated)</span><span class="v">583.16 MW</span></div>
-          <div class="r-row"><span class="k">NEA own thermal (diesel)</span><span class="v">53.41 MW</span></div>
-          <div class="r-row"><span class="k">NEA own solar</span><span class="v">25 MW</span></div>
-          <div class="r-row"><span class="k">NEA total own generation</span><span class="v accent">661.57 MW</span></div>
-          <div class="r-row"><span class="k">NEA Subsidiary companies</span><span class="v">646.4 MW</span></div>
-          <div class="r-row"><span class="k">Private sector hydro (IPPs)</span><span class="v">2,186.63 MW</span></div>
-          <div class="r-row"><span class="k">Private sector solar</span><span class="v">116.94 MW</span></div>
-          <div class="r-row"><span class="k">Biogas generation</span><span class="v">6 MW</span></div>
-          <div class="r-row"><span class="k">New IPPs commissioned (Q1 FY 2082/83)</span><span class="v">6 projects / 105.95 MW</span></div>
-        </div>
-        <div class="r-stat-card">
-          <div class="r-stat-card-title">Energy Generation &amp; Availability</div>
-          <div class="r-row"><span class="k">Total energy available in national system</span><span class="v accent">15,641 GWh</span></div>
-          <div class="r-row"><span class="k">— NEA + Subsidiaries share (34%)</span><span class="v">~5,318 GWh</span></div>
-          <div class="r-row"><span class="k">— IPP share (55%)</span><span class="v">~8,603 GWh</span></div>
-          <div class="r-row"><span class="k">— India imports (11%)</span><span class="v teal">1,712 GWh</span></div>
-          <div class="r-row"><span class="k">Domestic consumption (FY 2081/82)</span><span class="v green">11,319 GWh</span></div>
-          <div class="r-row"><span class="k">YoY consumption growth</span><span class="v green">+10.7%</span></div>
-          <div class="r-row"><span class="k">Peak demand recorded (Ashad 18, 2082)</span><span class="v accent">2,901 MW</span></div>
-          <div class="r-row"><span class="k">— Domestic component</span><span class="v">2,214 MW</span></div>
-          <div class="r-row"><span class="k">— Export at peak hour</span><span class="v">687 MW</span></div>
-          <div class="r-row"><span class="k">Max dry-season import (Poush 2081)</span><span class="v red">274 MW</span></div>
-        </div>
-      </div>
-
-      <!-- Seasonal generation pattern note -->
-      <div style="background:var(--surface);border:1px solid var(--border);padding:1.1rem 1.4rem;margin-top:0.5rem;">
-        <div style="font-size:0.7rem;font-weight:600;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase;font-family:'DM Mono',monospace;margin-bottom:0.75rem;">Seasonal Pattern — ROR vs Storage Generation</div>
-        <div style="font-size:0.8rem;color:var(--muted);line-height:1.8;">
-          Run-of-River (ROR) energy dominates during the monsoon and post-winter seasons, while storage (Kulekhani I, II, III — 106 MW combined) maintains balance during the dry season. Generation rises from Chaitra to Shrawan, then declines until Falgun — with peak generation in Shrawan–Bhadra (monsoon). In FY 2081/82, the generation from Kulekhani reservoir systems reached <strong style="color:var(--gold);">279.8 GWh</strong>, effectively supplementing reduced ROR output during winter months.
-        </div>
-      </div>
-    </div>
-
-    <!-- SECTION 2 — POWER TRADE ─────────────────────────────────── -->
-    <div class="r-section">
-      <div class="r-sec-tag">Power Trade</div>
-      <div class="r-sec-title">Electricity Export &amp; Import — FY 2081/82 <span class="r-source rs-nea">NEA</span><span class="r-source rs-live" style="margin-left:0.4rem;">Historic Year</span></div>
-
-      <div class="r-highlight">
-        <div class="rh-icon">🌏</div>
-        <div class="rh-text">
-          FY 2081/82 was a <strong>historic year</strong> for Nepal's electricity trade. Nepal began exporting electricity to <strong>Bangladesh</strong> for the first time (40 MW via Indian grid, from Kartik 20, 2081). Electricity exports to India increased <strong>22.33%</strong> to 2,380 GWh, and India granted approval for export of <strong>1,010 MW</strong> from 30 Nepali hydropower plants. Net export stood at <strong>668 GWh</strong> — a milestone for Nepal's energy trade balance.
-        </div>
-      </div>
-
-      <div class="r-achieve-grid">
-        <div class="r-achieve-card">
-          <div class="r-ach-icon">🇧🇩</div>
-          <div class="r-ach-label">Bangladesh Export — First Ever</div>
-          <div class="r-ach-val">40 MW</div>
-          <div class="r-ach-body">Nepal exported electricity to Bangladesh via Indian transmission (Dhalkebar–Muzaffarpur 400kV → Baharampur–Bheramara). Inaugural on Kartik 20, 2081, jointly launched by Nepal, India, and Bangladesh energy ministers.</div>
-        </div>
-        <div class="r-achieve-card">
-          <div class="r-ach-icon">📈</div>
-          <div class="r-ach-label">Export to India — YoY Growth</div>
-          <div class="r-ach-val">+22.33%</div>
-          <div class="r-ach-body">Total export to India reached 2,380 GWh in FY 2081/82. India approved export of 1,010 MW from 30 NEA/IPP projects. Nepal currently exports ~1,000 MW daily during monsoon season. In FY 2082/83, exports worth NPR 15B were achieved in first three months alone.</div>
-        </div>
-        <div class="r-achieve-card">
-          <div class="r-ach-icon">⚖️</div>
-          <div class="r-ach-label">Net Power Trade Balance</div>
-          <div class="r-ach-val">668 GWh</div>
-          <div class="r-ach-body">Export 2,380 GWh minus import 1,712 GWh = net export 668 GWh. Export revenue: NPR 17.47B. Electricity trade profit: NPR 4.57B (after deducting import costs of ~NPR 12.9B). Nepal shifting from net importer to net exporter.</div>
-        </div>
-      </div>
-
-      <div class="r-data-grid-2">
-        <div class="r-stat-card">
-          <div class="r-stat-card-title">Export Data (FY 2081/82)</div>
-          <div class="r-row"><span class="k">Total electricity export</span><span class="v green">2,380 GWh</span></div>
-          <div class="r-row"><span class="k">YoY export growth</span><span class="v green">+22.33%</span></div>
-          <div class="r-row"><span class="k">Export revenue</span><span class="v accent">NPR 17.47B</span></div>
-          <div class="r-row"><span class="k">Export to India (primary)</span><span class="v">Via IEX Day-Ahead + Real-Time Market</span></div>
-          <div class="r-row"><span class="k">Export to Bangladesh (historic)</span><span class="v">40 MW · via Indian grid</span></div>
-          <div class="r-row"><span class="k">India approval capacity</span><span class="v">1,010 MW from 30 projects</span></div>
-          <div class="r-row"><span class="k">Net income from power trade</span><span class="v accent">NPR 4.57B</span></div>
-          <div class="r-row"><span class="k">FY 2082/83 export (first 3 months)</span><span class="v green">NPR 15B</span></div>
-        </div>
-        <div class="r-stat-card">
-          <div class="r-stat-card-title">Import Data &amp; Cross-Border Lines</div>
-          <div class="r-row"><span class="k">Total electricity import</span><span class="v red">1,712 GWh</span></div>
-          <div class="r-row"><span class="k">Max dry-season import rate</span><span class="v red">274 MW (Poush 2081)</span></div>
-          <div class="r-row"><span class="k">Import cost</span><span class="v">~NPR 12.9B</span></div>
-          <div class="r-row"><span class="k">Dhalkebar–Muzaffarpur 400kV</span><span class="v">Capacity: 800 → 1,000 MW (upgrade agreed)</span></div>
-          <div class="r-row"><span class="k">Nijgadh–Harinya–Motihari 400kV</span><span class="v">Target: 2034–35</span></div>
-          <div class="r-row"><span class="k">Kohalpur–Lucknow 400kV</span><span class="v">Target: 2034–35</span></div>
-          <div class="r-row"><span class="k">Chamelia–Jaulijibi 220kV DC</span><span class="v">Target: 2027</span></div>
-          <div class="r-row"><span class="k">Tamor–Dhungesanghu 220kV</span><span class="v">PPP model — signed Poush 2, 2081</span></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- SECTION 3 — FINANCIALS ─────────────────────────────────── -->
-    <div class="r-section">
-      <div class="r-sec-tag">Financial Performance</div>
-      <div class="r-sec-title">Financial Results — FY 2081/82 <span class="r-source rs-nea">NEA Annual Report</span></div>
-
-      <!-- Mini KPI row -->
-      <div class="r-data-grid-4" style="margin-bottom:1.75rem;">
-        <div style="background:var(--surface);padding:1rem 1.1rem;">
-          <div style="font-family:'DM Mono',monospace;font-size:0.58rem;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.3rem;">Revenue from Sales</div>
-          <div style="font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:700;color:var(--gold);">NPR 125.27B</div>
-          <div style="font-size:0.62rem;color:var(--muted);margin-top:0.2rem;"><span style="color:#4ade80;">↑ 8.46% YoY</span></div>
-        </div>
-        <div style="background:var(--surface);padding:1rem 1.1rem;">
-          <div style="font-family:'DM Mono',monospace;font-size:0.58rem;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.3rem;">Total Revenue</div>
-          <div style="font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:700;color:var(--gold);">NPR 138.87B</div>
-          <div style="font-size:0.62rem;color:var(--muted);margin-top:0.2rem;">Incl. all income sources</div>
-        </div>
-        <div style="background:var(--surface);padding:1rem 1.1rem;">
-          <div style="font-family:'DM Mono',monospace;font-size:0.58rem;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.3rem;">Pre-Tax Profit</div>
-          <div style="font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:700;color:var(--gold);">NPR 9.06B</div>
-          <div style="font-size:0.62rem;color:var(--muted);margin-top:0.2rem;"><span style="color:var(--red);">↓ 37.32% YoY</span></div>
-        </div>
-        <div style="background:var(--surface);padding:1rem 1.1rem;">
-          <div style="font-family:'DM Mono',monospace;font-size:0.58rem;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.3rem;">Total Assets</div>
-          <div style="font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:700;color:var(--gold);">NPR 684.91B</div>
-          <div style="font-size:0.62rem;color:var(--muted);margin-top:0.2rem;"><span style="color:#4ade80;">↑ 6.2% YoY</span></div>
-        </div>
-      </div>
-
-      <div class="r-data-grid-2">
-        <div class="r-stat-card">
-          <div class="r-stat-card-title">Revenue Breakdown</div>
-          <div class="r-row"><span class="k">Revenue from electricity sales</span><span class="v accent">NPR 125.27B</span></div>
-          <div class="r-row"><span class="k">— Electricity export revenue</span><span class="v">NPR 17.47B</span></div>
-          <div class="r-row"><span class="k">YoY revenue growth</span><span class="v green">+8.46%</span></div>
-          <div class="r-row"><span class="k">Total revenue (all sources)</span><span class="v accent">NPR 138.87B</span></div>
-          <div class="r-row"><span class="k">Average selling price per unit</span><span class="v">NPR 9.44</span></div>
-          <div class="r-row"><span class="k">Online payment collected</span><span class="v green">NPR 34.33B</span></div>
-          <div class="r-row"><span class="k">— Previous year online payment</span><span class="v">NPR 27.44B</span></div>
-          <div class="r-row"><span class="k">Average units sold per customer</span><span class="v">1,978 units (up from 1,873)</span></div>
-          <div class="r-row"><span class="k">Average collection period</span><span class="v">45.84 days</span></div>
-        </div>
-        <div class="r-stat-card">
-          <div class="r-stat-card-title">Expenditure &amp; Profitability</div>
-          <div class="r-row"><span class="k">Total operating expenses</span><span class="v">NPR 97.79B</span></div>
-          <div class="r-row"><span class="k">YoY opex increase</span><span class="v red">+10.15%</span></div>
-          <div class="r-row"><span class="k">Electricity purchase costs</span><span class="v red">NPR 77.10B</span></div>
-          <div class="r-row"><span class="k">YoY electricity purchase cost rise</span><span class="v red">+11.73%</span></div>
-          <div class="r-row"><span class="k">Total expenditure (incl. interest, depreciation)</span><span class="v">NPR 129.81B</span></div>
-          <div class="r-row"><span class="k">Pre-tax profit</span><span class="v accent">NPR 9.06B</span></div>
-          <div class="r-row"><span class="k">YoY profit change</span><span class="v red">−37.32%</span></div>
-          <div class="r-row"><span class="k">Total assets</span><span class="v accent">NPR 684.91B</span></div>
-          <div class="r-row"><span class="k">YoY asset growth</span><span class="v green">+6.2%</span></div>
-        </div>
-      </div>
-
-      <div style="background:var(--surface);border:1px solid var(--border);padding:1.1rem 1.4rem;margin-top:0.5rem;">
-        <div style="font-size:0.7rem;font-weight:600;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase;font-family:'DM Mono',monospace;margin-bottom:0.65rem;">Note on Profit Decline</div>
-        <div style="font-size:0.79rem;color:var(--muted);line-height:1.8;">The 37.32% decline in pre-tax profit compared to FY 2080/81 is primarily attributable to the 11.73% increase in electricity purchase costs (NPR 77.10B) driven by higher IPP generation volumes, combined with increased interest payments, foreign exchange losses, and depreciation on expanded capital assets. Revenue growth of 8.46% could not fully offset the 10.15% rise in operating expenses.</div>
-      </div>
-    </div>
-
-    <!-- SECTION 4 — TRANSMISSION ─────────────────────────────────── -->
-    <div class="r-section">
-      <div class="r-sec-tag">Transmission Directorate</div>
-      <div class="r-sec-title">Transmission Infrastructure <span class="r-source rs-nea">NEA</span></div>
-
-      <div class="r-data-grid-2">
-        <div class="r-stat-card">
-          <div class="r-stat-card-title">Transmission Lines (Existing)</div>
-          <div class="r-row"><span class="k">Total transmission line length</span><span class="v accent">6,760 CKm</span></div>
-          <div class="r-row"><span class="k">— 400 kV lines</span><span class="v">644 km</span></div>
-          <div class="r-row"><span class="k">— 220 kV lines</span><span class="v">1,213 km</span></div>
-          <div class="r-row"><span class="k">— 132 kV lines</span><span class="v">4,136 km</span></div>
-          <div class="r-row"><span class="k">— 66 kV lines</span><span class="v">514 km</span></div>
-          <div class="r-row"><span class="k">Capacity added in FY 2024/25</span><span class="v teal">253 CKm</span></div>
-          <div class="r-row"><span class="k">Transmission lines under construction</span><span class="v">2,034 CKm</span></div>
-        </div>
-        <div class="r-stat-card">
-          <div class="r-stat-card-title">Substations &amp; Roadmap</div>
-          <div class="r-row"><span class="k">Total substation capacity</span><span class="v accent">14,123 MVA</span></div>
-          <div class="r-row"><span class="k">Substations under construction</span><span class="v">6,338.5 MVA</span></div>
-          <div class="r-row"><span class="k">Substation automation (grid SSs)</span><span class="v">52 substations (FY 2082/83)</span></div>
-          <div class="r-row"><span class="k">Transmission line roadmap (2035 target)</span><span class="v">17,446 CKm</span></div>
-          <div class="r-row"><span class="k">Substation capacity roadmap (2035)</span><span class="v">40,000 MVA</span></div>
-          <div class="r-row"><span class="k">Current line length (from 6,507 → target)</span><span class="v teal">6,760 → 17,446 CKm</span></div>
-          <div class="r-row"><span class="k">Private sector in transmission (PPP)</span><span class="v green">First ever — Poush 2081</span></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- SECTION 5 — DISTRIBUTION & CUSTOMERS ─────────────────────── -->
-    <div class="r-section">
-      <div class="r-sec-tag">Distribution &amp; Customers</div>
-      <div class="r-sec-title">Distribution &amp; Consumer Data <span class="r-source rs-nea">NEA FY 2081/82</span></div>
-
-      <div class="r-data-grid-2">
-        <div class="r-stat-card">
-          <div class="r-stat-card-title">Consumer Statistics</div>
-          <div class="r-row"><span class="k">Total customers (Poush 2082 / Dec 2025)</span><span class="v accent">6.11 million (61,13,198)</span></div>
-          <div class="r-row"><span class="k">— NEA direct customers</span><span class="v">57,85,028</span></div>
-          <div class="r-row"><span class="k">— Community/cooperative customers</span><span class="v">3,28,170</span></div>
-          <div class="r-row"><span class="k">Electrification (ward level)</span><span class="v green">97.6%</span></div>
-          <div class="r-row"><span class="k">Per capita annual consumption</span><span class="v">465 units (up from 420)</span></div>
-          <div class="r-row"><span class="k">Average units sold per customer</span><span class="v">1,978 units</span></div>
-          <div class="r-row"><span class="k">Free electricity (≤5A connected load HHs)</span><span class="v">176.71 M units to 2.07M HHs</span></div>
-          <div class="r-row"><span class="k">Electrification (local unit level)</span><span class="v">95.18%</span></div>
-        </div>
-        <div class="r-stat-card">
-          <div class="r-stat-card-title">Distribution Quality &amp; Losses</div>
-          <div class="r-row"><span class="k">System electricity losses</span><span class="v">12.26%</span></div>
-          <div class="r-row"><span class="k">YoY loss reduction</span><span class="v green">−0.47%</span></div>
-          <div class="r-row"><span class="k">SAIFI (international reliability index)</span><span class="v">Implementation started FY 2081/82</span></div>
-          <div class="r-row"><span class="k">Susta electrification (Nawalparasi)</span><span class="v green">First-ever — via Bholunge Bridge</span></div>
-          <div class="r-row"><span class="k">Fully electrified local levels (95–100%)</span><span class="v">590</span></div>
-          <div class="r-row"><span class="k">75–95% electrified local levels</span><span class="v">72</span></div>
-          <div class="r-row"><span class="k">50–75% electrified local levels</span><span class="v">33</span></div>
-          <div class="r-row"><span class="k">DMS (Document Management System)</span><span class="v">ERC online DMS — implemented 2081</span></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- SECTION 6 — MILESTONES TIMELINE ────────────────────────── -->
-    <div class="r-section">
-      <div class="r-sec-tag">Key Milestones</div>
-      <div class="r-sec-title">FY 2081/82 — Year in Review <span class="r-source rs-2081">Historic Year</span></div>
-
-      <div class="r-timeline">
-        <div class="r-tl-item">
-          <div class="r-tl-left"><div class="r-tl-month">Baisakh<br>2081</div><div class="r-tl-dot filled"></div><div class="r-tl-line"></div></div>
-          <div class="r-tl-body"><div class="r-tl-title">20-Project Commissioning Drive Begins</div><div class="r-tl-desc">From Baisakh to Chaitra 2081 BS, 456.45 MW added from 20 projects (18 hydro, 2 solar). Largest single-year capacity addition in recent history.</div></div>
-        </div>
-        <div class="r-tl-item">
-          <div class="r-tl-left"><div class="r-tl-month">Kartik<br>2081</div><div class="r-tl-dot filled"></div><div class="r-tl-line"></div></div>
-          <div class="r-tl-body"><div class="r-tl-title">🇧🇩 First Electricity Export to Bangladesh</div><div class="r-tl-desc">On Kartik 20, Nepal exported 40 MW to Bangladesh via Dhalkebar–Muzaffarpur–Baharampur–Bheramara route. Jointly launched by Nepal, India, and Bangladesh ministers — a historic tripartite milestone.</div></div>
-        </div>
-        <div class="r-tl-item">
-          <div class="r-tl-left"><div class="r-tl-month">Mangsir<br>2081</div><div class="r-tl-dot filled"></div><div class="r-tl-line"></div></div>
-          <div class="r-tl-body"><div class="r-tl-title">Middle Bhotekoshi 102 MW — Final Testing Phase</div><div class="r-tl-desc">102 MW Middle Bhotekoshi Hydropower Project by MBJCL completed construction and entered final testing. Among the largest NEA subsidiary projects commissioned in this cycle.</div></div>
-        </div>
-        <div class="r-tl-item">
-          <div class="r-tl-left"><div class="r-tl-month">Poush<br>2081</div><div class="r-tl-dot filled"></div><div class="r-tl-line"></div></div>
-          <div class="r-tl-body"><div class="r-tl-title">Private Sector in Transmission (First Ever)</div><div class="r-tl-desc">Tamor–Dhungesanghu 220 kV transmission line agreement signed under PPP model — the first time private sector has participated in transmission construction in Nepal's history.</div></div>
-        </div>
-        <div class="r-tl-item">
-          <div class="r-tl-left"><div class="r-tl-month">Falgun<br>2081</div><div class="r-tl-dot filled"></div><div class="r-tl-line"></div></div>
-          <div class="r-tl-body"><div class="r-tl-title">Cross-Border Transmission Agreements (India)</div><div class="r-tl-desc">Nepal-India Joint Secretary Level Energy Meeting agreed: Nijgadh–Motihari 400kV + Kohalpur–Lucknow 400kV by 2034–35; Dhalkebar–Muzaffarpur upgraded to 1,000 MW; Chamelia–Jaulijibi 220kV DC by 2027.</div></div>
-        </div>
-        <div class="r-tl-item">
-          <div class="r-tl-left"><div class="r-tl-month">Chaitra<br>2081</div><div class="r-tl-dot filled"></div><div class="r-tl-line"></div></div>
-          <div class="r-tl-body"><div class="r-tl-title">Industrial Tariff Dispute Resolution + Energy Roadmap</div><div class="r-tl-desc">Chaitra 29: NEA–industrial consumers tariff dispute agreed for resolution. GoN Energy Development Roadmap finalized: 28,500 MW by 2035 (15,000 MW export + 13,500 MW domestic); USD 46.5B investment needed.</div></div>
-        </div>
-        <div class="r-tl-item">
-          <div class="r-tl-left"><div class="r-tl-month">Ashad 18<br>2082</div><div class="r-tl-dot filled"></div></div>
-          <div class="r-tl-body"><div class="r-tl-title">Record Peak Demand — 2,901 MW</div><div class="r-tl-desc">Nepal set an all-time peak demand record of 2,901 MW, with 2,214 MW domestic and 687 MW exported simultaneously to India. Demonstrates NEA system capacity and export capability at peak conditions.</div></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- SECTION 7 — PROJECTS UNDER CONSTRUCTION ─────────────────── -->
-    <div class="r-section">
-      <div class="r-sec-tag">Projects Pipeline</div>
-      <div class="r-sec-title">Projects Under Construction (NEA Subsidiaries) <span class="r-source rs-nea">NEA</span></div>
-
-      <div class="r-data-grid-3">
-        <div class="r-stat-card">
-          <div class="r-stat-card-title">NEA Subsidiary Projects (Active)</div>
-          <div class="r-row"><span class="k">Sanjen Hydropower (SJCL)</span><span class="v">42.5 MW</span></div>
-          <div class="r-row"><span class="k">Rasuwagadhi (RGHPCL)</span><span class="v">111 MW</span></div>
-          <div class="r-row"><span class="k">Madhya Bhotekoshi (MBJCL)</span><span class="v">102 MW ✓ (testing)</span></div>
-          <div class="r-row"><span class="k">Upper Seti (CSHC)</span><span class="v">140 MW — target FY 2027/28</span></div>
-          <div class="r-row"><span class="k">Budi Gandaki (NEA direct)</span><span class="v">600 MW — Dhalkebar SS</span></div>
-          <div class="r-row"><span class="k">Tanahun Hydropower</span><span class="v">140 MW — Gandaki Province</span></div>
-          <div class="r-row"><span class="k">Projects under DoED review</span><span class="v">109 projects / 11,651 MW</span></div>
-        </div>
-        <div class="r-stat-card">
-          <div class="r-stat-card-title">Transmission Projects (Under Construction)</div>
-          <div class="r-row"><span class="k">Chilime Hub GIS Substation</span><span class="v">Completed</span></div>
-          <div class="r-row"><span class="k">Bajhang Substation</span><span class="v">Completed</span></div>
-          <div class="r-row"><span class="k">Trishuli 3A tailrace tunnel</span><span class="v">Ongoing</span></div>
-          <div class="r-row"><span class="k">Substation Automation System</span><span class="v">52 grid SSs — FY 2082/83</span></div>
-          <div class="r-row"><span class="k">400 kV PTCN line</span><span class="v">India–Dhalkebar commissioned</span></div>
-          <div class="r-row"><span class="k">Transmission lines under construction</span><span class="v">2,034 CKm</span></div>
-          <div class="r-row"><span class="k">Substations under construction</span><span class="v">6,338.5 MVA</span></div>
-        </div>
-        <div class="r-stat-card">
-          <div class="r-stat-card-title">Energy Development Roadmap — 2035</div>
-          <div class="r-row"><span class="k">Target installed capacity</span><span class="v accent">28,500 MW</span></div>
-          <div class="r-row"><span class="k">— For domestic consumption</span><span class="v">13,500 MW</span></div>
-          <div class="r-row"><span class="k">— For export</span><span class="v">15,000 MW</span></div>
-          <div class="r-row"><span class="k">Per capita consumption target</span><span class="v">1,500 units/year</span></div>
-          <div class="r-row"><span class="k">Annual domestic demand target</span><span class="v">40,710 GWh</span></div>
-          <div class="r-row"><span class="k">Transmission line target</span><span class="v">17,446 CKm</span></div>
-          <div class="r-row"><span class="k">Investment required</span><span class="v accent">USD 46.5B (NPR 64T)</span></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- SECTION 8 — POLICY & SOCIAL ─────────────────────────────── -->
-    <div class="r-section">
-      <div class="r-sec-tag">Policy &amp; Social Programs</div>
-      <div class="r-sec-title">Policy Reforms &amp; Social Initiatives <span class="r-source rs-nea">FY 2081/82</span></div>
-
-      <div class="r-data-grid-2">
-        <div class="r-stat-card">
-          <div class="r-stat-card-title">Key Policy Reforms</div>
-          <div class="r-row"><span class="k">People's Hydropower Program revival</span><span class="v">Collateral-free loans NPR 2L–5L at subsidized rate</span></div>
-          <div class="r-row"><span class="k">ERC Document Management System</span><span class="v">Online DMS — application tracking live</span></div>
-          <div class="r-row"><span class="k">Private sector transmission</span><span class="v">PPP model introduced (first ever)</span></div>
-          <div class="r-row"><span class="k">Industrial tariff dispute resolution</span><span class="v">5% dues as guarantee — Chaitra 29, 2081</span></div>
-          <div class="r-row"><span class="k">SAIFI/SAIDI reliability indices</span><span class="v">International standards — implementation started</span></div>
-          <div class="r-row"><span class="k">Battery Storage R&amp;D</span><span class="v">Studies initiated for PSH and BESS</span></div>
-        </div>
-        <div class="r-stat-card">
-          <div class="r-stat-card-title">Social Impact</div>
-          <div class="r-row"><span class="k">Population with electricity access</span><span class="v green">99% (ward-level study)</span></div>
-          <div class="r-row"><span class="k">Fully electrified local levels</span><span class="v">590 of 753</span></div>
-          <div class="r-row"><span class="k">Free electricity beneficiaries</span><span class="v">2.07 million households</span></div>
-          <div class="r-row"><span class="k">Susta electrification (Nawalparasi)</span><span class="v green">First-ever grid connection</span></div>
-          <div class="r-row"><span class="k">Online payment growth</span><span class="v green">NPR 27.44B → 34.33B</span></div>
-          <div class="r-row"><span class="k">Royalty distribution to local govts</span><span class="v">50% local, 25% area, 25% population</span></div>
-        </div>
-      </div>
-    </div>
-
-
-    <!-- ══ NEW: Q2 FY 2082/83 QUARTERLY DATA ══ -->
-    <div class="r-section">
-      <div class="r-sec-tag">Q2 FY 2082/83 Self-Publication</div>
-      <div class="r-sec-title">NEA Quarterly Update — Kartik to Poush 2082 <span class="r-source rs-live">Oct–Dec 2025</span></div>
-
-      <div class="r-highlight">
-        <div class="rh-icon">📋</div>
-        <div class="rh-text">
-          NEA's FY 2082/83 Q2 Self-Publication (स्वतःप्रकाशन) covers Kartik–Poush 2082 (Oct–Dec 2025). Total installed capacity reached <strong>3,617.54 MW</strong>. Six new IPPs commissioned in Q1 added <strong>105.95 MW</strong>. Eight hydropower projects (947.585 MW combined) completed Grid Impact Studies (GIS) during the period. Total customers reached <strong>6.11 million</strong> (61,13,198). Electricity export in Q1–Q2 generated revenue of <strong>NPR 20.06B</strong> from 2.89 billion units.
-        </div>
-      </div>
-
-      <div class="r-data-grid-2">
-        <div class="r-stat-card">
-          <div class="r-stat-card-title">Financial Summary — Kartik to Poush 2082 (Cumulative)</div>
-          <div class="r-row"><span class="k">Electricity export (units)</span><span class="v green">2.89 billion units</span></div>
-          <div class="r-row"><span class="k">Export revenue</span><span class="v accent">NPR 20.06B (20 arba 6 crore 93 lakh)</span></div>
-          <div class="r-row"><span class="k">Electricity import (units)</span><span class="v red">12.80 crore units</span></div>
-          <div class="r-row"><span class="k">Import cost</span><span class="v red">NPR 97.53 crore</span></div>
-          <div class="r-row"><span class="k">Electricity purchased from producers</span><span class="v">8.18 billion units → NPR 45.24B</span></div>
-          <div class="r-row"><span class="k">Revenue from electricity sales (billed)</span><span class="v accent">NPR 58.58B</span></div>
-          <div class="r-row"><span class="k">Cash collected from electricity sales</span><span class="v green">NPR 55.90B</span></div>
-          <div class="r-row"><span class="k">Operating expenses</span><span class="v">NPR 77.24B</span></div>
-          <div class="r-row"><span class="k">Total income (electricity + interest + other)</span><span class="v accent">NPR 85.31B</span></div>
-          <div class="r-row"><span class="k">Pre-tax profit estimate</span><span class="v green">NPR 8.06B</span></div>
-          <div class="r-row"><span class="k">Development budget received (FY 2082/83)</span><span class="v">NPR 2.50B (GoN equity + loan)</span></div>
-          <div class="r-row"><span class="k">Foreign development expenditure (direct)</span><span class="v">NPR 10.64B (Kartik–Poush 2082)</span></div>
-        </div>
-        <div class="r-stat-card">
-          <div class="r-stat-card-title">New Projects — IPPs Commissioned (Q1 FY 2082/83)</div>
-          <div class="r-row"><span class="k">Sagu Khola HPP — Him Parbat Hydropower (Dolakha)</span><span class="v teal">20 MW · COD: 2082/06/25</span></div>
-          <div class="r-row"><span class="k">Thulo Khola HPP — Samyukta Urja (Myagdi)</span><span class="v teal">21.3 MW · COD: 2082/05/09</span></div>
-          <div class="r-row"><span class="k">Buku Kapati HPP — Him Star Urja (Okhaldhunga)</span><span class="v teal">5 MW · COD: 2082/05/14</span></div>
-          <div class="r-row"><span class="k">Upper Rahughat HPP — Tundi Power (Myagdi)</span><span class="v teal">48.5 MW · COD: 2082/07/07</span></div>
-          <div class="r-row"><span class="k">Upper Gaddigad HPP — Shaileshwari (Doti)</span><span class="v teal">1.55 MW · COD: 2082/07/09</span></div>
-          <div class="r-row"><span class="k">Daram Khola HPP — Daram Khola Hydro (Baglung/Gulmi)</span><span class="v teal">9.6 MW · COD: 2082/07/23</span></div>
-          <div class="r-row"><span class="k">Total new capacity (Q1)</span><span class="v accent">105.95 MW (6 projects)</span></div>
-          <div class="r-row"><span class="k">Rasuwagadhi HPP (RGHPCL)</span><span class="v green">111 MW — commercial operation since Poush 16, 2081; halted by flood Ashadh 24, 2082 — restoration ongoing</span></div>
-          <div class="r-row"><span class="k">Sanjen Upper HPP (SJCL)</span><span class="v green">14.8 MW — commercial since 2080/06/21</span></div>
-          <div class="r-row"><span class="k">Sanjen HPP (SJCL)</span><span class="v green">42.5 MW — commercial since 2081/09/01</span></div>
-        </div>
-      </div>
-
-      <div class="r-data-grid-2" style="margin-top:1.25rem;">
-        <div class="r-stat-card">
-          <div class="r-stat-card-title">GIS-Cleared HPPs — Kartik to Poush 2082</div>
-          <div class="r-row"><span class="k">Super Siwa Khola HPP</span><span class="v teal">9.6 MW · SS: Khungri (COD 28/29)</span></div>
-          <div class="r-row"><span class="k">Bajra Madi HPP</span><span class="v teal">31 MW · SS: Khungri (COD 28/29)</span></div>
-          <div class="r-row"><span class="k">Lower Balephi HPP</span><span class="v teal">22.1 MW · SS: Khungri (COD 28/29)</span></div>
-          <div class="r-row"><span class="k">Lower Chepe HPP</span><span class="v teal">9.7 MW · SS: Dhungesangu (COD 30/31)</span></div>
-          <div class="r-row"><span class="k">Illep Tatopani Khola HPP</span><span class="v teal">23.685 MW · SS: Paudi Amarai (COD 28/29)</span></div>
-          <div class="r-row"><span class="k">Menchet Khola HPP</span><span class="v teal">7 MW · SS: Lapan (COD 31/32)</span></div>
-          <div class="r-row"><span class="k">Super Ankhu Khola HPP</span><span class="v teal">23.5 MW · SS: Dadakhet (COD 27/28)</span></div>
-          <div class="r-row"><span class="k">Uttar Ganga HPP</span><span class="v teal">821 MW · SS: Lamahi (COD 37/38)</span></div>
-          <div class="r-row"><span class="k">Total GIS-cleared capacity (Kartik–Poush)</span><span class="v accent">947.585 MW (8 HPPs)</span></div>
-        </div>
-        <div class="r-stat-card">
-          <div class="r-stat-card-title">NEA Staff Strength (Poush 2082)</div>
-          <div class="r-row"><span class="k">Managing Director</span><span class="v">Hitendra Dev Shakya</span></div>
-          <div class="r-row"><span class="k">Total sanctioned posts</span><span class="v accent">11,433</span></div>
-          <div class="r-row"><span class="k">— Officer level (Technical + Admin)</span><span class="v">2,641 sanctioned / 1,900 working</span></div>
-          <div class="r-row"><span class="k">— Assistant level (Technical + Admin)</span><span class="v">8,782 sanctioned / 6,744 working</span></div>
-          <div class="r-row"><span class="k">Total working staff</span><span class="v teal">8,652</span></div>
-          <div class="r-row"><span class="k">Contract / on deputation staff</span><span class="v">208</span></div>
-          <div class="r-row"><span class="k">Number of active directorates</span><span class="v">9</span></div>
-          <div class="r-row"><span class="k">Complaints received (Q2)</span><span class="v">12,393 received / 12,274 resolved</span></div>
-          <div class="r-row"><span class="k">RTI requests (Q2)</span><span class="v">3 received / 1 fulfilled / 2 in process</span></div>
-          <div class="r-row"><span class="k">Electrification — ward level</span><span class="v green">97.6%</span></div>
-          <div class="r-row"><span class="k">Electrification — local unit level</span><span class="v green">95.18%</span></div>
-          <div class="r-row"><span class="k">National electrification (all sources)</span><span class="v green">~98% (Ashadh 2081/82)</span></div>
-        </div>
-      </div>
-
-      <div style="background:var(--surface);border:1px solid var(--border);padding:1.1rem 1.4rem;margin-top:1.25rem;">
-        <div style="font-size:0.7rem;font-weight:600;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase;font-family:'DM Mono',monospace;margin-bottom:0.75rem;">Key Projects Under NEA Subsidiary Companies (Status: Poush 2082)</div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;font-size:0.79rem;color:var(--muted);line-height:1.8;">
-          <div><strong style="color:var(--gold);">Chainpur Seti HPP — 210 MW</strong> (semi-storage, Seti River, Sethi Koshi Province)<br>Annual generation: 1,206.67 GWh (371.97 GWh dry + 834.70 GWh wet). Under "Nepal's Water, People's Investment" program. EIA approved; Generation License obtained.</div>
-          <div><strong style="color:var(--gold);">Budhi Gandaki Prok HPP — 81 MW</strong><br>Detailed feasibility complete, EIA approved, Energy Lock + Connection Agreement signed with NEA, Generation License issued 2081/09/02.</div>
-          <div><strong style="color:var(--gold);">Chumchhet Syarkhola HPP — 45 MW</strong> (Gorkha)<br>DPR complete, EIA approved (in process), Energy Lock + Connection Agreement signed, Generation License issued 2082/08/05.</div>
-          <div><strong style="color:var(--gold);">Budhi Gandaki Prok-1 — 93 MW</strong> (semi-storage, Gorkha)<br>Survey license obtained 2079/03/15; protected area study clearance received 2081/07/26 after delay; detailed feasibility and environmental study in progress.</div>
-          <div><strong style="color:var(--gold);">Chilime–Seti HPP — 87 MW</strong> (Bajhang, semi-storage)<br>DPR complete, EIA approved, land acquisition done, Energy Lock + Connection Agreement signed, Generation License issued 2082/10/28.</div>
-          <div><strong style="color:var(--gold);">Sanjen Hydropower (SJCL)</strong><br>Sanjen Upper (14.8 MW): operational since 2080/06/21. Sanjen HPP (42.5 MW): operational since 2081/09/01. Both evacuating via Chilime–Trishuli 220 kV national line.</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Source footer -->
-    <div style="background:var(--surface);border:1px solid var(--border);padding:1.1rem 1.4rem;margin-top:1rem;display:flex;align-items:flex-start;gap:1rem;flex-wrap:wrap;">
-      <div style="flex:1;min-width:240px;">
-        <div style="font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--gold);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:0.5rem;">Sources &amp; Verification</div>
-        <div style="font-size:0.75rem;color:var(--muted);line-height:1.8;">
-          Primary: NEA Self-Publication FY 2082/83 Q2 (Kartik–Poush 2082 / Oct–Dec 2025, PDF ID: 36771827, Author: Punam Joshi, Published: March 2026) · NEA Annual Report FY 2081/82 (40th Anniversary) · Data verified via Spotlight Nepal, Urja Khabar. Live updates auto-fetched via Claude API from <a href="https://www.nea.org.np/monthlyUpdates" target="_blank" style="color:var(--teal);text-decoration:none;">nea.org.np/monthlyUpdates</a>.
-        </div>
-      </div>
-      <div style="display:flex;flex-direction:column;gap:0.5rem;">
-        <a href="https://www.nea.org.np/monthlyUpdates" target="_blank" style="display:inline-flex;align-items:center;gap:0.4rem;padding:0.5rem 1rem;border:1px solid var(--border);color:var(--muted);text-decoration:none;font-size:0.73rem;transition:all 0.2s;" onmouseover="this.style.borderColor='#38b2ac';this.style.color='#38b2ac'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">🔗 NEA Monthly Updates</a>
-        <a href="https://nea.org.np/annual_report" target="_blank" style="display:inline-flex;align-items:center;gap:0.4rem;padding:0.5rem 1rem;border:1px solid var(--border);color:var(--muted);text-decoration:none;font-size:0.73rem;transition:all 0.2s;" onmouseover="this.style.borderColor='#c8a96e';this.style.color='#c8a96e'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">🔗 NEA Annual Reports</a>
-      </div>
-    </div>
-
-  </div><!-- /pb -->
-</div><!-- /panel-nea-report -->
-
-  </div><!-- /panel-wrap -->
-</div><!-- /main -->
-
-<script>
-/* ══════════════════════════════════════════════
-   ADMIN SYNC — reads from localStorage on load
-   Key: civilopedia_content (set by admin dashboard)
-══════════════════════════════════════════════ */
-(function applyAdminSync() {
-  try {
-    var d = JSON.parse(localStorage.getItem('civilopedia_content') || '{}');
-    if (!d || Object.keys(d).length === 0) return;
-
-    var bar = document.getElementById('admin-sync-bar');
-
-    // ── HERO ──
-    if (d.hero) {
-      var h = d.hero;
-      if (h.eyebrow) { var ey = document.getElementById('cv-eyebrow'); if(ey) ey.textContent = h.eyebrow; }
-      if (h.line1 || h.line2) {
-        var h1 = document.getElementById('cv-headline');
-        if(h1) h1.innerHTML = (h.line1||'Comprehensive Hydropower') + '<br>' + (h.line2||'Development Reference');
-      }
-      if (h.sub) { var sb = document.getElementById('cv-sub'); if(sb) sb.textContent = h.sub; }
-      // Stats bar
-      var smap = [[h.s1v,'sv1',h.s1l,'sl1'],[h.s2v,'sv2',h.s2l,'sl2'],[h.s3v,'sv3',h.s3l,'sl3'],[h.s4v,'sv4',h.s4l,'sl4'],[h.s5v,'sv5',h.s5l,'sl5']];
-      smap.forEach(function(s){ if(s[0]){var el=document.getElementById(s[1]);if(el)el.textContent=s[0];} if(s[2]){var el2=document.getElementById(s[3]);if(el2)el2.textContent=s[2];} });
-      if (bar) { bar.textContent = ' Admin edits active — Hero & Stats Bar updated'; bar.classList.add('show'); }
-    }
-
-    // ── PPA RATES ──
-    if (d.ppa) {
-      var p = d.ppa;
-      var pmap = {rw:'ppa-ror-wet',rd:'ppa-ror-dry',sdo:'ppa-stor-dry-old',sdn:'ppa-stor-dry-new',swo:'ppa-stor-wet-old',swn:'ppa-stor-wet-new','sol-max':'ppa-sol-max'};
-      Object.keys(pmap).forEach(function(k){ if(p[k]){var el=document.getElementById(pmap[k]);if(el){el.textContent=p[k];}} });
-      if (p.en) { var et=document.getElementById('cv-erc-text'); if(et) et.textContent=p.en; }
-      if (bar) bar.classList.add('show');
-    }
-
-    // ── NEA STATS ──
-    if (d.nea) {
-      var n = d.nea;
-      var nmap = {nc:'nea-cap',na:'nea-add',ns:'nea-sol',np:'nea-prod',nco:'nea-cons',ny:'nea-yoy',fr:'nea-rev',fe:'nea-exp',fi:'nea-inc',fp:'nea-pbt',fy:'nea-pyoy',fa:'nea-ass'};
-      Object.keys(nmap).forEach(function(k){ if(n[k]){var el=document.getElementById(nmap[k]);if(el)el.textContent=n[k];} });
-      if (bar) bar.classList.add('show');
-    }
-
-    // ── LIFECYCLE ──
-    if (d.lifecycle && Array.isArray(d.lifecycle) && d.lifecycle.length > 0) {
-      var grid = document.getElementById('cv-lifecycle');
-      if (grid) {
-        grid.innerHTML = d.lifecycle.map(function(s){
-          return '<div class="lc-step"><div class="lc-dot"></div><div class="lc-num">'+s.n+' — '+s.ph.toUpperCase()+'</div><div class="lc-title">'+s.ti+'</div><div class="lc-body">'+s.bo+'</div></div>';
-        }).join('');
-        if (bar) bar.classList.add('show');
-      }
-    }
-
-    // ── MANUALS ──
-    if (d.manuals && Array.isArray(d.manuals) && d.manuals.length > 0) {
-      var mg = document.getElementById('cv-manuals-grid');
-      if (mg) {
-        mg.innerHTML = d.manuals.map(function(m){
-          return '<a class="manual-card" href="'+m.url+'" target="_blank" rel="noopener"><span class="manual-card-arrow">↗</span><div class="manual-icon">'+m.ic+'</div><div class="manual-cat">'+m.cat+'</div><div class="manual-title">'+m.ti+'</div></a>';
-        }).join('');
-        if (bar) bar.classList.add('show');
-      }
-    }
-
-    if (bar && bar.classList.contains('show')) {
-      bar.textContent = ' Admin edits active — content synced from dashboard · ' + new Date().toLocaleTimeString('en-US',{hour:'2-digit',minute:'2-digit'});
-    }
-
-  } catch(e) { console.warn('Admin sync failed:', e.message); }
-})();
-
-/* ══════════════════════════════════════════════
-   NEA LIVE DATA FETCH
-══════════════════════════════════════════════ */
-var FALLBACK = {
-  demand:{val:'2,238',unit:'MW · peak demand (FY 2024/25)',cls:'gold'},
-  gen:{val:'3,591',unit:'MW · installed capacity (FY 2024/25)',cls:'teal'},
-  import_:{val:'500–700',unit:'MW · dry-season import (est.)',cls:'red'},
-  export_:{val:'~500',unit:'MW · avg daily export (est.)',cls:'green'},
-  domestic:{val:'11,319',unit:'GWh · FY 2024/25 consumption',cls:'teal'},
-  capacity:{val:'3,591',unit:'MW · total installed',cls:'gold'}
-};
-// Override fallback with admin-saved values if present
-try {
-  var fb = JSON.parse(localStorage.getItem('civilopedia_content')||'{}').fallback;
-  if (fb) {
-    if(fb.demand)   FALLBACK.demand.val   = fb.demand;
-    if(fb.gen)      FALLBACK.gen.val      = fb.gen;
-    if(fb.import_)  FALLBACK.import_.val  = fb.import_;
-    if(fb.export_)  FALLBACK.export_.val  = fb.export_;
-    if(fb.domestic) FALLBACK.domestic.val = fb.domestic;
-    if(fb.capacity) FALLBACK.capacity.val = fb.capacity;
-  }
-} catch(e){}
-
-function setCell(valId, unitId, val, unit, cls) {
-  var v=document.getElementById(valId), u=document.getElementById(unitId);
-  if(v){v.className='live-cell-value '+(cls||'');v.textContent=val;}
-  if(u)u.textContent=unit;
-}
-function showFallback() {
-  setCell('lv-demand','lv-demand-u',FALLBACK.demand.val,FALLBACK.demand.unit,FALLBACK.demand.cls);
-  setCell('lv-gen','lv-gen-u',FALLBACK.gen.val,FALLBACK.gen.unit,FALLBACK.gen.cls);
-  setCell('lv-import','lv-import-u',FALLBACK.import_.val,FALLBACK.import_.unit,FALLBACK.import_.cls);
-  setCell('lv-export','lv-export-u',FALLBACK.export_.val,FALLBACK.export_.unit,FALLBACK.export_.cls);
-  setCell('lv-domestic','lv-domestic-u',FALLBACK.domestic.val,FALLBACK.domestic.unit,FALLBACK.domestic.cls);
-  setCell('lv-capacity','lv-capacity-u',FALLBACK.capacity.val,FALLBACK.capacity.unit,FALLBACK.capacity.cls);
-  var ts=new Date().toLocaleTimeString('en-US',{hour12:false,hour:'2-digit',minute:'2-digit'});
-  document.getElementById('live-updated').textContent='Last known data · '+ts;
-  var btn=document.getElementById('refresh-btn'); if(btn)btn.innerHTML='↻ Retry';
-}
-async function fetchNEALive() {
-  var btn=document.getElementById('refresh-btn'); if(btn)btn.innerHTML='<span class="spin">↻</span> Fetching…';
-  ['lv-demand','lv-gen','lv-import','lv-export','lv-domestic','lv-capacity'].forEach(function(id){var el=document.getElementById(id);if(el){el.className='live-cell-value loading';el.textContent='—';}});
-  try {
-    var resp=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:600,tools:[{type:'web_search_20250305',name:'web_search'}],system:'Search for the latest Nepal Electricity Authority (NEA) power system live data. Return ONLY a JSON object: {"demand_mw":"...","generation_mw":"...","import_mw":"...","export_mw":"...","consumption_gwh":"...","capacity_mw":"...","note":"..."}',messages:[{role:'user',content:'Fetch latest NEA Nepal power system data: demand MW, generation MW, import MW, export MW, consumption GWh, capacity MW. JSON only.'}]})});
-    if(!resp.ok)throw new Error('API '+resp.status);
-    var data=await resp.json();
-    var txt=(data.content||[]).filter(function(b){return b.type==='text';}).map(function(b){return b.text;}).join('');
-    var clean=txt.replace(/```json|```/g,'').trim();
-    var match=clean.match(/\{[\s\S]*\}/);
-    if(!match)throw new Error('No JSON');
-    var d=JSON.parse(match[0]);
-    setCell('lv-demand','lv-demand-u',d.demand_mw||FALLBACK.demand.val,'MW · current demand','gold');
-    setCell('lv-gen','lv-gen-u',d.generation_mw||FALLBACK.gen.val,'MW · total generation','teal');
-    setCell('lv-import','lv-import-u',d.import_mw||FALLBACK.import_.val,'MW · import from India','red');
-    setCell('lv-export','lv-export-u',d.export_mw||FALLBACK.export_.val,'MW · export to India','green');
-    setCell('lv-domestic','lv-domestic-u',d.consumption_gwh||FALLBACK.domestic.val,'GWh · consumption','teal');
-    setCell('lv-capacity','lv-capacity-u',d.capacity_mw||FALLBACK.capacity.val,'MW · installed capacity','gold');
-    var ts=new Date().toLocaleTimeString('en-US',{hour12:false,hour:'2-digit',minute:'2-digit'});
-    document.getElementById('live-updated').textContent=(d.note?d.note+' · ':'')+' Updated '+ts;
-    if(btn)btn.innerHTML='↻ Refresh';
-  } catch(e) { console.warn('NEA fetch failed:',e.message); showFallback(); }
-}
-
-/* ══════════════════════════════════════════════
-   PANEL SWITCHING + SIDEBAR
-══════════════════════════════════════════════ */
-var sidebar=document.getElementById('sidebar'),overlay=document.getElementById('sb-overlay'),menuBtn=document.getElementById('menu-btn'),topCrumb=document.getElementById('topbar-crumb');
-var LABELS={'nea-report':'NEA Annual Report',home:'Home & Live Data',roadmap:'Development Cycle',nea:'NEA Statistics',ppa:'PPA Rates',doed:'DoED Licensing',mofe:'MoFE / EIA',compliance:'Legal Framework',manuals:'Technical Manuals'};
-
-function showPanel(id) {
-  document.querySelectorAll('.panel').forEach(function(p){p.classList.remove('active');});
-  var target=document.getElementById('panel-'+id); if(target)target.classList.add('active');
-  document.querySelectorAll('.sb-item').forEach(function(b){b.classList.toggle('active',b.dataset.panel===id);});
-  if(topCrumb)topCrumb.textContent=LABELS[id]||id;
-  if(target){var pb=target.querySelector('.pb');if(pb)pb.scrollTop=0;}
-  if(window.innerWidth<=820)closeSidebar();
-}
-function openSidebar(){sidebar.classList.add('open');overlay.classList.add('on');menuBtn.classList.add('open');}
-function closeSidebar(){sidebar.classList.remove('open');overlay.classList.remove('on');menuBtn.classList.remove('open');}
-document.querySelectorAll('.sb-item, .hn-card').forEach(function(btn){btn.addEventListener('click',function(){var id=btn.dataset.panel;if(id)showPanel(id);});});
-if(menuBtn)menuBtn.addEventListener('click',function(){sidebar.classList.contains('open')?closeSidebar():openSidebar();});
-overlay.addEventListener('click',closeSidebar);
-
-// Auto-wrap tables
-document.querySelectorAll('.pb table').forEach(function(t){if(t.closest('.tscroll'))return;var w=document.createElement('div');w.className='tscroll';t.parentNode.insertBefore(w,t);w.appendChild(t);});
-
-// Start live data fetch
-window.addEventListener('DOMContentLoaded',function(){fetchNEALive();setInterval(fetchNEALive,10*60*1000);fetchNEAReport();setInterval(fetchNEAReport,24*60*60*1000);});
-
-/* ══ NEA REPORT AUTO-UPDATE ══ */
-const NEA_REPORT_CACHE_KEY = 'nea_report_cache';
-const NEA_REPORT_CACHE_TTL = 24 * 60 * 60 * 1000; // 24 hours in ms
-
-/* Fallback: FY 2081/82 (2024/25) verified data */
-const NEA_FALLBACK = {
-  installedCap: '3,617.54 MW',
-  energyAvail:  '15,641 GWh',
-  domestic:     '11,319 GWh',
-  netExport:    '668 GWh',
-  peakDemand:   '2,901 MW',
-  customers:    '6.11 M',
-  demand:       '2,238 MW',
-  generation:   '3,591 MW',
-  export_:      '~500 MW',
-  import_:      '274 MW',
-  pubName:      'NEA Self-Publication FY 2082/83 Q2 (Kartik–Poush 2082)',
-  note:         'Data: NEA Q2 FY 2082/83 Self-Publication (Oct–Dec 2025) · Installed: 3,617.54 MW · Customers: 6.11M'
-};
-
-function setReportCell(id, val, cls) {
-  const el = document.getElementById(id);
-  if (el) { if (cls) el.className = 'r-live-cell-val ' + cls; el.textContent = val; }
-}
-function setEl(id, val) { const el = document.getElementById(id); if (el) el.textContent = val; }
-function setInnerHTML(id, val) { const el = document.getElementById(id); if (el) el.innerHTML = val; }
-
-function applyReportData(d, source) {
-  /* Live cells */
-  setReportCell('rl-demand',   d.demand,   'gold');
-  setReportCell('rl-gen',      d.generation,'teal');
-  setReportCell('rl-export',   d.export_,  'green');
-  setReportCell('rl-import',   d.import_,  'red');
-  setEl('rl-demand-u',   'MW · current demand');
-  setEl('rl-gen-u',      'MW · total generation');
-  setEl('rl-export-u',   'MW · export to India/Bangladesh');
-  setEl('rl-import-u',   'MW · import from India');
-
-  /* KPI strip */
-  setEl('r-kpi-cap',    d.installedCap);
-  setEl('r-kpi-avail',  d.energyAvail);
-  setEl('r-kpi-cons',   d.domestic);
-  setEl('r-kpi-export', d.netExport);
-  setEl('r-kpi-peak',   d.peakDemand);
-  setEl('r-kpi-cust',   d.customers);
-
-  /* Publication name and timestamp */
-  const ts = new Date().toLocaleString('en-US', { month: 'short', day: 'numeric', year: 'numeric', hour: '2-digit', minute: '2-digit' });
-  setEl('r-live-ts', 'Updated ' + ts);
-  setEl('report-last-fetch', ts);
-  setEl('r-pub-name', d.pubName || NEA_FALLBACK.pubName);
-  setEl('report-update-label', 'Auto-updating from nea.org.np/monthlyUpdates · Source: ' + (source || 'Cache') + ' · Last fetch: ' + ts);
-
-  /* Live note */
-  const noteEl = document.getElementById('r-live-note');
-  if (noteEl) {
-    noteEl.innerHTML = (d.note || '') + '<br>Data from <a href="https://www.nea.org.np/monthlyUpdates" target="_blank" style="color:var(--teal);text-decoration:none;">nea.org.np/monthlyUpdates</a> · Refreshes automatically every 24 hours. Latest publication: <strong style="color:var(--gold);">' + (d.pubName || NEA_FALLBACK.pubName) + '</strong>';
-  }
-
-  /* Show updated badge */
-  const badge = document.getElementById('report-badge');
-  if (badge && source === 'API') badge.style.display = 'inline-flex';
-}
-
-async function fetchNEAReport() {
-  /* Check cache first */
-  try {
-    const cached = JSON.parse(localStorage.getItem(NEA_REPORT_CACHE_KEY) || 'null');
-    if (cached && (Date.now() - cached.ts) < NEA_REPORT_CACHE_TTL) {
-      applyReportData(cached.data, 'Cache');
-      return;
-    }
-  } catch(e) {}
-
-  /* Fetch via Claude API */
-  try {
-    const resp = await fetch('https://api.anthropic.com/v1/messages', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        model: 'claude-sonnet-4-20250514',
-        max_tokens: 1000,
-        tools: [{ type: 'web_search_20250305', name: 'web_search' }],
-        system: `You are a data extraction assistant for Nepal's electricity sector. 
-Search for the LATEST NEA Nepal monthly update data from nea.org.np/monthlyUpdates and any recent NEA publications. 
-Also search for the latest monthly operational data from Nepal Electricity Authority.
-Return ONLY a JSON object (no markdown, no preamble) with these exact keys:
+    <!-- SEO Meta Tags -->
+<title>Ramkrishna Mahato | Civil Engineer | Hydropower & Infrastructure, Nepal</title>
+<meta name="description" content="Civil Engineer from Nepal specializing in hydropower and infrastructure development. Currently working at Upper Daraundi HPP. View my projects and experience.">
+<meta name="keywords" content="civil engineer Nepal, hydropower engineer, infrastructure engineer, Kathmandu University engineer, Ramkrishna Mahato">
+<meta name="author" content="Ramkrishna Mahato">
+
+<!-- Open Graph (for LinkedIn/Facebook sharing) -->
+<meta property="og:title" content="Ramkrishna Mahato | Civil Engineer Nepal">
+<meta property="og:description" content="Civil Engineer specializing in hydropower and infrastructure. Based in Kathmandu, Nepal.">
+<meta property="og:url" content="https://www.ramkrishnamahato.com.np/">
+<meta property="og:type" content="website">
+
+<!-- Structured Data (tells Google you're a person) -->
+<script type="application/ld+json">
 {
-  "installedCap": "X,XXX MW",
-  "energyAvail": "XX,XXX GWh",
-  "domestic": "XX,XXX GWh",
-  "netExport": "XXX GWh",
-  "peakDemand": "X,XXX MW",
-  "customers": "X.XX M",
-  "demand": "X,XXX MW",
-  "generation": "X,XXX MW",
-  "export_": "XXX MW",
-  "import_": "XXX MW",
-  "pubName": "name of latest NEA monthly publication found",
-  "note": "brief source note with publication month and key headline stat"
-}
-If you cannot get live data from NEA website (it may be blocked), use the most recent data you can find from search results about NEA Nepal monthly statistics.`,
-        messages: [{ 
-          role: 'user', 
-          content: 'Search for the latest NEA Nepal monthly update from nea.org.np/monthlyUpdates — get current installed capacity, energy available, domestic consumption, export, import, peak demand, customer count, and latest publication name. Return ONLY valid JSON with those exact keys.' 
-        }]
-      })
-    });
-
-    if (!resp.ok) throw new Error('API ' + resp.status);
-    const apiData = await resp.json();
-    const txt = (apiData.content || []).filter(b => b.type === 'text').map(b => b.text).join('');
-    const match = txt.replace(/```json|```/g, '').match(/\{[\s\S]*\}/);
-    if (!match) throw new Error('No JSON');
-    const d = JSON.parse(match[0]);
-
-    /* Merge with fallback for any missing fields */
-    const merged = Object.assign({}, NEA_FALLBACK, d);
-
-    /* Cache result */
-    localStorage.setItem(NEA_REPORT_CACHE_KEY, JSON.stringify({ ts: Date.now(), data: merged }));
-    applyReportData(merged, 'API');
-
-  } catch(err) {
-    console.warn('NEA report fetch failed:', err.message);
-    applyReportData(NEA_FALLBACK, 'Embedded FY 2081/82');
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Ramkrishna Mahato",
+  "jobTitle": "Civil Engineer",
+  "url": "https://www.ramkrishnamahato.com.np",
+  "sameAs": [
+    "https://www.linkedin.com/in/YOUR-PROFILE",
+    "https://www.researchgate.net/profile/Ramkrishna-Mahato"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Kathmandu",
+    "addressCountry": "NP"
   }
 }
-
-// Listen for storage events (real-time sync when admin changes something)
-window.addEventListener('storage', function(e) {
-  if (e.key === 'civilopedia_content') {
-    console.log('Admin update detected — reloading content...');
-    applyAdminSync && location.reload();
-  }
-});
 </script>
-</body>
+
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html#home-section">Ramkrishna</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+	          <li class="nav-item"><a href="#myworks-section" class="nav-link"><span>My Works</span></a></li>
+	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+		  <li class="nav-item"><a href="https://engineeringgyaaan.blogspot.com/" target="_blank" rel="noopener noreferrer " class="btn btn-primary py-3 px-3"><span>Engineering Gyan</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  <section id="home-section" class="hero">
+		  <div class="home-slider  owl-carousel">
+	       <div class="slider-item ">
+	      	<div class="overlay"></div>
+	         <div class="container">
+	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/bg_1.png);">
+	          	 <div class="overlay"></div>
+	          	</div>
+		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading">NAMASTE!</span>
+			            <h1 class="mb-4 mt-3">I'm <span>Ramkrishna Mahato</span></h1>
+
+						<!-- Element to contain animated typing -->
+						<span id="typing-animation"></span>
+
+						<script>
+
+						// Initialize the typing animation
+						const typingAnimationElement = document.getElementById('typing-animation');
+
+						// Create an array of typing text
+						const typingTexts = [
+						'The Responsible Builders ',
+						'Driven by Duty ',
+						'Humanitarian   ',
+						];
+
+						// Create a function to display the typing animation for a given text
+						function playTypingAnimation(text) {
+						// Loop through each character and add it to the element
+						for (let i = 0; i < text.length; i++) {
+							setTimeout(() => {
+							typingAnimationElement.textContent += text[i];
+							}, i * 200); // Increase the delay to slow down the typing animation
+						}
+
+						// Once the animation is complete, reset the text and start over
+						setTimeout(() => {
+							typingAnimationElement.textContent = '';
+							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+						}, text.length * 200);
+						}
+
+						// Start the typing animation loop
+						playTypingAnimation(typingTexts[0]);
+
+						</script>
+
+						<br>
+						<br>
+			            <h2>Civil Engineer</h2>
+						<p><a href="Ramkrishna Mahato CV.pdf" target="_blank" rel="noopener noreferrer " class="btn btn-primary py-4 px-5">Download CV</a></p>
+						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+						<!-- <br> -->
+			            <!-- <p><a href="https://www.youtube.com/@RishabhMishraOfficial" class="btn btn-primary py-3 px-4">YouTube</a> 
+							<a href="https://github.com/rishabhnmishra" class="btn btn-white btn-outline-white py-3 px-4">My works</a></p> -->
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+		</div>
+    </section>
+
+
+
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    	<div class="container">
+			<div class="row">
+				<div class="row d-flex align-items-stretch">
+				<!-- <div class="row d-flex"> -->
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
+								<div class="row">
+									<div class="col-sm-6 col-md-5">
+									  <div class="about-img">
+										<img src="images/aboutme1.png" class="img-fluid rounded b-shadow-a" alt="">
+									  </div>
+									</div>
+									<!-- Details next to profile image -->
+									<div class="col-sm-6 col-md-7">
+									  <div class="about-info">
+										<p><span class="title-s">Name: </span> <span>Ramkrishna Mahato</span></p>
+										<p><span class="title-s">Job Role: </span> <span>Civil Engineer</span></p>
+<!-- 										<p><span class="title-s">Experience: </span> <span> 6 Months</span></p> -->
+									        <p><span class="title-s">Industry: </span> <span> Hydropower</span></p>
+										<p><span class="title-s">Address: </span> <span>Kathmandu, Nepal</span></p>
+									  </div>
+									</div>
+								  </div>
+
+								<!-- <div class="skill-mf">
+									<p class="title-s">Skills</p>
+									<span>AutoCAD</span> <span class="pull-right"></span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Civil3D</span> <span class="pull-right"></span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div> -->
+
+<!-- 									<span>SW Road</span> <span class="pull-right">85%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div> -->
+									
+<!-- 									<span>SAP2000</span> <span class="pull-right">90%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div> -->
+									
+<!-- 									<span>Project Management</span> <span class="pull-right">85%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div> -->
+									
+<!-- 									<span>BIM</span> <span class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div> -->
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">
+								
+								<h1 class="big">About</h1>
+								<h2 class="mb-4">About Me</h2>
+								
+								<p>I am a dedicated Civil Engineer with a strong foundation in hydropower and infrastructure development, specializing in site supervision, construction monitoring,
+									and quality assurance. I have hands-on experience coordinating with contractors, local stakeholders, and government authorities to ensure timely and sustainable
+									project delivery.
+									Driven by a passion for sustainable development and resilient infrastructure, I constantly seek to adapt to evolving engineering standards and practices. I value
+									teamwork, accountability, and integrity, and take pride in contributing to impactful projects that drive progress and empower communities.</p>
+								<ul class="about-info mt-4 px-md-0 px-2">
+									<li class="d-flex"><span>Profile:</span> <span>Civil Engineer</span></li>
+									<li class="d-flex"><span>Domain:</span> <span>Structure, Highway, Hydropower &amp; Disaster Management</span></li>
+									<li class="d-flex"><span>Education:</span> <span>Bachelor of Engineering</span></li>
+									<li class="d-flex"><span>Language:</span> <span>English, Nepali, Maithili, Hindi</span></li>
+									<li class="d-flex"><span>Software Skills:</span> <span>Revit, SW Road, Smart Road, MS Project &amp; InfraWorks</span></li>
+									<li class="d-flex"><span>Technical Skills:</span> <span>MS Office, Project Managment, BBS, Estimation,  &amp; Costing</span></li>
+									<li class="d-flex"><span>Interest:</span> <span>Traveling, Virtual Exploration of New Places, Teaching</span></li>
+									
+								</ul>
+							</div>
+						</div>
+
+
+						<div class="counter-wrap ftco-animate d-flex mt-md-3">
+							<div class="text">
+								<p class="mb-4">
+									<span class="number" data-number="5">0</span> <span>+</span>
+									<span>&nbsp; Projects completed</span>
+								</p>
+								<p><a href="https://www.linkedin.com/in/ramkrishnamahatoo/" target="_blank" rel="noopener noreferrer " class="btn btn-primary py-3 px-3">LinkedIn</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </section>
+
+
+
+	
+    <section class="ftco-section ftco-no-pb" id="resume-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">Resume</h1>
+            <h2 class="mb-4">Resume</h2>
+            <p>Dedicated civil engineer with hands-on project experience, Passionate about ethical practices, innovation, and collaboration, I bring a problem-solving mindset and commitment to excellence in every project. Let’s connect to explore impactful opportunities in civil engineering!</p>
+          </div>
+        </div>
+
+		<div class="container">
+			<div class="row justify-content-center pb-5">
+			<div class="col-md-10 heading-section text-center ftco-animate">
+			<h1 class="big-4">Professional Experience</h1>
+			<div class="underline"></div>
+			</div>
+			</div>
+		</div>
+		<br>
+		
+		<div class="row">
+<!-- 				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">Civil Engineer</span>
+						<h2>Freelancer</h2>
+						<span class="position">Oct 2024-Present</span> -->
+						<!-- <p class="mt-4">Merkle, a leading CXM and media company with over 10K+ professionals globally. It's a part of Dentsu International.  -->
+<!-- 							<ul>
+								<li>Muncipal Drawing </li>
+								<li>Estimation and Costing</li>
+								<li>Develops Design and Analysis</li>
+								<li>Recce of the site</li>
+							</ul>
+						</p>
+					</div>
+
+				</div>  -->
+
+			<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">Civil Engineer</span>
+						<h2 class="heading"><a href="https://www.ggel.com.np/" target="_blank" rel="noopener noreferrer " >Green Gorkha Energy Limited</a></h2>
+						<span class="position">Upper Daraundi HPP</span>
+						<span class="mt-4">Jun 2025- Present</span>
+						<!-- <p class="mt-4">Merkle, a leading CXM and media company with over 10K+ professionals globally. It's a part of Dentsu International.  -->
+<!-- 							<ul>
+								<li>Construction of well-equipped maternal and perinatal centre </li>
+								<li>Construction of Doctors quarter, Nurses quarter, maternity waiting home and HCWM unit</li>
+								<li>Commencing Day to Day works  </li>
+							</ul> -->
+						</p>
+					</div>
+
+				</div>
+
+			
+<br>
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">Civil Intern Engineer</span>
+						<h2 class="heading"><a href="https://mvdugar.com/" target="_blank" rel="noopener noreferrer " >MV Dugar Hydro Division</a></h2>
+						<span class="position">Likhu-1 HEP</span>
+						<span class="mt-4">2022-2023</span>
+						<!-- <p class="mt-4">iQuanti is a data-driven digital marketing analytics and solutions company, helps top 100 global brands.  -->
+							<ul>
+								<li>Supervision in the construction of trench weir</li>
+								<li>Seepage control of collection pool, tailrace and headrace tunnel</li>
+								<li>Shotcreting and cement grouting at HRT, vertical shaft, gantry construction in tunnel and quality control work.</li>
+								<li>Supervision in concreting of Switchyard</li>
+							</ul>
+						</p>
+					</div>
+
+				</div>
+			</div>
+
+		<br>
+		<br>
+
+		<div class="container">
+			<div class="row justify-content-center pb-5">
+			<div class="col-md-10 heading-section text-center ftco-animate">
+			<h1 class="big-4">Non-Professional Experience</h1>
+			<div class="underline"></div>
+			</div>
+			</div>
+		</div>
+		<br>
+		
+		<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">President</span>
+             				        <h3 class="heading"><a href="https://yrcc.ku.edu.np/" target="_blank" rel="noopener noreferrer " >Kathmandu University Youth Red Cross Circle</a></h3>
+						<span class="position">2021-2022</span>
+						<p class="mt-4">KUYRCC (Kathmandu University Youth Red Cross Circle) is a student-led initiative that acts before, during, and after emergencies to meet the needs and improve the lives of vulnerable people in our community.
+							<ul>
+								<li>Distributed Warm clothes to needy communities</li>
+								<li>Interaction with Orphanage Home</li>
+								<li>Tree Plantation Program in KU Premises</li>
+								<li>Conducted 3 Days Psychological First Aid Training</li>
+								<li>Conducted Mensuration Pad Making Class</li>
+								<li>Conducted Multilple Blood Donation Program</li>
+							</ul>
+						</p>
+					</div>
+
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">Administrator</span>
+						<h3 class="heading"><a href="https://www.facebook.com/sankalpaKU/" target="_blank" rel="noopener noreferrer " >Sankalpa-An Annual Civil Engineering Expo</a></h3>
+						<span class="position">2022-2023</span>
+						<p class="mt-4">Sankalpa-An annual Civil Engineering Expo organized by the Kathmandu University Civil Engineering Club, showcases innovative projects from civil engineering students and professionals.
+							<ul>
+								<li>Talk show and Panel Discussion</li>
+								<li>Project Demonstration</li>
+								<li>Unveiling of Civil Insight Vol.V</li>
+								<li>Diffrent competition and games</li>
+								<li>All Nepal Civil Football and Basketball tournaments</li>
+								<li>Acoustic Night</li>
+							</ul>
+						</p>
+					</div>
+
+				</div>
+			</div>
+
+		<br>
+		<br>
+
+		<div class="row">
+			<h1 class="big-4">Education</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+			<div class="row">
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2018-2022</span>
+    					<h2>Bachelor in Civil Engineering</h2>
+    					<span class="position"><a href="https://www.ku.edu.np/" target="_blank" rel="noopener noreferrer ">Kathmandu University</a></span>
+					<span class="mt-4">Dhulikhel, Kavre</span>
+    					<p class="mt-4">Grade: First class.</p>
+    				</div>
+    			</div>
+
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2015-2017</span>
+    					<h2>Higher Secondary School</h2>
+    					<span class="position"><a href="https://prasadi.edu.np/" target="_blank" rel="noopener noreferrer ">Prasadi Academy</a></span>
+					<span class="mt-4">kumaripati, Lalitpur</span>
+    					<p class="mt-4">Grade: First class distinction.</p>
+    				</div>
+				</div>
+				
+    		</div>
+
+    		<div class="row justify-content-center mt-5">
+    			<div class="col-md-6 text-center ftco-animate">
+    				<p><a href="Ramkrishna Mahato CV.pdf" target="_blank" rel="noopener noreferrer " class="btn btn-primary py-4 px-5">Download CV</a></p>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+
+   
+
+    <section class="ftco-section" id="project-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Projects</h1>
+            <h2 class="mb-4">Projects</h2>
+            <p>Below are the list of projects completed during academic session & beyond.</p>
+          </div>
+        </div>
+        <div class="row d-flex">
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="Final Year Report Chepe River.pdf" target="_blank" rel="noopener noreferrer " class="block-20 zoom-effect" style="background-image: url('images/proj_1.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+                <h3 class="heading"><a href="Final Year Report Chepe River.pdf" target="_blank" rel="noopener noreferrer " >FINAL YEAR PROJECT REPORT ON “STUDY OF HYDROELECTRIC POTENTIAL OF CHEPE RIVER</a></h3>
+                <p>Designed different components of Headworks, Tunnel, Penstocks, Anchor block, Powerhouse and Estimation and Costing along with feasibility of the Hydropower. </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://www.researchgate.net/publication/367008472_Performance_of_Concrete_With_Partial_replacement_of_fine_aggregate_by_glass_powder" target="_blank" rel="noopener noreferrer " class="block-20 zoom-effect" style="background-image: url('images/proj_2.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://www.researchgate.net/publication/367008472_Performance_of_Concrete_With_Partial_replacement_of_fine_aggregate_by_glass_powder" target="_blank" rel="noopener noreferrer " >PERFORMANCE OF CONCRETE WITH PARTIAL REPLACEMENT OF FINE AGGREGATE BY GLASS POWDER</a></h3>
+                <p>Experimental study on performance of concrete with partial replacement of fine aggregate by glass powder.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry">
+              <a href="#" target="_blank" rel="noopener noreferrer " class="block-20 zoom-effect" style="background-image: url('images/proj_3.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="#" target="_blank" rel="noopener noreferrer " >DEMONOSTRATIVE MODEL OF FLYOVER AT NEW BANESHWOR INTERSECTION</a></h3>
+                <p>Designed a Demonstrative model of flyover to reduce traffic congestion at Baneshwor intersection for smooth flow of vehicles and pedestrian.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+	<br>
+<!-- 		added justify-content-center to center align the last two projects -->
+		<div class="row d-flex justify-content-center">  
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="Poster Design_Hydropower_Internship.pptx" target="_blank" rel="noopener noreferrer " class="block-20 zoom-effect" style="background-image: url('images/proj_4.jpg');">
+				</a>
+			 	<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="Poster Design_Hydropower_Internship.pptx" target="_blank" rel="noopener noreferrer " >POSTER DESIGN FOR HYDROPOWER INTERNSHIP WORK</a></h3>
+				  <p>This PPT summarizes our six-week internship at the Likhu 1 and Likhu 2 Hydroelectric Projects. It outlines the project background and the key office and field works we 
+					  performed, including reinforcement, concreting, and tunneling activities. It also highlights the practical skills and site experience gained in hydropower construction.</p>
+				</div>
+			  </div>
+			</div>
+			<!-- <div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="#" target="_blank" rel="noopener noreferrer " class="block-20 zoom-effect" style="background-image: url('images/proj_5.jpg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="#" target="_blank" rel="noopener noreferrer " >#</a></h3>
+				  <p>#</p>
+				</div>
+			  </div>
+			</div> -->
+		 </div>
+	  </div>
+    </section>
+
+	  <section class="ftco-section" id="myworks-section">
+		<div class="container">
+		  <div class="row justify-content-center mb-5 pb-5">
+			<div class="col-md-7 heading-section text-center ftco-animate">
+			  <h1 class="big big-2">My Works</h1>
+			  <h2 class="mb-4">My Works</h2>
+			  <p> Lists of the works completed</p>
+			</div>
+		  </div>
+		  <div class="row d-flex">
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="Muncipal Drawing.pdf" target="_blank" rel="noopener noreferrer " class="block-20 zoom-effect" style="background-image: url('images/mywork_1.jpg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+				  <h3 class="heading"><a href="Muncipal Drawing.pdf" target="_blank" rel="noopener noreferrer " >Typical Municipal Drawing</a></h3>
+				  <p>Location, Plan, Elevation, Section CAD Drawing, Structural detailing </p>
+				</div>
+			  </div>
+			</div>
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="images/mywork_2.jpg" class="block-20 zoom-effect" style="background-image: url('images/mywork_2.jpg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="images/mywork_2.jpg" >Road and Bridge Alignment Survey in Panauti Village, Karve</a></h3>
+				  <p>Performed Alignment Survey of Road and Bridge. use of Reciprocle and Differential Levling. Transfer of Benchmark to the start of survey point. </p>
+				</div>
+			  </div>
+			</div>
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry">
+				<a href="images/mywork_3.jpg"  class="block-20 zoom-effect" style="background-image: url('images/mywork_3.jpg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="images/mywork_3.jpg" >Topography Map of KU Premise (Above KU CANTEEN and International Girls Hostel Area)</a></h3>
+				  <p>Performed Topography Survey of the area</p>
+				</div>
+			  </div>
+			</div>
+		  </div>
+	  <br>
+<!-- 		  added justify-content-center to center align the last two projects -->
+		  <div class="row d-flex justify-content-center">  
+			  <div class="col-md-4 d-flex ftco-animate">
+				  <div class="blog-entry justify-content-end">
+				  <a href="images/mywork_4.jpg" target="_blank" rel="noopener noreferrer " class="block-20 zoom-effect" style="background-image: url('images/mywork_4.jpg');">
+				  </a>
+				  <div class="text mt-3 float-right d-block">
+	
+					<h3 class="heading"><a href="Bar Bending Schedules BBS Siraha.xlsx" target="_blank" rel="noopener noreferrer " >Bar Bending Schedules BBS</a></h3>
+					<p>Bar Bending Schedules of Residental Building in siraha district </p>
+				  </div>
+				</div>
+			  </div>
+<!-- 			  <div class="col-md-4 d-flex ftco-animate">
+				  <div class="blog-entry justify-content-end">
+				  <a href="#" target="_blank" rel="noopener noreferrer " class="block-20 zoom-effect" style="background-image: url('images/mywork_5.jpg');">
+				  </a>
+				  <div class="text mt-3 float-right d-block">
+	
+					<h3 class="heading"><a href="#" target="_blank" rel="noopener noreferrer " >#</a></h3>
+					<p>#</p>
+				  </div>
+				</div>
+			  </div> -->
+		   </div>
+		</div>
+	</section>
+
+	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+      <div class="container">
+		<div class="row d-md-flex align-items-center">
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="5">0</strong>
+                <span>Achievements</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="8">0</strong>
+                <span>Projects</span>
+              </div>
+            </div>
+          </div>
+<!--           <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="1000">0</strong>
+                <span>Mentored Students</span>
+              </div>
+            </div>
+          </div> -->
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="5120">0</strong> <strong>+</strong>
+                <span>Cups of tea</span>
+ <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const counterElement = document.getElementById("tea-counter");
+    const baseCount = 5120; // Initial count
+    const startDate = new Date("2025-02-24"); // Set a reference start date
+    const today = new Date();
+    const timeDiff = today - startDate;
+    const daysPassed = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+    
+    const updatedCount = baseCount + daysPassed;
+    counterElement.textContent = updatedCount;
+  });
+</script>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+	
+	  <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-md-7 ftco-animate text-center">
+						<h2>My Article on<span> ResearchGate  </span> </h2>
+						<div class="heading"> <h4> Research Enthusiast &amp; Analyst </h4>
+						<br>
+						<p><a href="https://www.researchgate.net/profile/Ramkrishna-Mahato" target="_blank" rel="noopener noreferrer " class="btn btn-primary py-3 px-5">ResearchGate</a></p>
+						</div>
+					</div>
+				</div>
+			 </div>
+		</div>
+	</section>
+
+
+
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+      <div class="container">
+      	<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Contact</h1>
+            <h2 class="mb-4">Contact Me</h2>
+            <p>Below are the details to reach out to me!</p>
+          </div>
+        </div>
+
+        <div class="row d-flex contact-info mb-5">
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-map-signs"></span>
+          		</div>
+          		<h3 class="mb-4">Address</h3>
+	            <p>Kathmandu, Nepal </p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-phone2"></span>
+          		</div>
+          		<h3 class="mb-4">Contact Number</h3>
+	            <p><a href="tel://9862935904">+9779862935904</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-paper-plane"></span>
+          		</div>
+          		<h3 class="mb-4">Email Address</h3>
+	            <p><a href="mailto:mahatoramkrishnaa@gmail.com" target="_blank" rel="noopener noreferrer " >mahatoramkrishnaa@gmail.com</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-globe"></span>
+          		</div>
+          		<h3 class="mb-4">Resume</h3>
+	            <p><a href="Ramkrishna Mahato CV.pdf" target="_blank" rel="noopener noreferrer " >Download</a></p>
+	          </div>
+          </div>
+
+		  <div class="container">
+			<br>
+			<br>
+			<div class="row justify-content-center">
+				<div class="col-md-7 ftco-animate text-center">
+					<h2>Have a<span> Question?  </span> <a href="https://forms.gle/zHi3uunkbq7aSGka7" target="_blank" rel="noopener noreferrer " class="btn btn-primary py-3 px-5">Click Here</a> </h2>
+				</div>
+			</div>
+				<br>
+					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+					  <li class="ftco-animate normal-txt">Find me on  </li>
+					  <li class="ftco-animate"><a href="https://www.youtube.com/@ramkrishnamahatoo" target="_blank" rel="noopener noreferrer " ><span class="icon-youtube"></span></a></li>
+					  <li class="ftco-animate"><a href="https://www.linkedin.com/in/ramkrishnamahatoo/" target="_blank" rel="noopener noreferrer " ><span class="icon-linkedin"></span></a></li>  
+					  <li class="ftco-animate"><a href="https://x.com/haudeEngineer" target="_blank" rel="noopener noreferrer " ><span class="icon-twitter"></span></a></li>
+					  <li class="ftco-animate"><a href="https://www.facebook.com/ramkrishnamahatoo/" target="_blank" rel="noopener noreferrer " ><span class="icon-facebook"></span></a></li>
+				      <li class="ftco-animate"><a href="https://www.instagram.com/ramkrishnamahatoo/" target="_blank" rel="noopener noreferrer " ><span class="icon-instagram"></span></a></li>
+					</ul>
+				<br>
+		   </div>
+   </div>
+ </section>
+
+	<footer style="background:#111111; color:#fff; padding:40px 0; font-family:Arial, sans-serif;">
+    <div style="max-width:1100px; margin:auto; display:flex; flex-wrap:wrap; gap:40px;">
+
+
+        <!-- Important Links Column 1 -->
+        <div style="flex:1; min-width:280px;">
+            <h2 style="margin-bottom:15px;">Important Links</h2>
+            <ul style="list-style:none; padding:0; line-height:1.8;">
+                <li><a href="https://doed.gov.np/" target="_blank" rel="noopener noreferrer" >Department of Electricity Development</a></li>
+                <!-- <li><a href="#" style="color:white;">Water and Energy Commission Secretariat</a></li>
+                <li><a href="#" style="color:white;">Budhi Ganga Hydropower Project</a></li>
+                <li><a href="#" style="color:white;">Nepal Electricity Authority</a></li>
+                <li><a href="#" style="color:white;">Online Application System (License)</a></li>
+                <li><a href="#" style="color:white;">Hello DOED</a></li>
+                <li><a href="#" style="color:white;">Master List (Internal Access Only)</a></li>
+                <li><a href="#" style="color:white;">Environmental Study Report Database</a></li> -->
+            </ul>
+        </div>
+
+        <!-- Important Links Column 2 -->
+        <div style="flex:1; min-width:280px;">
+            <h2 style="margin-bottom:15px;">&nbsp;</h2>
+            <ul style="list-style:none; padding:0; line-height:1.8;">
+                <li><a href="https://www.khpl.com.np/" target="_blank" rel="noopener noreferrer" >Kalinchowk Hydropower Limited</a></li>
+                <!-- <li><a href="#" style="color:white;">Pancheswhar Multipurpose Project</a></li>
+                <li><a href="#" style="color:white;">Naumure Multipurpose Project</a></li>
+                <li><a href="#" style="color:white;">Disclaimer</a></li>
+                <li><a href="#" style="color:white;">Royalty Management and Distribution System</a></li>
+                <li><a href="#" style="color:white;">Inspection Division Database</a></li>
+                <li><a href="#" style="color:white;">Review Committee Meeting Schedule</a></li>
+                <li><a href="#" style="color:white;">Link of Progress Update</a></li> -->
+            </ul>
+        </div>
+
+    </div>
+
+    <p style="text-align:center; margin-top:30px; font-size:14px; opacity:0.8;">
+        <!-- © 2025 Ramkrishna Mahato — All Rights Reserved. -->
+    </p>
+</footer>
+	  
+    <footer class="ftco-footer ftco-section">
+		<div class="container">
+		  <div class="row">
+			<div class="col-md-12 text-center">
+  
+			  <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+	Copyright &copy;<script>document.write(new Date().getFullYear());</script> Ramkrishna Mahato | All rights reserved <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+			</div>
+		  </div>
+		</div>
+	  </footer>
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+	<div class="container">
+	<div class="row justify-content-center mb-5 pb-5">
+		  <div class="col-md-7 heading-section text-center ftco-animate">
+  <script src="js/main.js"></script>
+  <!-- hitwebcounter Code START -->
+<a href="https://www.hitwebcounter.com" target="_blank">
+	<img src="https://hitwebcounter.com/counter/counter.php?page=18362370&style=0008&nbdigits=6&type=page&initCount=0" title="Counter Widget" Alt="Visit counter For Websites"   border="0" /></a>   
+		</div>
+		</div>
+	</div>
+	  
+  </body>
 </html>
