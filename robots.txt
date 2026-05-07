@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.ramkrishnamahato.com.np/sitemap.xml
+Sitemap: https://ramkrishnamahato.com.np/sitemap.xml
