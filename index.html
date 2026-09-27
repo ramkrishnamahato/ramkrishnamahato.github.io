@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
     <!-- SEO Meta Tags -->
-    <title>Ramkrishna Mahato | Graduate Student | Civil Engineer | Tunnel Engineering</title>
+    <title>Ramkrishna Mahato | Graduate Student | Tunnel Engineering | Civil Engineer |</title>
     
     <!-- Favicon -->
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
@@ -87,6 +87,15 @@
             100% { background-position: 0% 50%; }
         }
 
+        /* ===== FULL BACKGROUND IMAGE FOR HOME SECTION ===== */
+        #home-section {
+            background-image: url('images/bg_1.png');
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
         /* Glassmorphism Classes */
         .glass {
             background: rgba(255, 255, 255, 0.05);
@@ -157,10 +166,9 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home-section" class="min-h-screen flex items-center justify-center bg-hydro relative overflow-hidden pt-20">
-        <!-- Decorative abstract circles -->
-        <div class="absolute top-20 left-10 w-72 h-72 bg-sky-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
-        <div class="absolute bottom-20 right-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" style="animation-delay: 2s;"></div>
+    <section id="home-section" class="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
+        <!-- Dark overlay for text readability -->
+        <div class="absolute inset-0 bg-slate-900/60 z-0"></div>
 
         <div class="max-w-7xl mx-auto px-4 relative z-10 w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div data-aos="fade-right" data-aos-duration="1000">
@@ -171,7 +179,7 @@
                 <div class="text-2xl md:text-3xl font-light mb-8 h-10 text-gray-300">
                     <span id="typing-animation" class="typing-cursor text-white font-semibold"></span>
                 </div>
-                <h2 class="text-xl text-gray-400 mb-8">Graduate Student | Civil Engineer | Tunnel Engineering</h2>
+                <h2 class="text-xl text-gray-400 mb-8">Graduate Student | Tunnel Engineering | Civil Engineer</h2>
                 <div class="flex flex-wrap gap-4">
                     <a href="Ramkrishna-Mahato-CV.pdf" target="_blank" class="px-8 py-4 bg-sky-500 hover:bg-sky-600 text-white rounded-full font-medium transition shadow-[0_0_20px_rgba(56,189,248,0.4)]">
                         <i class="fas fa-download mr-2"></i> Download CV
