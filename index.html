@@ -87,13 +87,41 @@
             100% { background-position: 0% 50%; }
         }
 
-        /* ===== FULL BACKGROUND IMAGE FOR HOME SECTION ===== */
+        /* ===== FULL BACKGROUND VIDEO FOR HOME SECTION ===== */
         #home-section {
-            background-image: url('images/bghero.jpg');
+            position: relative;
+            overflow: hidden;
+        }
+
+        #home-section .bg-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* Fallback poster image (shows while video loads or if video fails) */
+        #home-section .bg-video-fallback {
+            position: absolute;
+            inset: 0;
+            background-image: url('images/bg_1.png');
             background-size: cover;
-            background-position: center center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
+            background-position: center;
+            z-index: -1;
+        }
+
+        /* Mobile: hide video, show poster image (saves data + better performance) */
+        @media (max-width: 768px) {
+            #home-section .bg-video {
+                display: none;
+            }
         }
 
         /* Glassmorphism Classes */
@@ -165,8 +193,15 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero Section with Full Background Video -->
     <section id="home-section" class="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
+        <!-- Background Video (with poster fallback) -->
+        <div class="bg-video-fallback"></div>
+        <video class="bg-video" autoplay muted loop playsinline preload="auto" poster="images/bg_1.png">
+            <source src="videos/hero-bg.mp4" type="video/mp4">
+            <source src="videos/hero-bg.webm" type="video/webm">
+        </video>
+
         <!-- Dark overlay for text readability -->
         <div class="absolute inset-0 bg-slate-900/60 z-0"></div>
 
