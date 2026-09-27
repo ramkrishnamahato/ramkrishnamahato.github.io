@@ -87,41 +87,13 @@
             100% { background-position: 0% 50%; }
         }
 
-        /* ===== FULL BACKGROUND VIDEO FOR HOME SECTION ===== */
+        /* ===== FULL BACKGROUND IMAGE FOR HOME SECTION ===== */
         #home-section {
-            position: relative;
-            overflow: hidden;
-        }
-
-        #home-section .bg-video {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            min-width: 100%;
-            min-height: 100%;
-            width: auto;
-            height: auto;
-            transform: translate(-50%, -50%);
-            object-fit: cover;
-            z-index: 0;
-            pointer-events: none;
-        }
-
-        /* Fallback poster image (shows while video loads or if video fails) */
-        #home-section .bg-video-fallback {
-            position: absolute;
-            inset: 0;
             background-image: url('images/bghero.jpg');
             background-size: cover;
-            background-position: center;
-            z-index: -1;
-        }
-
-        /* Mobile: hide video, show poster image (saves data + better performance) */
-        @media (max-width: 768px) {
-            #home-section .bg-video {
-                display: none;
-            }
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
         }
 
         /* Glassmorphism Classes */
@@ -193,15 +165,8 @@
         </div>
     </nav>
 
-    <!-- Hero Section with Full Background Video -->
+    <!-- Hero Section -->
     <section id="home-section" class="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
-        <!-- Background Video (with poster fallback) -->
-        <div class="bg-video-fallback"></div>
-        <video class="bg-video" autoplay muted loop playsinline preload="auto" poster="images/bghero.jpg">
-            <source src="videos/hero-bg.mp4" type="video/mp4">
-            <source src="videos/hero-bg.webm" type="video/webm">
-        </video>
-
         <!-- Dark overlay for text readability -->
         <div class="absolute inset-0 bg-slate-900/60 z-0"></div>
 
@@ -225,13 +190,13 @@
                 </div>
             </div>
             
-            <!-- <div class="hidden md:flex justify-end relative" data-aos="zoom-in" data-aos-duration="1200">
-                <div class="w-80 h-96 glass rounded-2xl p-4 transform rotate-3 hover:rotate-0 transition duration-500 relative z-10"> -->
+            <div class="hidden md:flex justify-end relative" data-aos="zoom-in" data-aos-duration="1200">
+                <div class="w-80 h-96 glass rounded-2xl p-4 transform rotate-3 hover:rotate-0 transition duration-500 relative z-10">
                     <!-- Since you had a background image for hero, we map it here or keep it abstract. Mapping your original bg_1.png -->
-                    <!-- <img src="images/bg_1.png" alt="Ramkrishna Mahato" class="w-full h-full object-cover rounded-xl grayscale hover:grayscale-127 transition duration-500" onerror="this.src='https://images.unsplash.com/photo-1541888087644-12964a2f8b9e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
+                    <img src="images/bg_1.png" alt="Ramkrishna Mahato" class="w-full h-full object-cover rounded-xl grayscale hover:grayscale-127 transition duration-500" onerror="this.src='https://images.unsplash.com/photo-1541888087644-12964a2f8b9e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
                 </div>
                 <div class="absolute -bottom-6 -left-6 w-40 h-40 bg-blue-600 rounded-full blur-2xl opacity-40 z-0"></div>
-            </div> -->
+            </div>
         </div>
     </section>
 
