@@ -129,6 +129,55 @@
         @media (min-width: 768px) {
             .timeline-line::before { left: 50%; transform: translateX(-50%); }
         }
+
+        /* ===== RESUME TIMELINE CARDS WITH BACKGROUND IMAGES ===== */
+        .timeline-card {
+            position: relative;
+            overflow: hidden;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Dark overlay so text stays readable */
+        .timeline-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                135deg,
+                rgba(15, 23, 42, 0.92) 0%,
+                rgba(15, 23, 42, 0.85) 50%,
+                rgba(15, 23, 42, 0.75) 100%
+            );
+            z-index: 0;
+            transition: background 0.4s ease;
+        }
+
+        /* On hover, lighten the overlay slightly so image shows more */
+        .timeline-card:hover::before {
+            background: linear-gradient(
+                135deg,
+                rgba(15, 23, 42, 0.85) 0%,
+                rgba(15, 23, 42, 0.75) 50%,
+                rgba(15, 23, 42, 0.65) 100%
+            );
+        }
+
+        /* Keep content above the overlay */
+        .timeline-card > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Individual card backgrounds */
+        .card-tongji       { background-image: url('images/resume-tongji.jpg'); }
+        .card-green-gorkha { background-image: url('images/resume-green-gorkha.jpg'); }
+        .card-kalinchock   { background-image: url('images/resume-kalinchock.jpg'); }
+        .card-mv-dugar     { background-image: url('images/resume-mv-dugar.jpg'); }
+        .card-ku           { background-image: url('images/resume-ku.jpg'); }
+        .card-nonpro       { background-image: url('images/resume-nonpro.jpg'); }
     </style>
 
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9363759574975997" crossorigin="anonymous"></script>
@@ -276,54 +325,55 @@
             </div>
 
             <div class="relative timeline-line pt-4 pb-12">
-                <!-- Timeline Item 1 -->
-                 <div class="relative z-10 flex flex-col md:flex-row mb-12" data-aos="fade-up">
+                <!-- Timeline Item 1: Tongji University -->
+                <div class="relative z-10 flex flex-col md:flex-row mb-12" data-aos="fade-up">
                     <div class="md:w-1/2 md:pr-12 md:text-right pl-12 md:pl-0">
-                        <div class="glass p-6 rounded-2xl hover:-translate-y-1 transition duration-300 shadow-xl border-t-2 border-t-sky-500">
-                            <span class="inline-block px-3 py-1 bg-sky-500/20 text-sky-400 rounded-full text-xs font-bold mb-3">Sep 2026 - Present</span>
+                        <div class="timeline-card card-tongji glass p-6 rounded-2xl shadow-xl border-t-2 border-t-sky-500">
+                            <span class="inline-block px-3 py-1 bg-sky-500/30 text-sky-300 rounded-full text-xs font-bold mb-3 backdrop-blur-sm">Sep 2026 - Present</span>
                             <h3 class="text-xl font-bold mb-1"><a href="https://en.tongji.edu.cn/" target="_blank" class="hover:text-sky-400">Tongji University</a></h3>
                             <h4 class="text-blue-300 font-medium mb-3">Master's in Tunnel Engineering</h4>
-                            <p class="text-gray-400 text-sm">Shanghai, China</p>
+                            <p class="text-gray-300 text-sm">Shanghai, China</p>
                         </div>
                     </div>
                     <div class="absolute left-[12px] md:left-1/2 w-4 h-4 bg-sky-500 rounded-full md:-ml-2 mt-6 ring-4 ring-slate-900"></div>
-                </div>  
-                
-                <!-- Timeline Item 2 -->
+                </div>
+
+                <!-- Timeline Item 2: Green Gorkha Energy -->
                 <div class="relative z-10 flex flex-col md:flex-row mb-12" data-aos="fade-up">
                     <div class="hidden md:block md:w-1/2"></div>
                     <div class="md:w-1/2 md:pl-12 pl-12">
-                        <div class="glass p-6 rounded-2xl hover:-translate-y-1 transition duration-300 shadow-xl border-t-2 border-t-blue-500">
-                            <span class="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-xs font-bold mb-3">Oct 2025 - Sep 2026</span>
+                        <div class="timeline-card card-green-gorkha glass p-6 rounded-2xl shadow-xl border-t-2 border-t-blue-500">
+                            <span class="inline-block px-3 py-1 bg-blue-500/30 text-blue-300 rounded-full text-xs font-bold mb-3 backdrop-blur-sm">Oct 2025 - Sep 2026</span>
                             <h3 class="text-xl font-bold mb-1"><a href="https://ggel.com.np/" target="_blank" class="hover:text-blue-400">Green Gorkha Energy Limited</a></h3>
-                            <h4 class="text-sky-300 font-medium mb-3"> Civil Engineer (Upper Daraundi HPP 9.2 MW)</h4>
-                            <p class="text-gray-400 text-sm">Overseeing project coordination, technical reviews, and compliance monitoring from the client side, ensuring adherence to design specifications, contract provisions, and regulatory requirements for hydropower development.</p>
+                            <h4 class="text-sky-300 font-medium mb-3">Civil Engineer (Upper Daraundi HPP 9.2 MW)</h4>
+                            <p class="text-gray-300 text-sm">Overseeing project coordination, technical reviews, and compliance monitoring from the client side, ensuring adherence to design specifications, contract provisions, and regulatory requirements for hydropower development.</p>
                         </div>
                     </div>
                     <div class="absolute left-[12px] md:left-1/2 w-4 h-4 bg-blue-500 rounded-full md:-ml-2 mt-6 ring-4 ring-slate-900"></div>
                 </div>
-                  <!-- Timeline Item 3 -->
+
+                <!-- Timeline Item 3: Kalinchock Hydropower -->
                 <div class="relative z-10 flex flex-col md:flex-row mb-12" data-aos="fade-up">
                     <div class="md:w-1/2 md:pr-12 md:text-right pl-12 md:pl-0">
-                        <div class="glass p-6 rounded-2xl hover:-translate-y-1 transition duration-300 shadow-xl border-t-2 border-t-sky-500">
-                            <span class="inline-block px-3 py-1 bg-sky-500/20 text-sky-400 rounded-full text-xs font-bold mb-3">Jun 2025 - Sep 2026</span>
+                        <div class="timeline-card card-kalinchock glass p-6 rounded-2xl shadow-xl border-t-2 border-t-sky-500">
+                            <span class="inline-block px-3 py-1 bg-sky-500/30 text-sky-300 rounded-full text-xs font-bold mb-3 backdrop-blur-sm">Jun 2025 - Sep 2026</span>
                             <h3 class="text-xl font-bold mb-1"><a href="https://www.khpl.com.np/" target="_blank" class="hover:text-sky-400">Kalinchock Hydropower Limited</a></h3>
                             <h4 class="text-blue-300 font-medium mb-3">Civil Engineer (Sangu Sorun Khola HPP 5.0 MW)</h4>
-                            <p class="text-gray-400 text-sm">Overseeing day-to-day works, quality assurance, and site supervision for hydropower development.</p>
+                            <p class="text-gray-300 text-sm">Overseeing day-to-day works, quality assurance, and site supervision for hydropower development.</p>
                         </div>
                     </div>
                     <div class="absolute left-[12px] md:left-1/2 w-4 h-4 bg-sky-500 rounded-full md:-ml-2 mt-6 ring-4 ring-slate-900"></div>
                 </div>
-              
-                <!-- Timeline Item 4 -->
+
+                <!-- Timeline Item 4: MV Dugar -->
                 <div class="relative z-10 flex flex-col md:flex-row mb-12" data-aos="fade-up">
                     <div class="hidden md:block md:w-1/2"></div>
                     <div class="md:w-1/2 md:pl-12 pl-12">
-                        <div class="glass p-6 rounded-2xl hover:-translate-y-1 transition duration-300 shadow-xl border-t-2 border-t-blue-500">
-                            <span class="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-xs font-bold mb-3">2022 - 2023</span>
+                        <div class="timeline-card card-mv-dugar glass p-6 rounded-2xl shadow-xl border-t-2 border-t-blue-500">
+                            <span class="inline-block px-3 py-1 bg-blue-500/30 text-blue-300 rounded-full text-xs font-bold mb-3 backdrop-blur-sm">2022 - 2023</span>
                             <h3 class="text-xl font-bold mb-1"><a href="https://mvdugar.com/" target="_blank" class="hover:text-blue-400">MV Dugar Hydro Division</a></h3>
                             <h4 class="text-sky-300 font-medium mb-3">Civil Intern Engineer (Likhu-1 HEP)</h4>
-                            <ul class="text-gray-400 text-sm list-disc list-inside space-y-1">
+                            <ul class="text-gray-300 text-sm list-disc list-inside space-y-1">
                                 <li>Supervision in the construction of trench weir.</li>
                                 <li>Seepage control of collection pool, tailrace and headrace tunnel.</li>
                                 <li>Shotcreting, cement grouting at HRT, vertical shaft.</li>
@@ -334,32 +384,32 @@
                     <div class="absolute left-[12px] md:left-1/2 w-4 h-4 bg-blue-500 rounded-full md:-ml-2 mt-6 ring-4 ring-slate-900"></div>
                 </div>
 
-                <!-- Timeline Item 5 (Education) -->
+                <!-- Timeline Item 5: Kathmandu University -->
                 <div class="relative z-10 flex flex-col md:flex-row mb-12" data-aos="fade-up">
                     <div class="md:w-1/2 md:pr-12 md:text-right pl-12 md:pl-0">
-                        <div class="glass p-6 rounded-2xl hover:-translate-y-1 transition duration-300 shadow-xl border-t-2 border-t-sky-500">
-                            <span class="inline-block px-3 py-1 bg-sky-500/20 text-sky-400 rounded-full text-xs font-bold mb-3">2018 - 2022</span>
+                        <div class="timeline-card card-ku glass p-6 rounded-2xl shadow-xl border-t-2 border-t-sky-500">
+                            <span class="inline-block px-3 py-1 bg-sky-500/30 text-sky-300 rounded-full text-xs font-bold mb-3 backdrop-blur-sm">2018 - 2022</span>
                             <h3 class="text-xl font-bold mb-1"><a href="https://www.ku.edu.np/" target="_blank" class="hover:text-sky-400">Kathmandu University</a></h3>
                             <h4 class="text-blue-300 font-medium mb-3">Bachelor in Civil Engineering</h4>
-                            <p class="text-gray-400 text-sm">Dhulikhel, Kavre. Grade: First class.</p>
+                            <p class="text-gray-300 text-sm">Dhulikhel, Kavre. Grade: First class.</p>
                         </div>
                     </div>
                     <div class="absolute left-[12px] md:left-1/2 w-4 h-4 bg-sky-500 rounded-full md:-ml-2 mt-6 ring-4 ring-slate-900"></div>
                 </div>
 
-                <!-- Timeline Item 6 (Non-Pro) -->
+                <!-- Timeline Item 6: Non-Professional Roles -->
                 <div class="relative z-10 flex flex-col md:flex-row" data-aos="fade-up">
                     <div class="hidden md:block md:w-1/2"></div>
                     <div class="md:w-1/2 md:pl-12 pl-12">
-                        <div class="glass p-6 rounded-2xl hover:-translate-y-1 transition duration-300 shadow-xl border-t-2 border-t-blue-500">
-                            <span class="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-xs font-bold mb-3">2021 - 2023 (Leadership)</span>
+                        <div class="timeline-card card-nonpro glass p-6 rounded-2xl shadow-xl border-t-2 border-t-blue-500">
+                            <span class="inline-block px-3 py-1 bg-blue-500/30 text-blue-300 rounded-full text-xs font-bold mb-3 backdrop-blur-sm">2021 - 2023 (Leadership)</span>
                             <h3 class="text-xl font-bold mb-1">Non-Professional Roles</h3>
                             <div class="mt-3">
                                 <h4 class="text-sky-300 font-medium text-sm">President - KU Youth Red Cross Circle</h4>
-                                <p class="text-gray-400 text-xs mt-1 mb-3">Conducted blood donation, first aid training, plantation programs.</p>
-                                
+                                <p class="text-gray-300 text-xs mt-1 mb-3">Conducted blood donation, first aid training, plantation programs.</p>
+
                                 <h4 class="text-sky-300 font-medium text-sm">Administrator - Sankalpa Expo</h4>
-                                <p class="text-gray-400 text-xs mt-1">Organized panel discussions, project demonstrations, and sports tournaments.</p>
+                                <p class="text-gray-300 text-xs mt-1">Organized panel discussions, project demonstrations, and sports tournaments.</p>
                             </div>
                         </div>
                     </div>
