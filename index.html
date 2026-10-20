@@ -100,6 +100,11 @@ footer{padding:40px 0 60px}
 .sect .fl{opacity:0;animation:fi 4s 6s ease forwards}
 @keyframes fi{to{opacity:1}}
 @media (prefers-reduced-motion:reduce){.sect .al{stroke-dashoffset:0}.sect .fl{opacity:1}}
+#home-section{padding:26px 0 22px}#home-section h1{font-size:clamp(30px,4.6vw,50px)}.hero{gap:28px}
+.hero .photo{width:clamp(140px,16vw,200px);justify-self:center;font-size:48px}
+.alw{margin-top:18px}.sect{max-height:27vh}
+#about-section .photo{border-radius:50%;max-width:260px}#about-section .photo:after{border-radius:50%}
+.tz{position:relative;overflow:hidden;background:var(--surf);border:1px solid var(--line);border-radius:6px;padding:18px 22px}.tz .hero{position:relative;z-index:1}.tz+.alw{margin-top:14px}
 @media(max-width:760px){.hero,.two,.proj{grid-template-columns:1fr}.photo{max-width:280px}.ph{max-width:260px}}
 </style></head>
 <body>
@@ -112,7 +117,7 @@ footer{padding:40px 0 60px}
 </div></nav>
 
 <main>
-<section id="home-section"><canvas id="tun" aria-hidden="true"></canvas><div class="wrap">
+<section id="home-section"><div class="wrap"><div class="tz"><canvas id="tun" aria-hidden="true"></canvas>
 <div class="hero"><div>
 <div class="tag">// Longitudinal Section · Chainage 0+000</div>
 <p class="sub" style="margin:.8em 0 0">Namaste!</p>
@@ -121,7 +126,7 @@ footer{padding:40px 0 60px}
 <p style="display:flex;gap:12px;flex-wrap:wrap;margin-top:24px"><a class="btn p" href="https://ramkrishnamahato.com.np/Ramkrishna-Mahato-CV.pdf">Download CV</a><a class="btn" href="#contact-section">Let's Talk</a></p>
 </div>
 <div class="photo" aria-label="Ramkrishna Mahato">RM<img src="https://ramkrishnamahato.com.np/images/bg_1.png" alt="Ramkrishna Mahato" onerror="this.remove()"></div></div>
-<div class="alw"><svg class="sect" viewBox="0 0 1200 210" role="img" aria-label="Tunnel alignment profile"><line x1="0" y1="176" x2="1200" y2="176" stroke="currentColor" stroke-opacity=".3"/><path class="fl" fill="currentColor" fill-opacity=".09" d="M0 156 L40 149 C110 100 170 34 260 46 C340 56 390 100 480 84 C570 68 630 20 720 36 C810 52 860 92 950 70 C1030 50 1100 96 1160 129 L1200 133 L1200 176 L0 176Z"/><path class="al" pathLength="100" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" d="M0 156 L40 149 C110 100 170 34 260 46 C340 56 390 100 480 84 C570 68 630 20 720 36 C810 52 860 92 950 70 C1030 50 1100 96 1160 129 L1200 133"/><path id="aln" d="M40 149 L1160 129" fill="none" stroke="var(--acc2)" stroke-width="3" stroke-dasharray="14 8"/><path d="M60 176v6M330 176v6M600 176v6M870 176v6M1140 176v6" stroke="currentColor" stroke-opacity=".5"/><text x="60" y="198" text-anchor="middle">0+000</text><text x="330" y="198" text-anchor="middle">0+500</text><text x="600" y="198" text-anchor="middle">1+000</text><text x="870" y="198" text-anchor="middle">1+500</text><text x="1140" y="198" text-anchor="middle">2+000</text><text x="10" y="14">━ Ground profile</text><text x="10" y="29" style="fill:var(--acc2)">╍ Tunnel alignment</text><circle cx="40" cy="149" r="5" fill="var(--bg)" stroke="var(--acc2)" stroke-width="2"/><circle cx="1160" cy="129" r="5" fill="var(--bg)" stroke="var(--acc2)" stroke-width="2"/><text x="40" y="168" text-anchor="middle">PORTAL</text><text x="1160" y="150" text-anchor="middle">PORTAL</text><g><circle r="9" fill="var(--acc2)"/><circle r="3.5" fill="var(--surf)"/><animateMotion dur="40s" repeatCount="indefinite" rotate="auto"><mpath href="#aln"/></animateMotion></g></svg></div>
+</div><div class="alw"><svg class="sect" viewBox="0 0 1200 210" role="img" aria-label="Tunnel alignment profile"><line x1="0" y1="176" x2="1200" y2="176" stroke="currentColor" stroke-opacity=".3"/><path class="fl" fill="currentColor" fill-opacity=".09" d="M0 156 L40 149 C110 100 170 34 260 46 C340 56 390 100 480 84 C570 68 630 20 720 36 C810 52 860 92 950 70 C1030 50 1100 96 1160 129 L1200 133 L1200 176 L0 176Z"/><path class="al" pathLength="100" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" d="M0 156 L40 149 C110 100 170 34 260 46 C340 56 390 100 480 84 C570 68 630 20 720 36 C810 52 860 92 950 70 C1030 50 1100 96 1160 129 L1200 133"/><path id="aln" d="M40 149 L1160 129" fill="none" stroke="var(--acc2)" stroke-width="3" stroke-dasharray="14 8"/><path d="M60 176v6M330 176v6M600 176v6M870 176v6M1140 176v6" stroke="currentColor" stroke-opacity=".5"/><text x="60" y="198" text-anchor="middle">0+000</text><text x="330" y="198" text-anchor="middle">0+500</text><text x="600" y="198" text-anchor="middle">1+000</text><text x="870" y="198" text-anchor="middle">1+500</text><text x="1140" y="198" text-anchor="middle">2+000</text><text x="10" y="14">━ Ground profile</text><text x="10" y="29" style="fill:var(--acc2)">╍ Tunnel alignment</text><circle cx="40" cy="149" r="5" fill="var(--bg)" stroke="var(--acc2)" stroke-width="2"/><circle cx="1160" cy="129" r="5" fill="var(--bg)" stroke="var(--acc2)" stroke-width="2"/><text x="40" y="168" text-anchor="middle">PORTAL</text><text x="1160" y="150" text-anchor="middle">PORTAL</text><g><circle r="9" fill="var(--acc2)"/><circle r="3.5" fill="var(--surf)"/><animateMotion dur="40s" repeatCount="indefinite" rotate="auto"><mpath href="#aln"/></animateMotion></g></svg></div>
 </div></section>
 
 <section id="about-section"><div class="wrap">
@@ -230,7 +235,7 @@ var sm=K/((zf+zn)/2);cx.strokeStyle=a2;cx.globalAlpha=.55*fog;cx.lineWidth=lw*1.
 cx.fillStyle=a2;cx.globalAlpha=.9*fog;cx.beginPath();cx.arc(vx,vy-.9*sm,Math.max(1,sm*.018),0,TAU);cx.fill();cx.globalAlpha=.12*fog;cx.beginPath();cx.arc(vx,vy-.9*sm,Math.max(2,sm*.09),0,TAU);cx.fill()}
 var sF=K/N,sN=K/.22;cx.lineWidth=lw*2;cx.strokeStyle=ac;cx.globalAlpha=.7;cx.beginPath();[-.2,.2].forEach(function(x){cx.moveTo(vx+x*sF,vy+.6*sF);cx.lineTo(vx+x*sN,vy+.6*sN)});cx.stroke();
 cx.lineWidth=lw*1.4;cx.globalAlpha=.35;cx.beginPath();[-130,-50].forEach(function(a){var r=a*Math.PI/180,c=Math.cos(r),s=Math.sin(r);cx.moveTo(vx+c*.93*sF,vy+s*.93*sF);cx.lineTo(vx+c*.93*sN,vy+s*.93*sN)});cx.stroke();cx.globalAlpha=1}
-function loop(ts){if(on){if(last)pos+=Math.min(ts-last,100)/1000*.12;last=ts;draw()}else last=0;requestAnimationFrame(loop)}
+function loop(ts){if(on){if(last)pos+=Math.min(ts-last,100)/1000*.02;last=ts;draw()}else last=0;requestAnimationFrame(loop)}
 rs();draw();window.addEventListener('resize',function(){rs();draw()});
 if(rm)return;if('IntersectionObserver' in window)new IntersectionObserver(function(e){on=e[0].isIntersecting}).observe(cv.parentNode);requestAnimationFrame(loop)})();
 /* scroll reveal */
@@ -247,4 +252,5 @@ function onS(){var h=document.documentElement,y=window.scrollY||h.scrollTop;pr.s
 window.addEventListener('scroll',onS,{passive:true});onS();
 })();
 </script>
+<script>(function(){Array.prototype.forEach.call(document.querySelectorAll('a[href]'),function(a){var h=a.getAttribute('href');if(!h||h.charAt(0)==='#'||/^(tel|mailto):/i.test(h))return;a.target='_blank';a.rel='noopener noreferrer'})})();</script>
 </body></html>
