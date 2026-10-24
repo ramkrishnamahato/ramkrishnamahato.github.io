@@ -109,7 +109,7 @@ footer{padding:40px 0 60px}
 </style></head>
 <body>
 <div id="prog"></div>
-<div class="status mono"><div class="wrap"><span><span class="dot">●</span> STATUS: ACTIVE</span><span>SITE: UPPER DARAUNDI HPP · 9.2 MW</span><span id="clk">--:--:--</span><span>KATHMANDU, NEPAL</span></div></div>
+<div class="status mono"><div class="wrap"><span><span class="dot">●</span> STATUS: ACTIVE</span><span>TONGJI UNIVERSITY</span><span id="clk">--:--:--</span><span>SHANGHAI, CHINA</span></div></div>
 <nav><div class="wrap">
 <a class="logo" href="#home-section">Ramkrishna<b>.</b></a>
 <div class="links"><a href="#home-section">Home</a><a href="#about-section">About</a><a href="#resume-section">Resume</a><a href="#project-section">Projects</a><a href="#myworks-section">Works</a><a href="#contact-section">Contact</a>
@@ -302,31 +302,5 @@ $('hl').innerHTML=L.map(function(x){return '<li><b>'+nu(x.s+1)+(x.e>x.s?'–'+nu
 $('pv').disabled=cm==0;$('nx').disabled=cm==11}
 $('pv').onclick=function(){if(cm>0){cm--;render()}};$('nx').onclick=function(){if(cm<11){cm++;render()}};
 $('cbtn').onclick=function(){cm=now?now[0]:0;render();open(cov)};
-})();</script>
-<style>[hidden]{display:none!important}.lb{display:block;font:600 12px ui-monospace,Menlo,monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--acc2);margin:12px 0 4px}.in{width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:4px;background:var(--bg);color:var(--ink);font:inherit;resize:vertical}.in:focus{outline:2px solid var(--acc);border-color:var(--acc)}</style>
-<div class="ov" id="cvm" role="dialog" aria-modal="true" aria-labelledby="cvt"><div class="md" style="text-align:left"><button class="x" data-x aria-label="Close">×</button>
-<div id="cvf"><div class="tag">// Before you download</div><h3 id="cvt">Download CV</h3><p style="color:var(--mut);margin:.2em 0 6px">Please tell me who you are and why you need my CV. Your download starts right after.</p>
-<label class="lb" for="cvn">Your name</label><input class="in" id="cvn" maxlength="80" autocomplete="name" placeholder="e.g. Sita Sharma">
-<label class="lb" for="cvr">Reason for download</label><textarea class="in" id="cvr" rows="3" maxlength="300" placeholder="e.g. Job opportunity, collaboration, academic reference…"></textarea>
-<div id="cve" class="mono" style="color:#d64545;font-size:12px;min-height:20px;margin-top:6px"></div>
-<button class="btn p" id="cvs" type="button">Submit &amp; Download</button></div>
-<div id="cvd" hidden style="text-align:center"><div class="em">✅</div><h3 id="cvth"></h3><p style="color:var(--mut)">Your download should start automatically. If it doesn’t, use the button below.</p><a class="btn p" id="cvl" href="https://ramkrishnamahato.com.np/Ramkrishna-Mahato-CV.pdf" target="_blank" rel="noopener noreferrer">Download CV</a></div>
-</div></div>
-<script>(function(){
-var m=document.getElementById('cvm'),U='https://ramkrishnamahato.com.np/Ramkrishna-Mahato-CV.pdf',n=document.getElementById('cvn'),r=document.getElementById('cvr'),e=document.getElementById('cve');
-function show(){document.getElementById('cvf').hidden=false;document.getElementById('cvd').hidden=true;e.textContent='';m.classList.add('open');setTimeout(function(){n.focus()},60)}
-function hide(){m.classList.remove('open')}
-function save(nm,rs){try{if(!window.claude||!claude.use)return;claude.use('db').then(function(db){if(!db)return;return db.collection('cv_requests').add({name:nm,reason:rs,at:new Date().toISOString()})}).catch(function(){})}catch(x){}}
-function go(){var nm=n.value.trim(),rs=r.value.trim();
-if(nm.length<2){e.textContent='Please enter your name.';n.focus();return}
-if(rs.length<3){e.textContent='Please tell me the reason for download.';r.focus();return}
-document.getElementById('cvth').textContent='Thank you, '+nm+'!';document.getElementById('cvf').hidden=true;document.getElementById('cvd').hidden=false;
-try{window.open(U,'_blank','noopener')}catch(x){}
-save(nm,rs);n.value='';r.value=''}
-Array.prototype.forEach.call(document.querySelectorAll('a[href$="Ramkrishna-Mahato-CV.pdf"]'),function(a){if(a.id==='cvl')return;a.addEventListener('click',function(ev){ev.preventDefault();show()})});
-document.getElementById('cvs').addEventListener('click',go);
-n.addEventListener('keydown',function(ev){if(ev.key==='Enter'){ev.preventDefault();r.focus()}});
-m.addEventListener('click',function(ev){if(ev.target===m||ev.target.hasAttribute('data-x'))hide()});
-document.addEventListener('keydown',function(ev){if(ev.key==='Escape')hide()});
 })();</script>
 </body></html>
