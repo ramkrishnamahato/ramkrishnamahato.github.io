@@ -12,12 +12,6 @@
 <meta property="og:title" content="Ramkrishna Mahato | Civil Engineer Nepal">
 <meta property="og:description" content="Civil Engineer specializing in hydropower and infrastructure. Based in Kathmandu, Nepal.">
 <link rel="canonical" href="https://ramkrishnamahato.com.np/">
- <!-- Favicon -->
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
 <style>
 :root{--bg:#f4f6f8;--surf:#fff;--ink:#14212b;--mut:#5d6b78;--line:#cfd8e0;--acc:#0b7a8f;--acc2:#c9741a;--grid:rgba(11,122,143,.07)}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0c1822;--surf:#122431;--ink:#e6eef4;--mut:#8fa3b3;--line:#244053;--acc:#3fc1d8;--acc2:#f0a04b;--grid:rgba(63,193,216,.07)}}
@@ -115,7 +109,7 @@ footer{padding:40px 0 60px}
 </style></head>
 <body>
 <div id="prog"></div>
-<!-- <div class="status mono"><div class="wrap"><span><span class="dot">●</span> STATUS: ACTIVE</span><span>SITE: UPPER DARAUNDI HPP · 9.2 MW</span><span id="clk">--:--:--</span><span>KATHMANDU, NEPAL</span></div></div> -->
+<div class="status mono"><div class="wrap"><span><span class="dot">●</span> STATUS: ACTIVE</span><span>SITE: UPPER DARAUNDI HPP · 9.2 MW</span><span id="clk">--:--:--</span><span>KATHMANDU, NEPAL</span></div></div>
 <nav><div class="wrap">
 <a class="logo" href="#home-section">Ramkrishna<b>.</b></a>
 <div class="links"><a href="#home-section">Home</a><a href="#about-section">About</a><a href="#resume-section">Resume</a><a href="#project-section">Projects</a><a href="#myworks-section">Works</a><a href="#contact-section">Contact</a>
@@ -259,4 +253,80 @@ window.addEventListener('scroll',onS,{passive:true});onS();
 })();
 </script>
 <script>(function(){Array.prototype.forEach.call(document.querySelectorAll('a[href]'),function(a){var h=a.getAttribute('href');if(!h||h.charAt(0)==='#'||/^(tel|mailto):/i.test(h))return;a.target='_blank';a.rel='noopener noreferrer'})})();</script>
+<style>
+.cb{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:60;width:52px;height:52px;border-radius:50%;border:1.5px solid var(--acc);background:var(--surf);color:var(--acc);font-size:24px;cursor:pointer;box-shadow:0 6px 18px rgba(0,0,0,.2);transition:transform .3s}.cb:hover{transform:translateY(-3px) scale(1.06)}
+.ov{position:fixed;inset:0;z-index:100;background:rgba(5,15,22,.6);display:none;align-items:center;justify-content:center;padding:16px}.ov.open{display:flex;animation:fi2 .3s}
+@keyframes fi2{from{opacity:0}}@keyframes pop{from{opacity:0;transform:translateY(24px) scale(.94)}}@keyframes bnc{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.md{background:var(--surf);color:var(--ink);border:1px solid var(--line);border-radius:10px;width:100%;max-width:420px;max-height:90vh;overflow:auto;padding:24px;position:relative;animation:pop .45s ease;text-align:center}
+.md:before{content:"";position:absolute;left:0;right:0;top:0;height:5px;background:linear-gradient(90deg,var(--acc),var(--acc2))}
+.md .x{position:absolute;right:10px;top:12px;background:none;border:0;color:var(--mut);font-size:24px;cursor:pointer}
+.em{font-size:56px;animation:bnc 2.4s infinite}.md h3{font-size:24px;margin:.2em 0}.md .ne{font-size:20px;color:var(--acc);font-weight:700}
+button.btn{cursor:pointer;font-family:inherit;background:transparent;color:var(--ink)}button.btn.p{background:var(--acc);color:#fff}
+.cal{width:100%;border-collapse:collapse;table-layout:fixed;margin-top:10px}.cal th{font:600 11px ui-monospace,monospace;color:var(--mut);padding:4px 0}
+.cal td{height:46px;text-align:center;vertical-align:middle;border-radius:6px;font-weight:600;font-size:15px;line-height:1.1}.cal td small{display:block;font:10px ui-monospace,monospace;color:var(--mut);font-weight:400}
+.cal td.sat,.cal th.sat{color:#d64545}.cal td.h{background:rgba(214,69,69,.15);color:#d64545}.cal td.t{outline:2px solid var(--acc)}
+.nv{display:flex;justify-content:space-between;align-items:center;margin-top:6px;text-align:center}.nv button{border:1px solid var(--line);background:none;color:var(--ink);border-radius:4px;padding:6px 14px;cursor:pointer;font-size:18px}.nv button:disabled{opacity:.3;cursor:default}
+.hl{text-align:left;font-size:14px;margin:12px 0 0;padding:0;list-style:none}.hl li{padding:4px 0;border-bottom:1px dotted var(--line)}.hl b{color:var(--acc2);font-family:ui-monospace,monospace}
+</style>
+<button class="cb" id="cbtn" aria-label="Open Nepali calendar" title="नेपाली पात्रो · Nepali Calendar">📅</button>
+<div class="ov" id="pop" role="dialog" aria-modal="true" aria-labelledby="ph"><div class="md"><button class="x" data-x aria-label="Close">×</button><div class="em" id="pe"></div><div class="ne" id="pn"></div><h3 id="ph"></h3><p id="pw" style="color:var(--mut);margin:.4em 0 .8em"></p><p class="mono" id="pd" style="font-size:12px;color:var(--acc2)"></p><button class="btn p" data-x>धन्यवाद · Thank you</button></div></div>
+<div class="ov" id="cov" role="dialog" aria-modal="true" aria-label="Nepali calendar"><div class="md" style="text-align:left"><button class="x" data-x aria-label="Close">×</button><div class="tag" style="text-align:center">नेपाली पात्रो · Bikram Sambat 2083</div><div class="nv"><button id="pv" aria-label="Previous month">‹</button><div><b id="mt" style="font-size:20px"></b><div class="mono" id="ms" style="font-size:11px;color:var(--mut)"></div></div><button id="nx" aria-label="Next month">›</button></div><table class="cal" id="ct"></table><ul class="hl" id="hl"></ul><p class="mono" style="font-size:10px;color:var(--mut);margin:10px 0 0">Red = public holiday · Saturday = weekly holiday. Source: Nepal Gazette, MoHA notice (18 Falgun 2082). Eid dates are announced on the day; some holidays are regional or for specific groups.</p></div></div>
+<script>(function(){
+var NM=['बैशाख','जेठ','असार','श्रावण','भदौ','असोज','कार्तिक','मंसिर','पौष','माघ','फागुन','चैत'],EN=['Baisakh','Jestha','Ashadh','Shrawan','Bhadra','Ashwin','Kartik','Mangsir','Poush','Magh','Falgun','Chaitra'],WD=['आइतबार','सोमबार','मंगलबार','बुधबार','बिहीबार','शुक्रबार','शनिबार'],WS=['आइत','सोम','मंगल','बुध','बिही','शुक्र','शनि'],ML=[31,31,32,31,31,31,30,29,30,29,30,30],S=Date.UTC(2026,3,14),DY=864e5,H={},i;
+function $(x){return document.getElementById(x)}
+function nu(n){return String(n).replace(/\d/g,function(d){return '०१२३४५६७८९'[d]})}
+function iso(ms){return new Date(ms).toISOString().slice(0,10)}
+function pd(n){return ('0'+n).slice(-2)}
+function add(d,a,b,c,t){H[d]=[a,b,c,t||'f']}
+[['2026-04-14','Nepali New Year 2083','नयाँ वर्ष २०८३','🎉'],['2026-05-01','Buddha Jayanti & Labour Day','बुद्ध जयन्ती तथा श्रमिक दिवस','☸️'],['2026-05-29','Republic Day','गणतन्त्र दिवस','🇳🇵','n'],['2026-08-28','Raksha Bandhan (Janai Purnima)','रक्षा बन्धन (जनै पूर्णिमा)','🧵'],['2026-08-29','Gai Jatra','गाईजात्रा','🐄'],['2026-09-04','Krishna Janmashtami','श्रीकृष्ण जन्माष्टमी','🦚'],['2026-09-14','Haritalika Teej','हरितालिका तीज','💃'],['2026-09-19','Constitution Day','संविधान दिवस','🇳🇵','n'],['2026-09-25','Indra Jatra','इन्द्रजात्रा','🎭'],['2026-10-04','Jitiya Parva','जितिया पर्व','🌿'],['2026-10-11','Ghatasthapana','घटस्थापना','🏵️'],['2026-11-15','Chhath Parva','छठ पर्व','🌅'],['2026-12-24','Yomari Punhi (Dhanya Purnima)','योमरी पुन्ही (धान्य पूर्णिमा)','🌕'],['2026-12-25','Christmas Day','क्रिसमस','🎄'],['2026-12-30','Tamu Lhosar','तमु ल्होसार','🎊'],['2027-01-11','Prithvi Jayanti (National Unity Day)','पृथ्वी जयन्ती (राष्ट्रिय एकता दिवस)','🇳🇵','n'],['2027-01-15','Maghe Sankranti','माघे संक्रान्ति','☀️'],['2027-01-30','Martyrs’ Day','शहीद दिवस','🕯️','r'],['2027-02-07','Sonam Lhosar','सोनाम ल्होसार','🎊'],['2027-02-11','Basanta Panchami','वसन्त पञ्चमी','🌼'],['2027-02-19','Democracy Day','प्रजातन्त्र दिवस','🇳🇵','n'],['2027-03-06','Maha Shivaratri','महाशिवरात्रि','🔱'],['2027-03-08','International Women’s Day','अन्तर्राष्ट्रिय महिला दिवस','👩','n'],['2027-03-09','Gyalpo Lhosar','ग्याल्पो ल्होसार','🎊'],['2027-03-21','Holi (Fagu Purnima)','फागु पूर्णिमा (होली)','🎨'],['2027-03-22','Holi (Fagu Purnima, Terai)','फागु पूर्णिमा (तराई)','🎨'],['2027-04-06','Ghode Jatra','घोडेजात्रा','🐎']].forEach(function(r){add(r[0],r[1],r[2],r[3],r[4])});
+for(i=17;i<=23;i++)add('2026-10-'+i,i==17?'Phulpati (Dashain)':'Dashain',i==17?'फूलपाती (दशैं)':'दशैं','🏵️');
+for(i=8;i<=12;i++)add('2026-11-'+pd(i),i==9?'Laxmi Puja (Tihar)':i==11?'Bhai Tika (Tihar)':'Tihar',i==9?'लक्ष्मी पूजा (तिहार)':i==11?'भाइटीका (तिहार)':'तिहार','🪔');
+function bs(s){var p=s.split('-'),k=Math.round((Date.UTC(+p[0],p[1]-1,+p[2])-S)/DY),m;if(k<0||k>364)return null;for(m=0;m<12;m++){if(k<ML[m])return [m,k+1];k-=ML[m]}}
+function wish(h){var t=h[3];return t=='r'?['Today we remember and honour the martyrs of Nepal.','शहिदहरूप्रति हार्दिक श्रद्धाञ्जली 🙏']:t=='n'?['Wishing you a proud and meaningful '+h[0]+'.',h[1]+' को हार्दिक शुभकामना!']:['Happy '+h[0]+'! Wishing you and your family happiness, health and prosperity.',h[1]+' को हार्दिक मंगलमय शुभकामना!']}
+var pop=$('pop'),cov=$('cov'),td=new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Kathmandu'}).format(new Date()),now=bs(td),cm=now?now[0]:0;
+function open(o){o.classList.add('open');var b=o.querySelector('.x');if(b)b.focus()}
+function shut(o){o.classList.remove('open')}
+[pop,cov].forEach(function(o){o.addEventListener('click',function(e){if(e.target===o||e.target.hasAttribute('data-x'))shut(o)})});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){shut(pop);shut(cov)}});
+var th=H[td];
+if(th&&now){var w=wish(th),wd=new Date(td+'T00:00:00Z').getUTCDay(),seen=false;$('pe').textContent=th[2];$('pn').textContent=w[1];$('ph').textContent=th[0];$('pw').textContent=w[0];$('pd').textContent='आज · '+WD[wd]+', '+nu(now[1])+' '+NM[now[0]]+' २०८३ · '+td;
+try{seen=sessionStorage.getItem('hd'+td)}catch(e){}
+if(!seen)setTimeout(function(){open(pop);try{sessionStorage.setItem('hd'+td,'1')}catch(e){}},900)}
+function render(){var off=0,k,st,w0,n=ML[cm],r='<tr>'+WS.map(function(x,j){return '<th'+(j==6?' class="sat"':'')+'>'+x+'</th>'}).join('')+'</tr><tr>',L=[],last=null,f={month:'short',year:'numeric',timeZone:'UTC'};
+for(k=0;k<cm;k++)off+=ML[k];st=S+off*DY;w0=new Date(st).getUTCDay();for(k=0;k<w0;k++)r+='<td></td>';
+for(k=0;k<n;k++){var ms=st+k*DY,d=iso(ms),h=H[d],c=(w0+k)%7;
+r+='<td class="'+(c==6?'sat ':'')+(h?'h ':'')+(d==td?'t':'')+'"'+(h?' title="'+h[0]+'"':'')+'>'+nu(k+1)+'<small>'+new Date(ms).getUTCDate()+'</small></td>';if(c==6&&k<n-1)r+='</tr><tr>';
+if(h){if(last&&last.n==h[0]&&last.e==k-1)last.e=k;else{last={n:h[0],z:h[1],s:k,e:k};L.push(last)}}}
+$('ct').innerHTML=r+'</tr>';$('mt').textContent=NM[cm]+' २०८३';$('ms').textContent=EN[cm]+' 2083 · '+new Date(st).toLocaleString('en',f)+' – '+new Date(st+(n-1)*DY).toLocaleString('en',f);
+$('hl').innerHTML=L.map(function(x){return '<li><b>'+nu(x.s+1)+(x.e>x.s?'–'+nu(x.e+1):'')+'</b> '+x.n+' · '+x.z+'</li>'}).join('')||'<li style="color:var(--mut)">No public holidays this month (besides Saturdays).</li>';
+$('pv').disabled=cm==0;$('nx').disabled=cm==11}
+$('pv').onclick=function(){if(cm>0){cm--;render()}};$('nx').onclick=function(){if(cm<11){cm++;render()}};
+$('cbtn').onclick=function(){cm=now?now[0]:0;render();open(cov)};
+})();</script>
+<style>[hidden]{display:none!important}.lb{display:block;font:600 12px ui-monospace,Menlo,monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--acc2);margin:12px 0 4px}.in{width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:4px;background:var(--bg);color:var(--ink);font:inherit;resize:vertical}.in:focus{outline:2px solid var(--acc);border-color:var(--acc)}</style>
+<div class="ov" id="cvm" role="dialog" aria-modal="true" aria-labelledby="cvt"><div class="md" style="text-align:left"><button class="x" data-x aria-label="Close">×</button>
+<div id="cvf"><div class="tag">// Before you download</div><h3 id="cvt">Download CV</h3><p style="color:var(--mut);margin:.2em 0 6px">Please tell me who you are and why you need my CV. Your download starts right after.</p>
+<label class="lb" for="cvn">Your name</label><input class="in" id="cvn" maxlength="80" autocomplete="name" placeholder="e.g. Sita Sharma">
+<label class="lb" for="cvr">Reason for download</label><textarea class="in" id="cvr" rows="3" maxlength="300" placeholder="e.g. Job opportunity, collaboration, academic reference…"></textarea>
+<div id="cve" class="mono" style="color:#d64545;font-size:12px;min-height:20px;margin-top:6px"></div>
+<button class="btn p" id="cvs" type="button">Submit &amp; Download</button></div>
+<div id="cvd" hidden style="text-align:center"><div class="em">✅</div><h3 id="cvth"></h3><p style="color:var(--mut)">Your download should start automatically. If it doesn’t, use the button below.</p><a class="btn p" id="cvl" href="https://ramkrishnamahato.com.np/Ramkrishna-Mahato-CV.pdf" target="_blank" rel="noopener noreferrer">Download CV</a></div>
+</div></div>
+<script>(function(){
+var m=document.getElementById('cvm'),U='https://ramkrishnamahato.com.np/Ramkrishna-Mahato-CV.pdf',n=document.getElementById('cvn'),r=document.getElementById('cvr'),e=document.getElementById('cve');
+function show(){document.getElementById('cvf').hidden=false;document.getElementById('cvd').hidden=true;e.textContent='';m.classList.add('open');setTimeout(function(){n.focus()},60)}
+function hide(){m.classList.remove('open')}
+function save(nm,rs){try{if(!window.claude||!claude.use)return;claude.use('db').then(function(db){if(!db)return;return db.collection('cv_requests').add({name:nm,reason:rs,at:new Date().toISOString()})}).catch(function(){})}catch(x){}}
+function go(){var nm=n.value.trim(),rs=r.value.trim();
+if(nm.length<2){e.textContent='Please enter your name.';n.focus();return}
+if(rs.length<3){e.textContent='Please tell me the reason for download.';r.focus();return}
+document.getElementById('cvth').textContent='Thank you, '+nm+'!';document.getElementById('cvf').hidden=true;document.getElementById('cvd').hidden=false;
+try{window.open(U,'_blank','noopener')}catch(x){}
+save(nm,rs);n.value='';r.value=''}
+Array.prototype.forEach.call(document.querySelectorAll('a[href$="Ramkrishna-Mahato-CV.pdf"]'),function(a){if(a.id==='cvl')return;a.addEventListener('click',function(ev){ev.preventDefault();show()})});
+document.getElementById('cvs').addEventListener('click',go);
+n.addEventListener('keydown',function(ev){if(ev.key==='Enter'){ev.preventDefault();r.focus()}});
+m.addEventListener('click',function(ev){if(ev.target===m||ev.target.hasAttribute('data-x'))hide()});
+document.addEventListener('keydown',function(ev){if(ev.key==='Escape')hide()});
+})();</script>
 </body></html>
