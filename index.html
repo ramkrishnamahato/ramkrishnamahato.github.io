@@ -213,7 +213,24 @@ footer{padding:40px 0 60px}
 <div class="copy"><span>© Ramkrishna Mahato | All rights reserved.</span><a href="https://ramkrishnamahato.com.np/hydropedia/privacy-policy.html">Privacy Policy</a></div>
 </div></footer>
 <script>
-(function(){var c=document.getElementById('clk');function t(){try{c.textContent=new Date().toLocaleTimeString('en-GB',{timeZone:'Asia/Kathmandu'})+' NPT'}catch(e){}}t();setInterval(t,1000)})();
+
+(function () {
+    var c = document.getElementById('clk');
+
+    function t() {
+        c.textContent = new Date().toLocaleTimeString('en-GB', {
+            timeZone: 'Asia/Shanghai',
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit',
+            hour12: false
+        }) + ' CST';
+    }
+
+    t();
+    setInterval(t, 1000);
+})();
+
 (function(){
 var rm=window.matchMedia&&matchMedia('(prefers-reduced-motion:reduce)').matches;
 var q=function(s){return Array.prototype.slice.call(document.querySelectorAll(s))};
