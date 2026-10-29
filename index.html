@@ -113,6 +113,24 @@ footer{padding:40px 0 60px}
 #about-section .photo{border-radius:50%;max-width:260px}#about-section .photo:after{border-radius:50%}
 .tz{position:relative;overflow:hidden;background:var(--surf);border:1px solid var(--line);border-radius:6px;padding:18px 22px}.tz .hero{position:relative;z-index:1}.tz+.alw{margin-top:14px}
 @media(max-width:760px){.hero,.two,.proj{grid-template-columns:1fr}.photo{max-width:280px}.ph{max-width:260px}}
+/* ===== Resume image upload (additive) ===== */
+.rimg{margin-top:12px;padding:10px 12px;border:1px dashed var(--line);border-radius:4px;background:var(--surf);transition:border-color .3s,background .3s}
+.rimg.drag{border-color:var(--acc);background:var(--grid)}
+.rimg .rh{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;font:12px ui-monospace,Menlo,Consolas,monospace;color:var(--acc2);letter-spacing:.08em;text-transform:uppercase}
+.rimg .btn.s{padding:6px 12px;font-size:11px;cursor:pointer;margin:0}
+.rimg .btn.s:hover{background:var(--acc);color:#fff}
+.rimg .empty{margin-top:8px;font-size:13px;color:var(--mut)}
+.rimg .rg{display:grid;grid-template-columns:repeat(auto-fill,minmax(110px,1fr));gap:8px}
+.rimg .rg:not(:empty){margin-top:10px}
+.rimg .th{position:relative;aspect-ratio:4/3;border:1px solid var(--line);border-radius:4px;overflow:hidden;cursor:zoom-in;background:repeating-linear-gradient(45deg,var(--grid),var(--grid) 8px,transparent 8px,transparent 16px)}
+.rimg .th img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.rimg .th:hover img{transform:scale(1.08)}
+.rimg .th button{position:absolute;top:4px;right:4px;width:22px;height:22px;border-radius:50%;border:0;background:rgba(10,20,28,.75);color:#fff;font-size:14px;line-height:1;cursor:pointer;opacity:0;transition:opacity .2s}
+.rimg .th:hover button,.rimg .th button:focus{opacity:1}
+@media (hover:none){.rimg .th button{opacity:1}}
+.lbx img{max-width:100%;max-height:90vh;border-radius:6px;border:1px solid var(--line);background:var(--surf)}
+.lbx{cursor:zoom-out}
+
 </style></head>
 <body>
 <div id="prog"></div>
@@ -329,4 +347,70 @@ $('pv').disabled=cm==0;$('nx').disabled=cm==11}
 $('pv').onclick=function(){if(cm>0){cm--;render()}};$('nx').onclick=function(){if(cm<11){cm++;render()}};
 $('cbtn').onclick=function(){cm=now?now[0]:0;render();open(cov)};
 })();</script>
+    <script>
+(function(){
+var items=[].slice.call(document.querySelectorAll('#resume-section .tl .it')),blocks={},DB=null,mem=[],uid=0;
+function slug(s){return (s||'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')}
+function db(cb){
+  if(DB)return cb(DB);
+  try{var r=indexedDB.open('resume-imgs',1);
+    r.onupgradeneeded=function(){r.result.createObjectStore('i',{keyPath:'id',autoIncrement:true})};
+    r.onsuccess=function(){DB=r.result;cb(DB)};r.onerror=function(){cb(null)};
+  }catch(e){cb(null)}
+}
+function sync(b){b.querySelector('.empty').style.display=b.querySelector('.rg').children.length?'none':''}
+function lightbox(src){
+  var o=document.createElement('div');o.className='ov open lbx';
+  o.innerHTML='<img alt="">';o.firstChild.src=src;
+  o.onclick=function(){o.remove()};
+  document.addEventListener('keydown',function k(e){if(e.key==='Escape'){o.remove();document.removeEventListener('keydown',k)}});
+  document.body.appendChild(o);
+}
+function thumb(b,rec,label){
+  var t=document.createElement('div'),im=document.createElement('img'),x=document.createElement('button'),u=URL.createObjectURL(rec.blob);
+  t.className='th';im.src=u;im.alt=label+' image';im.onclick=function(){lightbox(u)};
+  x.type='button';x.textContent='×';x.setAttribute('aria-label','Remove image');
+  x.onclick=function(e){e.stopPropagation();
+    db(function(d){if(d&&rec.id)d.transaction('i','readwrite').objectStore('i').delete(rec.id)});
+    URL.revokeObjectURL(u);t.remove();sync(b)};
+  t.appendChild(im);t.appendChild(x);b.querySelector('.rg').appendChild(t);sync(b);
+}
+function add(b,files,label){
+  [].slice.call(files).forEach(function(f){
+    if(!/^image\//.test(f.type))return;
+    var rec={k:b.dataset.k,blob:f,name:f.name};
+    db(function(d){
+      if(d){var rq=d.transaction('i','readwrite').objectStore('i').add(rec);rq.onsuccess=function(){rec.id=rq.result;thumb(b,rec,label)};rq.onerror=function(){thumb(b,rec,label)}}
+      else thumb(b,rec,label);
+    });
+  });
+}
+function mk(key,label,after,parent){
+  var b=document.createElement('div');b.className='rimg';b.dataset.k=key;
+  b.innerHTML='<div class="rh"><span></span><label class="btn s">+ Add images<input type="file" accept="image/*" multiple hidden></label></div><div class="rg"></div><div class="empty">No images yet. Click “Add images” or drop files here.</div>';
+  b.querySelector('.rh span').textContent='Images · '+label;
+  var inp=b.querySelector('input');
+  inp.onchange=function(){add(b,inp.files,label);inp.value=''};
+  b.addEventListener('dragover',function(e){e.preventDefault();b.classList.add('drag')});
+  b.addEventListener('dragleave',function(){b.classList.remove('drag')});
+  b.addEventListener('drop',function(e){e.preventDefault();b.classList.remove('drag');add(b,e.dataTransfer.files,label)});
+  if(after)after.insertAdjacentElement('afterend',b);else parent.appendChild(b);
+  blocks[key]={el:b,label:label};
+}
+items.forEach(function(it,n){
+  var h3=it.querySelector('h3'),h4s=it.querySelectorAll('h4'),base=slug(h3&&h3.textContent)+'-'+n;
+  if(h4s.length>1){
+    [].slice.call(h4s).forEach(function(h,j){
+      var p=h.nextElementSibling;while(p&&p.tagName!=='P')p=p.nextElementSibling;
+      mk(base+'-'+slug(h.textContent),h.textContent,p||h);
+    });
+  }else mk(base,h3?h3.textContent:'Item',null,it);
+});
+db(function(d){
+  if(!d)return;
+  var rq=d.transaction('i').objectStore('i').getAll();
+  rq.onsuccess=function(){rq.result.forEach(function(rec){var B=blocks[rec.k];if(B)thumb(B.el,rec,B.label)})};
+});
+})();
+</script>
 </body></html>
